@@ -270,7 +270,7 @@
 			<Cursor x={stage.cursor.x} y={stage.cursor.y} visible={stage.cursor.visible && !ui.explore} down={stage.cursor.down} ripple={stage.cursor.ripple} scale={cam.s} />
 		</div>
 
-		<Title card={director.title} vw={stage.vw} vh={stage.vh} />
+		<Title card={director.title} unit={stage.unit} />
 
 		{#if director.keys}
 			<div class="keycaps" transition:fly={{ y: 20, duration: 250 }}>
@@ -280,7 +280,7 @@
 
 		{#if ui.captions && director.caption && !director.title}
 			{#key director.caption}
-				<p class="caption" style:--u={Math.min(stage.vw, stage.vh * 1.6) / 1920} in:fly|global={{ y: 14, duration: 450 }} out:fade|global={{ duration: 200 }}>{director.caption}</p>
+				<p class="caption" style:--u={stage.unit} in:fly|global={{ y: 14, duration: 450 }} out:fade|global={{ duration: 200 }}>{director.caption}</p>
 			{/key}
 		{/if}
 
@@ -297,6 +297,11 @@
 					<button class="primary" onclick={() => start(director.index)}><Play /> Play the film</button>
 					<button onclick={() => setExplore(true)}><Pointer /> Explore the app</button>
 				</div>
+				<ol class="poster-chapters" aria-label="Chapters">
+					{#each director.chapters as c, i}
+						<li><button onclick={() => start(i)}><b>{String(i + 1).padStart(2, '0')}</b>{c.title}</button></li>
+					{/each}
+				</ol>
 				<small>Sound is optional (press M). Press ? for shortcuts.</small>
 			</div>
 		</div>
@@ -627,6 +632,38 @@
 
 	.poster-actions .primary:hover {
 		background: #fff;
+	}
+
+	.poster-chapters {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 6px;
+		max-width: 640px;
+		margin: 6px 0 14px;
+		padding: 0;
+		list-style: none;
+	}
+
+	.poster-chapters button {
+		padding: 5px 10px;
+		border-radius: 13px;
+		background: rgba(255, 255, 255, 0.06);
+		color: rgba(244, 246, 245, 0.7);
+		font-size: 12px;
+		transition: background 0.15s ease, color 0.15s ease;
+	}
+
+	.poster-chapters button:hover {
+		background: rgba(255, 255, 255, 0.14);
+		color: #fff;
+	}
+
+	.poster-chapters b {
+		margin-right: 6px;
+		color: rgba(244, 246, 245, 0.38);
+		font-weight: 500;
+		font-variant-numeric: tabular-nums;
 	}
 
 	.poster small {

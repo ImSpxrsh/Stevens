@@ -114,7 +114,7 @@ export const chapters: Chapter[] = [
 			await ctx.wait(600);
 			const chart = ctx.q('.row-a .card');
 			await ctx.camera.focus(chart, { pad: 0.8, max: 2.2 });
-			await ctx.cursor.scrub(chart?.querySelector('svg') ?? null, 2200);
+			await ctx.cursor.scrub(chart?.querySelector('.chart svg') ?? null, 2400);
 			await ctx.camera.focus('.row-b', { pad: 0.9, max: 1.8 });
 			await ctx.wait(900);
 		},

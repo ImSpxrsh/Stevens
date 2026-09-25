@@ -3,9 +3,8 @@
 	import logo from '@ivisyx/logo.svg?raw';
 	import type { TitleCard } from './engine.svelte';
 
-	const { card, vw, vh }: { card: TitleCard | null; vw: number; vh: number } = $props();
-	// Type is designed at 1920 wide and scales with the frame, so social cuts stay balanced.
-	const unit = $derived(Math.min(vw, vh * 1.6) / 1920);
+	// Type is designed at 1920 wide; `unit` scales it for each cut.
+	const { card, unit }: { card: TitleCard | null; unit: number } = $props();
 </script>
 
 {#key card?.id}

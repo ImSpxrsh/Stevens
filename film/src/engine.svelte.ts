@@ -85,6 +85,8 @@ export class Stage {
 	vh = $derived(aspects[this.aspect][1]);
 	/** Screen pixels per logical pixel. */
 	fit = $state(1);
+	/** Type scale: vertical and square cuts use larger type relative to width. */
+	unit = $derived(this.vw / (this.vw >= this.vh * 1.5 ? 1920 : this.vw >= this.vh ? 1400 : 1150));
 	cam = $state({ s: 1, x: 0, y: 0, rx: 0, ry: 0, lift: 0 });
 	spot = $state<Rect | null>(null);
 	backdropBlur = $state(0);
@@ -97,9 +99,10 @@ export class Stage {
 		return { x: (this.vw - WINDOW.w) / 2, y: (this.vh - WINDOW.h) / 2, ...WINDOW };
 	}
 
-	/** Camera that frames the whole app window. */
+	/** Camera that frames the whole app window. Social cuts run it edge to edge. */
 	rest() {
-		const s = Math.min((this.vw * 0.8) / WINDOW.w, (this.vh * 0.8) / WINDOW.h);
+		const landscape = this.vw >= this.vh * 1.5;
+		const s = landscape ? Math.min((this.vw * 0.8) / WINDOW.w, (this.vh * 0.8) / WINDOW.h) : (this.vw * 0.98) / WINDOW.w;
 		return { s, x: (this.vw / 2) * (1 - s), y: (this.vh / 2) * (1 - s) };
 	}
 
