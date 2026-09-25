@@ -155,3 +155,15 @@ def test_cli(tmp_path, capsys):
     dump_records(dataset(), path)
     assert main([str(path), "--k", "7", "--out", str(tmp_path / "r.md")]) == 0
     assert "Top-25 discovery backtest" in (tmp_path / "r.md").read_text()
+
+
+def test_ties_at_rank_k_are_flagged():
+    records = [
+        form_d(
+            f"Twin {i} Inc", cik=f"00050000{i:02d}", address=town(50 + i), filed=date(2022, 6, 1)
+        )
+        for i in range(5)
+    ]
+    report = run_backtest(records, cutoff=CUTOFF, k=2)
+    assert report.overall.gauge_ties_at_k == 5
+    assert "arbitrary" in to_markdown(report)

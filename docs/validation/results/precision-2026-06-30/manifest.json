@@ -1,0 +1,2528 @@
+{
+  "as_of": "2026-06-30",
+  "model_version": "prior-2026-09",
+  "population": "likely",
+  "population_size": 1185,
+  "rows": [
+    {
+      "company_id": "cik:0001846289",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7502601055951177,
+      "sample_id": "S001",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "cik:0002070994",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8455347349164652,
+      "sample_id": "S002",
+      "top_features": [
+        "incorporated_within_5y",
+        "first_record_recent",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-9faa4345e1e89e9d",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S003",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-ab52ffc88578918f",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S004",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001826673",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8175744761936437,
+      "sample_id": "S005",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001951099",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7502601055951177,
+      "sample_id": "S006",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-e660b9a41924d6b2",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S007",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-3c0e9e680ac076a8",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S008",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-f6bf5222e746b5e9",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S009",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-d9575713c223a9f0",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S010",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-8f45441d58fe7de4",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S011",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-5278dfab36e4282d",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S012",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001972720",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 1.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9088770389851438,
+      "sample_id": "S013",
+      "top_features": [
+        "incorporated_within_5y",
+        "no_revenue",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001623834",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7310585786300049,
+      "sample_id": "S014",
+      "top_features": [
+        "incorporated_within_5y",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001805092",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8807970779778823,
+      "sample_id": "S015",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "cik:0001837437",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9168273035060777,
+      "sample_id": "S016",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0002018293",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8909031788043871,
+      "sample_id": "S017",
+      "top_features": [
+        "incorporated_within_5y",
+        "first_record_recent",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001822684",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9168273035060777,
+      "sample_id": "S018",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-59b99faf0d09a0bf",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S019",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001716551",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 1.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 1.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S020",
+      "top_features": [
+        "incorporated_over_5y",
+        "sbir_phase_i",
+        "tech_industry",
+        "small_team"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-8f3642066f6eee48",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S021",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0002060335",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 1.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9644288107273639,
+      "sample_id": "S022",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "no_revenue",
+        "first_record_recent"
+      ]
+    },
+    {
+      "company_id": "cik:0001940714",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8175744761936437,
+      "sample_id": "S023",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-23978c72aeee97d7",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S024",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001983107",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9241418199787566,
+      "sample_id": "S025",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "first_record_recent",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0002125057",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 1.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9644288107273639,
+      "sample_id": "S026",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "no_revenue",
+        "first_record_recent"
+      ]
+    },
+    {
+      "company_id": "cik:0002135388",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 1.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9478464369215823,
+      "sample_id": "S027",
+      "top_features": [
+        "incorporated_within_5y",
+        "no_revenue",
+        "first_record_recent",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-0d9841778c6d639f",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S028",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-accb1bbf415ac9b7",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S029",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001800224",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8175744761936437,
+      "sample_id": "S030",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0002105848",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8909031788043871,
+      "sample_id": "S031",
+      "top_features": [
+        "incorporated_within_5y",
+        "first_record_recent",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001811941",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9168273035060777,
+      "sample_id": "S032",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-e77081a5501eb85c",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S033",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-cd11291a713ac68c",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S034",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0002024038",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8909031788043871,
+      "sample_id": "S035",
+      "top_features": [
+        "incorporated_within_5y",
+        "first_record_recent",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0002018938",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8455347349164652,
+      "sample_id": "S036",
+      "top_features": [
+        "incorporated_within_5y",
+        "first_record_recent",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-657f4fc19ad42a35",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S037",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001867791",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 1.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9608342772032357,
+      "sample_id": "S038",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "no_revenue",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-fcc590dfb0d48441",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S039",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0002052910",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 1.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9168273035060777,
+      "sample_id": "S040",
+      "top_features": [
+        "incorporated_within_5y",
+        "no_revenue",
+        "first_record_recent",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001739541",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 1.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9088770389851438,
+      "sample_id": "S041",
+      "top_features": [
+        "incorporated_within_5y",
+        "no_revenue",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-05a01fceadbb61e8",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S042",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-018c4a072848fb80",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S043",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-6a30555c535da337",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S044",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-3e85aabf53a9ea0d",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S045",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001815154",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9168273035060777,
+      "sample_id": "S046",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-246dac2dda130982",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S047",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-e263abf443f5b1d5",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S048",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-99d2c8117aa7402d",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S049",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001842902",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7502601055951177,
+      "sample_id": "S050",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-42d5ad7e2df96ef3",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S051",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-a44766fb31bc2639",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S052",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-24035e3a30fd8a1b",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S053",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-bebbcbc5a21f024d",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S054",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001991756",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8909031788043871,
+      "sample_id": "S055",
+      "top_features": [
+        "incorporated_within_5y",
+        "first_record_recent",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-3a7798b465aa38c7",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S056",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-f0b2aab50e193ca8",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S057",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-7df8ca0139e07814",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S058",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-ac6b285e901094fe",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S059",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-b4e9111c0ce6b310",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S060",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001739860",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9168273035060777,
+      "sample_id": "S061",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-fa5d05552cff0d2e",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S062",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001952024",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8175744761936437,
+      "sample_id": "S063",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry"
+      ]
+    },
+    {
+      "company_id": "cik:0001857134",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8175744761936437,
+      "sample_id": "S064",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001774971",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8807970779778823,
+      "sample_id": "S065",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-bb23b04777255c6a",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S066",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-4631cea59eb50380",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S067",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-736e6372d31ced72",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S068",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001869920",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8698915256370021,
+      "sample_id": "S069",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-832afd5f5e61f540",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S070",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001957811",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8175744761936437,
+      "sample_id": "S071",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001851161",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8698915256370021,
+      "sample_id": "S072",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-65153124fb12e2db",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S073",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-726540efe105bb40",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S074",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-d650634662d72101",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S075",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001982820",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9525741268224334,
+      "sample_id": "S076",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "first_record_recent",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-eaf537c786ca84af",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S077",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-28ccbf8fb1e2d8b5",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S078",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0002052134",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9525741268224334,
+      "sample_id": "S079",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "first_record_recent",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-d9c0f452bf2421fa",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S080",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-9dc2d6b7803e34b1",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S081",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-7d9051a750035989",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S082",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-49244c161f99e0ed",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S083",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0001932158",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8807970779778823,
+      "sample_id": "S084",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "cik:0002026293",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9241418199787566,
+      "sample_id": "S085",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "first_record_recent",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0002001030",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9525741268224334,
+      "sample_id": "S086",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "first_record_recent",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "cik:0001707454",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8807970779778823,
+      "sample_id": "S087",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "cik:0001765187",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8175744761936437,
+      "sample_id": "S088",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001875751",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 1.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9168273035060777,
+      "sample_id": "S089",
+      "top_features": [
+        "incorporated_within_5y",
+        "tech_industry",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-66a2547a51420630",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S090",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-bb0a6eebd6187ae1",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S091",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-8df7f446a47a5419",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S092",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "cik:0002140137",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 1.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.9478464369215823,
+      "sample_id": "S093",
+      "top_features": [
+        "incorporated_within_5y",
+        "no_revenue",
+        "first_record_recent",
+        "equity_offering"
+      ]
+    },
+    {
+      "company_id": "cik:0001927172",
+      "features": {
+        "equity_offering": 1.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8175744761936437,
+      "sample_id": "S094",
+      "top_features": [
+        "incorporated_within_5y",
+        "equity_offering",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "cik:0001992951",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 1.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 1.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 1.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 0.0,
+        "sbir_phase_ii": 0.0,
+        "small_team": 0.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.8320183851339245,
+      "sample_id": "S095",
+      "top_features": [
+        "incorporated_within_5y",
+        "first_record_recent",
+        "offering_under_10m"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-897d739e630305b5",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S096",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-6df7fd852450e78c",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S097",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-ab3ec11ca94c9b97",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S098",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-953f589beeb71728",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S099",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    },
+    {
+      "company_id": "rec:sbir_sttr:sbir-4a3a62b276e8d622",
+      "features": {
+        "equity_offering": 0.0,
+        "first_record_recent": 0.0,
+        "incorporated_over_5y": 0.0,
+        "incorporated_within_5y": 0.0,
+        "large_team": 0.0,
+        "no_revenue": 0.0,
+        "offering_under_10m": 0.0,
+        "revenue_over_1m": 0.0,
+        "sbir_phase_i": 1.0,
+        "sbir_phase_ii": 1.0,
+        "small_team": 1.0,
+        "tech_industry": 0.0
+      },
+      "predicted_label": "likely_startup",
+      "probability": 0.7858349830425586,
+      "sample_id": "S100",
+      "top_features": [
+        "sbir_phase_i",
+        "small_team",
+        "sbir_phase_ii"
+      ]
+    }
+  ],
+  "seed": 2026
+}
