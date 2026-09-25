@@ -13,6 +13,10 @@ npm run film:build   # static build in film/dist
 npm run film:preview # serve the build at http://localhost:4621
 ```
 
+To host it on Vercel, import the repository with the Root Directory left at the
+repo root. The root [`vercel.json`](../vercel.json) runs `npm ci --workspace film`
+and `npm run film:build` and serves `film/dist`.
+
 ## Chapters (2:20)
 
 Ivisyx · One window · Overview · NJ map · Company profile · Assistant · Pipeline ·

@@ -65,6 +65,12 @@ npm run film         # http://localhost:4620
 
 See [film/README.md](./film/README.md).
 
+### Deploy the film to Vercel
+
+Import this repository in Vercel and keep the Root Directory as the repo root.
+[`vercel.json`](./vercel.json) installs only the film's packages, builds `film/`,
+and serves `film/dist`, so no project settings need changing.
+
 ## Python core
 
 The Python package holds the shared domain types and logic used by the
