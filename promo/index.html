@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gauge · Product film</title>
+<meta name="description" content="An auto-playing product film of the Gauge demo: startup signals for New Jersey, from public records." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="promo.css" />
+</head>
+<body>
+<div id="app" class="playing">
+  <div id="viewport">
+    <div id="stage" aria-label="Gauge product film">
+      <div id="camera">
+        <!-- Desktop wallpaper (matches demo/src/components/apps/WallpaperApp) -->
+        <div class="wall"><i class="aurora a1"></i><i class="aurora a2"></i><i class="aurora a3"></i><i class="grain"></i></div>
+
+        <div class="menubar" id="menubar">
+          <span class="mb-logo"></span><b>Gauge</b><span>File</span><span>View</span><span>Signals</span><span>Window</span><span>Help</span>
+          <em class="mb-right"><span id="mb-sync">● Synced</span><span>Wed 9:41 AM</span></em>
+        </div>
+
+        <!-- Gauge window -->
+        <div class="window" id="win">
+          <div class="titlebar"><i class="tl red"></i><i class="tl yellow"></i><i class="tl green"></i><span>Gauge</span></div>
+          <aside class="sidebar">
+            <div class="brand"><div class="brand-mark"><span></span><span></span><i></i><i></i><i></i></div><div><strong>Gauge</strong><small>1435 Capital · Demo</small></div></div>
+            <nav>
+              <button data-view="signals" id="nav-signals" class="active"><span class="ico ico-map"></span>Signals<b>118</b></button>
+              <button data-view="programs" id="nav-programs"><span class="ico ico-archive"></span>Programs<b>3</b></button>
+              <button data-view="proof" id="nav-proof"><span class="ico ico-chart"></span>Proof</button>
+            </nav>
+            <div class="sidebar-label">Saved views</div>
+            <button class="saved"><i class="dot amber"></i>Review first<b>24</b></button>
+            <button class="saved"><i class="dot green"></i>$1M+ reported sold<b>42</b></button>
+            <div class="spacer"></div>
+            <div class="snapshot"><span class="ico ico-db"></span><div><strong>Demo snapshot</strong><small>Frozen Sep 18, 2026</small></div></div>
+            <div class="offline"><i></i> Offline ready</div>
+          </aside>
+
+          <main class="surface">
+            <!-- Signals -->
+            <section class="view" id="view-signals">
+              <header class="toolbar">
+                <div><small>GARDEN STATE INNOVATION FUND</small><h1>New Jersey signals</h1></div>
+                <div class="search" id="search"><span class="ico ico-search"></span><span id="search-text" class="search-text"></span><span id="search-placeholder">Search any NJ town</span><input id="search-input" placeholder="Search any NJ town" aria-label="Search any New Jersey town" /><i class="caret" id="caret"></i><kbd>↵</kbd></div>
+                <div class="avatar">14</div>
+              </header>
+              <div class="demo-warning"><span class="ico ico-info"></span><strong>Fictional demo data</strong><span>Product logic is real; companies and results are illustrative.</span></div>
+              <div class="signal-grid">
+                <section class="map-card card">
+                  <div class="map-toolbar">
+                    <div class="segmented" id="segmented"><i class="seg-thumb" id="seg-thumb"></i><button id="seg-funded">Already funded <b>42</b></button><button id="seg-all">All public signals <b>118</b></button></div>
+                    <span class="live"><i></i> 3 sources connected</span>
+                  </div>
+                  <div class="map-wrap">
+                    <div class="map-number"><small>SHOWING</small><strong id="count-showing">0</strong><span>likely startups<br />with public evidence</span></div>
+                    <div id="map-box"><svg id="map" aria-label="New Jersey counties with startup signals"></svg></div>
+                    <div class="map-tip" id="map-tip"><strong></strong><small></small></div>
+                    <div class="legend"><span><i class="funded"></i>$1M+ sold</span><span id="legend-other"><i></i>Other evidence</span></div>
+                  </div>
+                </section>
+                <aside class="insights">
+                  <div class="metric-row card">
+                    <div><small>MUNICIPALITIES</small><strong id="count-muni">0</strong><span>with a visible signal</span></div>
+                    <div><small>PROGRAM MATCHES</small><strong id="count-match">0</strong><span>strong matches</span></div>
+                  </div>
+                  <div class="company-list card">
+                    <div class="list-head"><span><strong>Priority signals</strong><small>Ranked within sector</small></span><button>···</button></div>
+                    <div id="rows"></div>
+                  </div>
+                  <div class="honesty card"><span class="ico ico-shield"></span><span><strong>Evidence, not certainty</strong><small>Gauge does not claim to show every NJ startup or prove program eligibility.</small></span></div>
+                </aside>
+              </div>
+            </section>
+
+            <!-- Programs -->
+            <section class="view" id="view-programs">
+              <header class="toolbar standalone"><div><small>RULES ENGINE</small><h1>Program opportunities</h1><p>Unknown facts become first-call questions, not invented eligibility.</p></div><div class="avatar">14</div></header>
+              <div class="program-grid" id="program-grid">
+                <article class="program-card green"><span>01</span><h2>CSIT SBIR/STTR Direct Financial Assistance</h2><p>Phase-based support for New Jersey companies with qualifying federal awards.</p><div><strong data-count="18">0</strong><small>strong matches</small></div><em>Round 5 NOFA · reviewed Sep 2026</em></article>
+                <article class="program-card amber"><span>02</span><h2>Angel Investor Tax Credit</h2><p>Refundable investor tax credit for qualifying New Jersey businesses.</p><div><strong data-count="7">0</strong><small>strong matches</small></div><em>2026 rules · 150-employee cap</em></article>
+                <article class="program-card violet"><span>03</span><h2>Life Sciences &amp; Healthcare Fund</h2><p>Matching capital for qualifying seed through Series C rounds.</p><div><strong data-count="4">0</strong><small>strong matches</small></div><em>SSBCI · partner fund managers</em></article>
+              </div>
+              <div class="semantics" id="semantics"><div><small>CLEAN SEMANTICS</small><h2>Three states. No eligibility theater.</h2></div>
+                <span class="strong"><i></i><strong>Strong match</strong><small>Every screenable requirement consistent</small></span>
+                <span class="potential"><i></i><strong>Potential, verify</strong><small>Unknowns become questions</small></span>
+                <span class="none"><i></i><strong>Not a match</strong><small>A record conflicts</small></span></div>
+            </section>
+
+            <!-- Proof -->
+            <section class="view" id="view-proof">
+              <div class="proof-view">
+                <div class="proof-top"><small>VALIDATION · REAL NJ PUBLIC RECORDS</small><span>Reported honestly</span></div>
+                <div class="proof-title"><p>Does the evidence add information?</p><h1>Measured.<br /><em>Not marketed.</em></h1></div>
+                <div class="proof-cards">
+                  <article><small>01 · BACKTEST</small><div><strong>2022</strong></div><h3>Frozen snapshot, no lookahead</h3><p>Top-25 vs. the strongest simple baseline, with intervals and ties reported.</p></article>
+                  <article><small>02 · PRECISION</small><div><strong>100</strong></div><h3>Blind, hand-labeled sample</h3><p>People label; the model never grades itself.</p></article>
+                  <article><small>03 · COVERAGE</small><div><strong>50</strong></div><h3>Known NJ startups, sourced</h3><p>Misses sorted by why: source gap, not guesswork.</p></article>
+                </div>
+              </div>
+            </section>
+
+            <!-- Company detail -->
+            <div class="detail-backdrop" id="detail-backdrop">
+              <article class="detail-panel" id="detail">
+                <header><span>FICTIONAL DEMO COMPANY</span><button id="detail-close">✕</button></header>
+                <div class="company-title"><div class="monogram" id="d-mono"></div><span><small id="d-sub"></small><h2 id="d-name"></h2><p id="d-desc"></p></span></div>
+                <div class="pills" id="d-pills"></div>
+                <section class="d-sec" id="d-evidence-sec"><h3 class="ok">✓ ESTABLISHED FROM PUBLIC RECORDS</h3><div id="d-evidence"></div></section>
+                <section class="d-sec" id="d-unknown-sec"><h3 class="unknown">ⓘ NOT ESTABLISHED FROM CURRENT SOURCES</h3><div id="d-unknowns"></div></section>
+                <section class="d-sec" id="d-programs-sec"><h3>▤ PROGRAM MATCHES</h3><div id="d-programs"></div></section>
+              </article>
+            </div>
+          </main>
+        </div>
+
+        <!-- Notifications -->
+        <div class="notifs" id="notifs"></div>
+
+        <!-- Dock -->
+        <div class="dock" id="dock">
+          <i class="app a-finder"></i><i class="app a-mail"></i><i class="app a-cal"></i>
+          <i class="app a-gauge" id="dock-gauge"><span class="brand-mark"><span></span><span></span><i></i><i></i><i></i></span><em class="run-dot"></em></i>
+          <i class="app a-notes"></i><i class="sep"></i><i class="app a-trash"></i>
+        </div>
+
+        <div id="cursor"><svg viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L10 19z" /></svg><i class="click-ring" id="click-ring"></i></div>
+      </div>
+
+      <!-- Full-screen story layers (outside the camera) -->
+      <div class="layer" id="layer-titles">
+        <canvas id="stars"></canvas>
+        <h1 class="kinetic" id="t-open1">Every startup leaves a trace.</h1>
+        <h1 class="kinetic" id="t-open2">Most of it is <em>public</em>.</h1>
+        <div class="brand-hero" id="brand-hero">
+          <svg class="rails" viewBox="0 0 600 120" id="hero-rails">
+            <line class="rail" x1="20" y1="44" x2="580" y2="44" /><line class="rail" x1="20" y1="76" x2="580" y2="76" />
+            <g id="hero-ties"></g>
+          </svg>
+          <h1 class="wordmark">Gauge</h1>
+          <p>Startup signals for New Jersey, from public records.</p>
+        </div>
+      </div>
+
+      <div class="layer" id="layer-pipeline">
+        <div class="pipe-head"><small>UNDER THE HOOD</small><h2>From filing to first call.</h2></div>
+        <svg class="pipe-svg" id="pipe-svg" viewBox="0 0 1920 1080"></svg>
+        <div id="pipe-nodes"></div>
+        <p class="pipe-foot">Counts from a real run on New Jersey public records, 2019–2026. Company examples in this film are fictional.</p>
+      </div>
+
+      <div class="layer" id="layer-measured">
+        <small>EVIDENCE, NOT CERTAINTY</small>
+        <h1>Every fact cites its record.<br /><em>Every gap becomes a question.</em></h1>
+        <div class="m-tiles" id="m-tiles">
+          <div><strong>Facts</strong><span>from filings, awards, and announcements, each linked to its source.</span></div>
+          <div><strong>Inferences</strong><span>labeled as Gauge's, with the features that drove them.</span></div>
+          <div><strong>Unknowns</strong><span>turned into first-call questions, never guessed.</span></div>
+        </div>
+      </div>
+
+      <div class="layer" id="layer-finale">
+        <svg class="rails big" viewBox="0 0 1920 200" id="final-rails">
+          <line class="rail" x1="-20" y1="70" x2="1940" y2="70" /><line class="rail" x1="-20" y1="130" x2="1940" y2="130" />
+          <g id="final-ties"></g>
+        </svg>
+        <h1 class="wordmark">Gauge</h1>
+        <p class="tagline">One common track for New Jersey's startup signals.</p>
+        <small class="gauge-mm">1,435 MILLIMETERS · STANDARD GAUGE</small>
+        <small class="fine">Companies shown are fictional. Product logic and data sources are real. Program rules must be re-verified before eligibility claims.</small>
+      </div>
+
+      <div class="letterbox top"></div><div class="letterbox bottom"></div>
+      <div class="captions" id="captions"><span id="caption-text"></span></div>
+      <div class="chapter-toast" id="chapter-toast"></div>
+    </div>
+  </div>
+
+  <!-- Player -->
+  <div id="controls">
+    <button id="btn-play" title="Play / pause (Space)" aria-label="Play or pause">❚❚</button>
+    <button id="btn-restart" title="Restart (R)" aria-label="Restart">↺</button>
+    <span id="time">0:00 / 0:00</span>
+    <div id="scrubber" role="slider" aria-label="Seek" tabindex="0"><div id="buffer"></div><div id="progress"></div><div id="ticks"></div><div id="knob"></div><div id="hover-tip"></div></div>
+    <button id="btn-chapters" title="Chapters (C)">Chapters</button>
+    <button id="btn-speed" title="Playback speed (S)">1×</button>
+    <button id="btn-cc" class="on" title="Captions (K)">CC</button>
+    <button id="btn-explore" title="Explore the live UI (E)">Explore</button>
+    <button id="btn-loop" class="on" title="Loop (L)">Loop</button>
+    <button id="btn-notes" title="Presenter notes (N)">Notes</button>
+    <button id="btn-full" title="Fullscreen (F)">⤢</button>
+    <button id="btn-help" title="Shortcuts (?)">?</button>
+  </div>
+  <div id="panel-chapters" class="panel"></div>
+  <div id="panel-notes" class="panel"><h3>Presenter notes</h3><p id="notes-text"></p></div>
+  <div id="panel-help" class="panel">
+    <h3>Shortcuts</h3>
+    <dl>
+      <dt>Space</dt><dd>Play / pause</dd><dt>← →</dt><dd>Back / forward 5s</dd><dt>[ ]</dt><dd>Previous / next chapter</dd>
+      <dt>1–9, 0</dt><dd>Jump to chapter</dd><dt>S</dt><dd>Cycle speed</dd><dt>K</dt><dd>Captions</dd><dt>E</dt><dd>Explore mode</dd>
+      <dt>L</dt><dd>Loop</dd><dt>N</dt><dd>Presenter notes</dd><dt>H</dt><dd>Hide controls (clean recording)</dd><dt>F</dt><dd>Fullscreen</dd><dt>R</dt><dd>Restart</dd>
+    </dl>
+    <p>Link to a moment with <code>#t=42</code> or a chapter with <code>#search</code>.</p>
+  </div>
+  <div id="explore-hint">Explore mode: click the map, the nav, the search box, or the toggle. Press <b>E</b> to return to the film.</div>
+</div>
+<script src="map-data.js"></script>
+<script src="promo.js"></script>
+</body>
+</html>
