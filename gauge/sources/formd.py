@@ -69,8 +69,8 @@ def _date(v: str | None, fmt: str) -> date | None:
         return None
 
 
-def read_quarter(path: str | Path, states: Collection[str] = ("NJ",)) -> list[NormalizedRecord]:
-    wanted = {s.upper() for s in states}
+def quarter_rows(path: str | Path) -> Iterator[dict]:
+    """One row per live filing's primary issuer: accession, filing date, issuer, offering."""
     with zipfile.ZipFile(path) as z:
         filed: dict[str, date] = {}
         for row in _table(z, "FORMDSUBMISSION"):
@@ -81,21 +81,33 @@ def read_quarter(path: str | Path, states: Collection[str] = ("NJ",)) -> list[No
             d = _date(raw, "%d-%b-%Y") or _date(raw[:10], "%Y-%m-%d")
             if d:
                 filed[row["ACCESSIONNUMBER"]] = d
-        issuers: dict[str, dict[str, str]] = {}
-        for row in _table(z, "ISSUERS"):
-            if row.get("IS_PRIMARYISSUER_FLAG") != "YES":
-                continue
-            if (row.get("STATEORCOUNTRY") or "").strip().upper() not in wanted:
-                continue
-            issuers[row["ACCESSIONNUMBER"]] = row
-        records = []
+        issuers = {
+            row["ACCESSIONNUMBER"]: row
+            for row in _table(z, "ISSUERS")
+            if row.get("IS_PRIMARYISSUER_FLAG") == "YES"
+        }
         for row in _table(z, "OFFERING"):
             acc = row["ACCESSIONNUMBER"]
-            issuer = issuers.get(acc)
-            if issuer is None or acc not in filed:
-                continue
-            records.append(_record(acc, filed[acc], issuer, row))
-    return records
+            if acc in issuers and acc in filed:
+                yield {
+                    "accession": acc,
+                    "filed": filed[acc],
+                    "issuer": issuers[acc],
+                    "offering": row,
+                }
+
+
+def issuer_state(row: dict) -> str:
+    return (row["issuer"].get("STATEORCOUNTRY") or "").strip().upper()
+
+
+def row_to_record(row: dict) -> NormalizedRecord:
+    return _record(row["accession"], row["filed"], row["issuer"], row["offering"])
+
+
+def read_quarter(path: str | Path, states: Collection[str] = ("NJ",)) -> list[NormalizedRecord]:
+    wanted = {s.upper() for s in states}
+    return [row_to_record(r) for r in quarter_rows(path) if issuer_state(r) in wanted]
 
 
 def _record(

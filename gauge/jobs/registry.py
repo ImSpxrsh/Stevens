@@ -29,7 +29,7 @@ JOBS: dict[str, Job] = {}
 DAILY: list[str] = []
 
 # Modules whose import registers jobs. Kept explicit so the order is predictable.
-JOB_MODULES: list[str] = []
+JOB_MODULES: list[str] = ["gauge.sources.jobs", "gauge.jobs.core"]
 
 
 def job(name: str, description: str, *, daily: bool = False):
