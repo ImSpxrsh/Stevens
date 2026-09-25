@@ -17,6 +17,9 @@ class ReviewKind(StrEnum):
     RECORD_MATCH = "record_match"
     # Two existing company profiles might be the same company.
     DUPLICATE_COMPANIES = "duplicate_companies"
+    # A model-extracted fact needs a person to accept it. Approve accepts the
+    # extraction, reject discards it; there is no candidate company.
+    EXTRACTION = "extraction"
 
 
 class ReviewStatus(StrEnum):
