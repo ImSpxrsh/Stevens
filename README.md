@@ -52,6 +52,19 @@ The simulator retains its upstream MIT license. See
 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) and
 [demo/LICENSE](./demo/LICENSE).
 
+## Ivisyx film
+
+A 2:20 Apple-style product film that drives the live app: the camera pushes in
+while a scripted cursor flies the NJ map, drags a deal, and drafts an IC memo.
+It includes chapters, captions, a transcript, 16:9 / 1:1 / 9:16 cuts, an
+explore mode, and one-click video recording.
+
+```bash
+npm run film         # http://localhost:4620
+```
+
+See [film/README.md](./film/README.md).
+
 ## Python core
 
 The Python package holds the shared domain types and logic used by the
