@@ -5,10 +5,10 @@ SBIR/STTR awards, NJEDA/CSIT announcements), explains why each one surfaced,
 and checks it against New Jersey funding programs.
 
 The repository contains both the Python evidence and program-matching core and
-an offline-friendly product demo inside the actual
+**Ivisyx**, an offline-friendly venture-intelligence demo running inside the
 [PuruVJ/macos-web](https://github.com/PuruVJ/macos-web) Svelte desktop shell.
 
-## macOS demo
+## Ivisyx demo
 
 ```bash
 npm install
@@ -23,24 +23,29 @@ npm run build
 npm run serve
 ```
 
-Demo path:
+What's in the suite:
 
-1. Start in **Already funded** on the real New Jersey outline and county map.
-2. Switch to **All public signals** for the reveal.
-3. Search for `Princeton`, `Newark`, `Camden`, `Hoboken`, `Paterson`, `Trenton`,
-   `New Brunswick`, `Jersey City`, or `Montclair`.
-4. Open a company and walk through its evidence, unknowns, sources, and
-   program-match states.
-5. Use the sidebar or dock to show Signals, Programs, and Proof.
+- **Command center**: greeting, thesis matches, KPIs, deal-flow chart, pipeline funnel, agenda, portfolio health, live signal ticker.
+- **Signal radar**: an interactive New Jersey map. Scroll or pinch to zoom, drag to pan, click a county or any of ~220 municipalities to fly in, and zoom far enough to see individual companies. It also has search, layers, a minimap, and a live signal stream.
+- **Pipeline**: drag-and-drop kanban and table, owner filters, fit scores.
+- **Companies**: ~1,400 companies with search and filters; each synthetic company gets a generated logo.
+- **Portfolio**, **Market map**, **Fund & LPs** (TVPI/DPI/IRR, J-curve, LP report generator), **Programs**, **Data sources**.
+- **Ivisyx AI**: scripted memo, portfolio, lookalike and meeting-prep answers. No model or API is called.
+- **⌘K command palette** and a **firm setup** screen. Pick a preset or enter any fund's thesis, stages, geography and brand color, and every fit score re-ranks.
 
-All company names, records, counts, matching outcomes, and proof metrics in the
-demo are fictional. Re-verify official program rules and replace the frozen
-demo snapshot before presenting factual claims.
+Demo path: Command center → Signal radar (zoom into Mercer County, then Princeton) →
+open a company → Draft IC memo → Pipeline → Fund & LPs → switch workspace in the
+sidebar to show it works for any VC.
 
-Demo layout:
+Data: six real New Jersey company profiles link to official sources and never
+receive simulated data. Every other company, deal, metric, fund figure, LP and
+signal is synthetic, and town coordinates are approximate. Program names and links
+point to official pages; re-verify rules before presenting factual claims.
 
-- `demo/` — copied and adapted macos-web simulator source
-- `demo/src/components/apps/Gauge/` — Gauge product UI and mock data
+Layout:
+
+- `demo/` — adapted macos-web simulator source
+- `demo/src/components/apps/Ivisyx/` — Ivisyx app (views, overlays, data generators)
 - `demo/src/components/apps/WallpaperApp/Wallpaper.svelte` — custom wallpaper
 
 The simulator retains its upstream MIT license. See

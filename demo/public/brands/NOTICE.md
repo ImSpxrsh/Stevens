@@ -1,4 +1,4 @@
-# Gauge demo brand assets
+# Ivisyx demo brand assets
 
 The six SVG marks (`aster`, `lucent`, `harbor`, `delta`, `mosaic`, `common`) are original fictional identities for synthetic demonstration companies. They do not represent real startups.
 
@@ -13,4 +13,4 @@ The following website icons were downloaded from assets linked by the companies'
 | polygone.webp | https://images.squarespace-cdn.com/content/v1/67c87cd0df9fc66a4ed90633/8b26851f-9c3e-47e5-9397-6ea07fccf6e4/favicon.ico?format=100w |
 | renewco2.webp | https://images.squarespace-cdn.com/content/v1/5b8ef566aa49a14a1b4d83ec/5af57440-da0e-4c5b-b120-da82bd3bb50c/favicon.ico?format=100w |
 
-Company descriptions and location sources are recorded in `src/components/apps/Gauge/real-companies.ts`. Map coordinates represent approximate town locations. The curated profiles are distinct from the synthetic SEC, patent, and funding events shown by the simulator.
+Company descriptions and location sources are recorded in `src/components/apps/Ivisyx/real-companies.ts`. Map coordinates represent approximate town locations. The curated profiles are distinct from the synthetic SEC, patent, and funding events shown by the simulator.

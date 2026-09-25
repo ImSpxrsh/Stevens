@@ -2,10 +2,10 @@ import { create_menu_config } from '🍎/helpers/create-menu-config';
 
 export const finder_menu_config = create_menu_config({
 	default: {
-		title: 'Gauge',
+		title: 'Ivisyx',
 		menu: {
 			'about-finder': {
-				title: 'About Gauge',
+				title: 'About Ivisyx',
 				breakAfter: true,
 			},
 			preferences: {

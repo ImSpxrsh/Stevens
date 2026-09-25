@@ -1,11 +1,11 @@
 import { create_app_config } from '🍎/helpers/create-app-config.ts';
 
-const gauge = create_app_config({
-	title: 'Gauge',
+const ivisyx = create_app_config({
+	title: 'Ivisyx',
 	resizable: true,
 	expandable: true,
-	height: 560,
-	width: 960,
+	height: 720,
+	width: 1180,
 });
 
 const wallpapers = create_app_config({
@@ -59,22 +59,14 @@ const systemPreferences = create_app_config({
 	resizable: true,
 });
 
-const purusTwitter = create_app_config({
-	title: `About the Developer`,
-	resizable: true,
-
-	dock_breaks_before: true,
-
-	height: 600,
-	width: 800,
-});
-
 const viewSource = create_app_config({
 	title: `View Source`,
 	resizable: true,
 
+	dock_breaks_before: true,
+
 	should_open_window: false,
-	external_action: () => window.open('https://github.com/puruvj/macos-web', '_blank'),
+	external_action: () => window.open('https://github.com/ImSpxrsh/Stevens', '_blank'),
 });
 
 const appstore = create_app_config({
@@ -84,7 +76,7 @@ const appstore = create_app_config({
 
 export const apps_config = {
 	finder,
-	gauge,
+	ivisyx,
 	wallpapers,
 	calculator,
 	calendar,
@@ -94,6 +86,5 @@ export const apps_config = {
 
 	// 'system-preferences': systemPreferences,
 
-	'purus-twitter': purusTwitter,
 	'view-source': viewSource,
 };

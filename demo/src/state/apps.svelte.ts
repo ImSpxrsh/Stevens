@@ -4,7 +4,7 @@ export type AppID = keyof typeof apps_config;
 
 export const apps = $state({
 	open: {
-		gauge: true,
+		ivisyx: true,
 		wallpapers: false,
 		finder: true,
 		vscode: false,
@@ -13,12 +13,10 @@ export const apps = $state({
 		appstore: false,
 		calendar: false,
 		// 'system-preferences': false,
-
-		'purus-twitter': false,
 		'view-source': true,
 	} as Record<AppID, boolean>,
 
-	active: 'gauge' satisfies AppID,
+	active: 'ivisyx' satisfies AppID,
 
 	/**
 	 * Maximum zIndex for the active app
@@ -27,7 +25,7 @@ export const apps = $state({
 	active_z_index: -2,
 
 	z_indices: {
-		gauge: 2,
+		ivisyx: 2,
 		wallpapers: 0,
 		finder: 0,
 		vscode: 0,
@@ -36,15 +34,13 @@ export const apps = $state({
 		appstore: 0,
 		calendar: 0,
 		// 'system-preferences': 0,
-
-		'purus-twitter': 0,
 		'view-source': 0,
 	} as Record<AppID, number>,
 
 	is_being_dragged: false as boolean,
 
 	fullscreen: {
-		gauge: false,
+		ivisyx: false,
 		wallpapers: false,
 		finder: false,
 		vscode: false,
@@ -53,8 +49,6 @@ export const apps = $state({
 		appstore: false,
 		calendar: false,
 		// 'system-preferences': false,
-
-		'purus-twitter': false,
 		'view-source': false,
 	} as Record<AppID, boolean>,
 });

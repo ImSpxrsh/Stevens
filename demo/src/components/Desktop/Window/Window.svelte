@@ -27,24 +27,22 @@
 	let dragging_enabled = $state(true);
 
 	let is_maximized = $state(false);
-	let minimized_transform = $state<string>();
-
 	let windowEl = $state<HTMLElement>();
 
 	const { height, width } = $derived(apps_config[app_id]);
 
 	const remModifier = $derived(+height * 1.2 >= window.innerHeight ? 24 : 16);
-	const renderedWidth = $derived(app_id === 'gauge' ? 'min(960px, calc(100vw - 48px))' : `${+width / remModifier}rem`);
-	const renderedHeight = $derived(app_id === 'gauge' ? 'min(560px, calc(100vh - 112px))' : `${+height / remModifier}rem`);
+	const renderedWidth = $derived(app_id === 'ivisyx' ? 'min(1180px, calc(100vw - 48px))' : `${+width / remModifier}rem`);
+	const renderedHeight = $derived(app_id === 'ivisyx' ? 'min(720px, calc(100vh - 124px))' : `${+height / remModifier}rem`);
 
 	const randX = rand_int(-600, 600);
 	const randY = rand_int(-100, 100);
 
 	function getDefaultPosition() {
-		return app_id === 'gauge'
+		return app_id === 'ivisyx'
 			? {
 				x: Math.max(24, (document.body.clientWidth - Math.min(+width, document.body.clientWidth - 48)) / 2),
-				y: Math.max(44, (document.body.clientHeight - Math.min(+height, document.body.clientHeight - 112)) / 2),
+				y: Math.max(38, (document.body.clientHeight - 84 - Math.min(+height, document.body.clientHeight - 124)) / 2),
 			}
 			: {
 				x: (document.body.clientWidth / 2 + randX) / 2,
@@ -80,29 +78,16 @@
 	}
 
 	async function maximizeApp() {
+		// Maximising is class-driven (see `.maximized`): the drag library owns the
+		// inline `translate`, so overriding it inline gets undone on its next update.
+		// Leaving it alone also restores the window to where it was.
 		if (!preferences.reduced_motion) {
-			windowEl.style.transition = 'height 0.3s ease, width 0.3s ease, transform 0.3s ease';
-		}
-
-		if (!is_maximized) {
-			dragging_enabled = false;
-
-			minimized_transform = windowEl.style.transform;
-			windowEl.style.transform = `translate(0px, 0px)`;
-
-			windowEl.style.width = `100%`;
-			// windowEl.style.height = 'calc(100vh - 1.7rem - 5.25rem)';
-			windowEl.style.height = 'calc(100vh - 1.7rem)';
-		} else {
-			dragging_enabled = true;
-			windowEl.style.transform = minimized_transform;
-
-			windowEl.style.width = renderedWidth;
-			windowEl.style.height = renderedHeight;
+			windowEl.style.transition =
+				'height 0.3s ease, width 0.3s ease, translate 0.3s ease, border-radius 0.3s ease';
 		}
 
 		is_maximized = !is_maximized;
-
+		dragging_enabled = !is_maximized;
 		apps.fullscreen[app_id] = is_maximized;
 
 		await sleep(300);
@@ -111,6 +96,7 @@
 	}
 
 	function closeApp() {
+		is_maximized = false;
 		apps.open[app_id] = false;
 		apps.fullscreen[app_id] = false;
 	}
@@ -133,6 +119,7 @@
 	class="container"
 	class:dark={preferences.theme.scheme === 'dark'}
 	class:active={apps.active === app_id}
+	class:maximized={is_maximized}
 	style:width={renderedWidth}
 	style:height={renderedHeight}
 	style:z-index={apps.z_indices[app_id]}
@@ -191,6 +178,15 @@
 					var(--elevated-shadow);
 			}
 		}
+	}
+
+	/* Fill the desktop below the menu bar. `!important` beats the inline size and
+	   drag offset without touching them, so un-maximising restores both. */
+	.container.maximized {
+		width: 100vw !important;
+		height: calc(100vh - 1.8rem) !important;
+		translate: 0 0 !important;
+		border-radius: 0;
 	}
 
 	.tl-container {

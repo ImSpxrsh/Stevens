@@ -1,0 +1,517 @@
+/* Shared tokens and primitives for the Ivisyx app. Everything is scoped under
+   `.ivx` so nothing leaks into the surrounding macOS shell. Component layout
+   lives in each component's own <style>. */
+
+.ivx {
+	--ink: #17201d;
+	--ink-2: #33403b;
+	--muted: #68766f;
+	--faint: #8a958f;
+	--line: rgba(31, 53, 45, 0.1);
+	--accent-deep: color-mix(in oklab, var(--accent) 64%, #04100c);
+	--accent-soft: color-mix(in srgb, var(--accent) 13%, transparent);
+	--accent-line: color-mix(in srgb, var(--accent) 32%, transparent);
+	--accent-glow: color-mix(in srgb, var(--accent) 45%, #9ef0cc);
+	--glass: rgba(249, 251, 249, 0.49);
+	--glass-strong: rgba(250, 252, 250, 0.76);
+	--glass-border: rgba(255, 255, 255, 0.34);
+	--glass-shadow: inset 0 0 0 0.5px rgba(22, 48, 39, 0.08), 0 8px 22px rgba(13, 35, 28, 0.06);
+	--amber: #c88b33;
+	--amber-soft: rgba(212, 154, 67, 0.16);
+	--violet: #7d6eb4;
+	--red: #b5473a;
+	--blue: #2b5f9e;
+
+	font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+	font-size: 8.5px;
+	color: var(--ink);
+	-webkit-font-smoothing: antialiased;
+}
+
+.ivx *,
+.ivx *::before,
+.ivx *::after {
+	box-sizing: border-box;
+}
+
+.ivx h1,
+.ivx h2,
+.ivx h3,
+.ivx p {
+	margin: 0;
+}
+
+.ivx button,
+.ivx input,
+.ivx select,
+.ivx textarea {
+	font: inherit;
+	color: inherit;
+}
+
+.ivx input,
+.ivx textarea {
+	cursor: text;
+}
+
+.ivx a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.ivx .num {
+	font-variant-numeric: tabular-nums;
+}
+
+.ivx .muted {
+	color: var(--muted);
+}
+
+/* Scrolling */
+.ivx .scroll {
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(31, 53, 45, 0.18) transparent;
+}
+
+.ivx .scroll::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+.ivx .scroll::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: rgba(31, 53, 45, 0.18);
+}
+
+/* Page heading */
+.ivx .page-head {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 14px;
+	margin-bottom: 12px;
+}
+
+.ivx .page-head h1 {
+	margin-top: 3px;
+	font-size: 20px;
+	line-height: 1;
+	letter-spacing: -0.045em;
+}
+
+.ivx .page-head p {
+	margin-top: 5px;
+	color: var(--muted);
+	font-size: 8px;
+}
+
+.ivx .page-head .actions {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.ivx .eyebrow {
+	color: color-mix(in oklab, var(--accent) 60%, #47665b);
+	font-size: 6.5px;
+	font-weight: 700;
+	letter-spacing: 0.11em;
+	text-transform: uppercase;
+}
+
+/* Glass cards (main-branch look) */
+.ivx .card {
+	position: relative;
+	border: 1px solid var(--glass-border);
+	border-radius: 11px;
+	background: var(--glass);
+	box-shadow: var(--glass-shadow);
+}
+
+.ivx .card-head {
+	min-height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	padding: 8px 11px;
+	border-bottom: 1px solid var(--line);
+}
+
+.ivx .card-head h3 {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 9px;
+	font-weight: 650;
+	letter-spacing: -0.01em;
+}
+
+.ivx .card-head small {
+	display: block;
+	margin-top: 2px;
+	color: var(--faint);
+	font-size: 6.5px;
+}
+
+/* Dark hero surface (main's proof view) */
+.ivx .hero-dark {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
+	color: #eaf2ee;
+	background:
+		radial-gradient(circle at 84% 8%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 36%),
+		radial-gradient(circle at 10% 110%, rgba(214, 169, 87, 0.16), transparent 40%),
+		linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+		color-mix(in oklab, var(--accent) 34%, #03110c);
+	background-size: auto, auto, 24px 24px, 24px 24px, auto;
+	box-shadow: 0 16px 36px rgba(6, 22, 16, 0.22);
+}
+
+/* Buttons */
+.ivx .btn {
+	height: 24px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 0 9px;
+	border: 1px solid rgba(31, 48, 42, 0.12);
+	border-radius: 7px;
+	background: rgba(255, 255, 255, 0.58);
+	color: var(--ink-2);
+	font-size: 7.5px;
+	font-weight: 600;
+	white-space: nowrap;
+	box-shadow: 0 1px 2px rgba(20, 42, 34, 0.05);
+	transition: transform 0.12s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ivx .btn:hover {
+	background: rgba(255, 255, 255, 0.85);
+}
+
+.ivx .btn:active {
+	transform: translateY(0.5px) scale(0.98);
+}
+
+.ivx .btn svg {
+	font-size: 10px;
+}
+
+.ivx .btn.primary {
+	border-color: transparent;
+	background: linear-gradient(180deg, color-mix(in oklab, var(--accent) 88%, white), var(--accent-deep));
+	color: white;
+	box-shadow: 0 5px 14px color-mix(in srgb, var(--accent) 34%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.ivx .btn.primary:hover {
+	background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+}
+
+.ivx .btn.ghost {
+	border-color: transparent;
+	background: transparent;
+	box-shadow: none;
+}
+
+.ivx .btn.ghost:hover {
+	background: rgba(31, 53, 45, 0.06);
+}
+
+.ivx .btn.icon {
+	width: 24px;
+	padding: 0;
+}
+
+.ivx .btn.on-dark {
+	border-color: rgba(255, 255, 255, 0.14);
+	background: rgba(255, 255, 255, 0.08);
+	color: #eaf2ee;
+}
+
+.ivx .btn.on-dark:hover {
+	background: rgba(255, 255, 255, 0.16);
+}
+
+/* Pills */
+.ivx .pill {
+	height: 15px;
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	padding: 0 6px;
+	border-radius: 8px;
+	background: rgba(103, 116, 109, 0.11);
+	color: #5f6c66;
+	font-size: 6px;
+	font-weight: 650;
+	white-space: nowrap;
+}
+
+.ivx .pill svg {
+	font-size: 8px;
+}
+
+.ivx .pill.accent {
+	background: var(--accent-soft);
+	color: var(--accent-deep);
+}
+
+.ivx .pill.amber {
+	background: var(--amber-soft);
+	color: #8d5f1f;
+}
+
+.ivx .pill.violet {
+	background: rgba(125, 110, 180, 0.15);
+	color: #5a4c93;
+}
+
+.ivx .pill.red {
+	background: rgba(181, 71, 58, 0.13);
+	color: #963628;
+}
+
+.ivx .pill.blue {
+	background: rgba(43, 95, 158, 0.13);
+	color: #25528a;
+}
+
+.ivx .pill.dark {
+	background: rgba(12, 22, 19, 0.82);
+	color: white;
+}
+
+/* Segmented control (main-branch look) */
+.ivx .seg {
+	display: inline-flex;
+	padding: 2px;
+	border-radius: 7px;
+	background: rgba(52, 72, 64, 0.1);
+}
+
+.ivx .seg button {
+	height: 21px;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 0 8px;
+	border-radius: 5px;
+	color: #68756f;
+	font-size: 7px;
+	white-space: nowrap;
+}
+
+.ivx .seg button b {
+	color: #829089;
+	font-weight: 500;
+}
+
+.ivx .seg button.on {
+	background: rgba(255, 255, 255, 0.86);
+	color: var(--accent-deep);
+	font-weight: 600;
+	box-shadow: 0 1px 4px rgba(28, 50, 42, 0.12);
+}
+
+/* Search field (main-branch look) */
+.ivx .field {
+	height: 28px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 0 8px;
+	border: 1px solid rgba(31, 48, 42, 0.11);
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.56);
+	box-shadow: 0 4px 12px rgba(20, 42, 34, 0.05);
+}
+
+.ivx .field > svg {
+	flex: 0 0 auto;
+	color: #6d7b75;
+	font-size: 12px;
+}
+
+.ivx .field input {
+	min-width: 0;
+	flex: 1;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	color: #25312d;
+	font-size: 8px;
+}
+
+.ivx .field input::placeholder {
+	color: #7d8883;
+}
+
+.ivx select.select {
+	height: 24px;
+	padding: 0 20px 0 8px;
+	border: 1px solid rgba(31, 48, 42, 0.12);
+	border-radius: 7px;
+	appearance: none;
+	background:
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%2368756f' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E") right 7px center / 7px no-repeat,
+		rgba(255, 255, 255, 0.58);
+	color: var(--ink-2);
+	font-size: 7.5px;
+	font-weight: 600;
+}
+
+/* KPIs */
+.ivx .kpi small {
+	display: block;
+	color: #718078;
+	font-size: 6px;
+	font-weight: 600;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+}
+
+.ivx .kpi strong {
+	display: block;
+	margin: 3px 0 2px;
+	color: var(--accent-deep);
+	font-size: 19px;
+	font-weight: 650;
+	line-height: 1;
+	letter-spacing: -0.04em;
+	font-variant-numeric: tabular-nums;
+}
+
+.ivx .kpi span {
+	color: #718078;
+	font-size: 6.5px;
+}
+
+.ivx .delta-up {
+	color: #2f7a5d;
+	font-weight: 650;
+}
+
+.ivx .delta-down {
+	color: var(--red);
+	font-weight: 650;
+}
+
+/* Avatars */
+.ivx .avatar {
+	width: 18px;
+	height: 18px;
+	display: inline-grid;
+	place-items: center;
+	flex: 0 0 auto;
+	border-radius: 50%;
+	color: white;
+	font-size: 6.5px;
+	font-weight: 700;
+	box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.9);
+}
+
+/* Live dot */
+.ivx .live-dot {
+	position: relative;
+	width: 6px;
+	height: 6px;
+	flex: 0 0 auto;
+	border-radius: 50%;
+	background: #4fc08f;
+	box-shadow: 0 0 8px #4fc08f;
+}
+
+.ivx .live-dot::after {
+	content: '';
+	position: absolute;
+	inset: -3px;
+	border-radius: 50%;
+	border: 1px solid #4fc08f;
+	animation: ivx-ping 1.8s ease-out infinite;
+}
+
+.ivx .live-dot.paused {
+	background: #a7b1ac;
+	box-shadow: none;
+}
+
+.ivx .live-dot.paused::after {
+	display: none;
+}
+
+@keyframes ivx-ping {
+	from {
+		transform: scale(0.6);
+		opacity: 1;
+	}
+	to {
+		transform: scale(2.2);
+		opacity: 0;
+	}
+}
+
+/* Entrance animation used by cards and rows */
+.ivx .rise {
+	animation: ivx-rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes ivx-rise {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+}
+
+/* Progress bars */
+.ivx .bar {
+	position: relative;
+	height: 4px;
+	overflow: hidden;
+	border-radius: 3px;
+	background: rgba(31, 53, 45, 0.09);
+}
+
+.ivx .bar > i {
+	position: absolute;
+	inset: 0 auto 0 0;
+	border-radius: inherit;
+	background: linear-gradient(90deg, color-mix(in oklab, var(--accent) 70%, white), var(--accent));
+	transition: width 0.6s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+/* Section headers inside panels */
+.ivx .section-label {
+	margin: 14px 0 7px;
+	color: rgba(31, 53, 45, 0.5);
+	font-size: 6.5px;
+	font-weight: 700;
+	letter-spacing: 0.11em;
+	text-transform: uppercase;
+}
+
+.ivx kbd {
+	padding: 1px 4px;
+	border: 1px solid rgba(26, 50, 42, 0.14);
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.5);
+	color: #75817b;
+	font-family: inherit;
+	font-size: 6.5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ivx *,
+	.ivx *::before,
+	.ivx *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
