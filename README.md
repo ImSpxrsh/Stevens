@@ -4,23 +4,59 @@ Gauge finds early-stage New Jersey startups in public records (SEC Form D,
 SBIR/STTR awards, NJEDA/CSIT announcements), explains why each one surfaced,
 and checks it against New Jersey funding programs.
 
-## Status
+The repository contains both the Python evidence and program-matching core and
+an offline-friendly product demo inside the actual
+[PuruVJ/macos-web](https://github.com/PuruVJ/macos-web) Svelte desktop shell.
 
-This is a minimal Python core. It holds only the shared domain types that the
-classifier, program-rule, review, and validation work builds on:
+## macOS demo
 
-- `gauge/core/models.py`: normalized source records with required provenance,
-  canonical company profiles, and evidence items that keep facts, inferred
-  labels, and unknowns apart.
-- `gauge/core/names.py`: company-name and town normalization.
+```bash
+npm install
+npm run dev
+```
 
-The full application scaffold (web app, jobs, database) is tracked in
-[#27](https://github.com/ImSpxrsh/Stevens/issues/27), the architecture in
-[#1](https://github.com/ImSpxrsh/Stevens/issues/1), and the schema in
-[#28](https://github.com/ImSpxrsh/Stevens/issues/28). Those can extend or
-replace these types.
+Production check:
 
-## Setup
+```bash
+npm run check
+npm run build
+npm run serve
+```
+
+Demo path:
+
+1. Start in **Already funded** on the real New Jersey outline and county map.
+2. Switch to **All public signals** for the reveal.
+3. Search for `Princeton`, `Newark`, `Camden`, `Hoboken`, `Paterson`, `Trenton`,
+   `New Brunswick`, `Jersey City`, or `Montclair`.
+4. Open a company and walk through its evidence, unknowns, sources, and
+   program-match states.
+5. Use the sidebar or dock to show Signals, Programs, and Proof.
+
+All company names, records, counts, matching outcomes, and proof metrics in the
+demo are fictional. Re-verify official program rules and replace the frozen
+demo snapshot before presenting factual claims.
+
+Demo layout:
+
+- `demo/` — copied and adapted macos-web simulator source
+- `demo/src/components/apps/Gauge/` — Gauge product UI and mock data
+- `demo/src/components/apps/WallpaperApp/Wallpaper.svelte` — custom wallpaper
+
+The simulator retains its upstream MIT license. See
+[THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) and
+[demo/LICENSE](./demo/LICENSE).
+
+## Python core
+
+The Python package holds the shared domain types and logic used by the
+classifier, program rules, review workflow, and pilot validation:
+
+- `gauge/core/` — provenance-aware source records and normalized company models
+- `gauge/classifier/` — likely-startup classifier and exclusions
+- `gauge/programs/` — program-matching rules
+- `gauge/review/` — search, dedupe, linking, and review tools
+- `gauge/pilot/` — pilot metrics and reporting
 
 Requires Python 3.12+.
 
@@ -30,17 +66,17 @@ source .venv/bin/activate
 pip install -e ".[dev]"
 ```
 
-For the LLM-assisted features, install the `ai` extra and copy `.env.example`
-to `.env`:
+For LLM-assisted features, install the `ai` extra and copy `.env.example` to
+`.env`:
 
 ```bash
 pip install -e ".[dev,ai]"
 ```
 
-## Commands
+Python checks:
 
 ```bash
-pytest              # run tests
-ruff check .        # lint
-ruff format .       # format
+pytest
+ruff check .
+ruff format .
 ```
