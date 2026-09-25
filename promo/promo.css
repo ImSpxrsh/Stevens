@@ -10,7 +10,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 #viewport { position: fixed; inset: 0 0 56px 0; display: grid; place-items: center; overflow: hidden; background: #000; transition: bottom .3s; }
 #app.clean #viewport { bottom: 0; }
-#stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: 0 0; overflow: hidden; background: #000; }
+#stage { --clip-w: 1920px; position: absolute; left: 0; top: 0; width: var(--clip-w); height: 1080px; transform-origin: 0 0; overflow: hidden; background: #000; }
+#frame { position: absolute; top: 0; left: calc((var(--clip-w) - 1920px) / 2); width: 1920px; height: 1080px; }
+#app.cut .layer { transform: scale(var(--layer-k)); }
+#app.cut .captions span { max-width: calc(var(--clip-w) - 60px); font-size: 26px; }
+#app.cut .chapter-toast { left: calc((1920px - var(--clip-w)) / 2 + 24px); }
 #camera { position: absolute; inset: 0; transform-origin: 0 0; will-change: transform, filter; }
 
 /* ---------- Wallpaper ---------- */
@@ -321,3 +325,4 @@ nav button.active { color: #fff; background: rgba(255,255,255,.12); box-shadow: 
   #time { min-width: 0; margin-right: auto; }
   .panel { left: 12px; right: 12px; width: auto; bottom: 106px; }
 }
+#app.cut .map-tip { transform: translate(-50%, -130%) scale(.55); transform-origin: 50% 100%; }

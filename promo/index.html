@@ -14,6 +14,7 @@
 <div id="app" class="playing">
   <div id="viewport">
     <div id="stage" aria-label="Gauge product film">
+      <div id="frame">
       <div id="camera">
         <!-- Desktop wallpaper (matches demo/src/components/apps/WallpaperApp) -->
         <div class="wall"><i class="aurora a1"></i><i class="aurora a2"></i><i class="aurora a3"></i><i class="grain"></i></div>
@@ -177,6 +178,7 @@
       <div class="letterbox top"></div><div class="letterbox bottom"></div>
       <div class="captions" id="captions"><span id="caption-text"></span></div>
       <div class="chapter-toast" id="chapter-toast"></div>
+      </div>
     </div>
   </div>
 
@@ -192,6 +194,9 @@
     <button id="btn-explore" title="Explore the live UI (E)">Explore</button>
     <button id="btn-loop" class="on" title="Loop (L)">Loop</button>
     <button id="btn-notes" title="Presenter notes (N)">Notes</button>
+    <button id="btn-aspect" title="Aspect: 16:9 / 1:1 / 9:16 (A)">16:9</button>
+    <button id="btn-sound" title="Sound (M)">Sound</button>
+    <button id="btn-share" title="Copy link to this moment (U)">Share</button>
     <button id="btn-full" title="Fullscreen (F)">⤢</button>
     <button id="btn-help" title="Shortcuts (?)">?</button>
   </div>
@@ -202,7 +207,7 @@
     <dl>
       <dt>Space</dt><dd>Play / pause</dd><dt>← →</dt><dd>Back / forward 5s</dd><dt>[ ]</dt><dd>Previous / next chapter</dd>
       <dt>1–9, 0</dt><dd>Jump to chapter</dd><dt>S</dt><dd>Cycle speed</dd><dt>K</dt><dd>Captions</dd><dt>E</dt><dd>Explore mode</dd>
-      <dt>L</dt><dd>Loop</dd><dt>N</dt><dd>Presenter notes</dd><dt>H</dt><dd>Hide controls (clean recording)</dd><dt>F</dt><dd>Fullscreen</dd><dt>R</dt><dd>Restart</dd>
+      <dt>L</dt><dd>Loop</dd><dt>A</dt><dd>Aspect (16:9, 1:1, 9:16)</dd><dt>M</dt><dd>Sound</dd><dt>U</dt><dd>Copy link to this moment</dd><dt>N</dt><dd>Presenter notes</dd><dt>H</dt><dd>Hide controls (clean recording)</dd><dt>F</dt><dd>Fullscreen</dd><dt>R</dt><dd>Restart</dd>
     </dl>
     <p>Link to a moment with <code>#t=42</code> or a chapter with <code>#search</code>.</p>
   </div>

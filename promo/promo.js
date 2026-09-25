@@ -10,7 +10,8 @@
 
   const MAP = window.GAUGE_MAP;
   const $ = (s) => document.querySelector(s);
-  const app = $('#app'), stage = $('#stage'), camera = $('#camera'), viewport = $('#viewport');
+  const app = $('#app'), stage = $('#stage'), frame = $('#frame'), camera = $('#camera'), viewport = $('#viewport');
+  const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const DURATION = 92;
   const SVG = 'http://www.w3.org/2000/svg';
 
@@ -259,7 +260,7 @@
   // ---------- anchors (layout positions in stage coordinates) ----------
   function pos(node) {
     let x = 0, y = 0, e = node;
-    while (e && e !== stage) { x += e.offsetLeft; y += e.offsetTop; e = e.offsetParent; }
+    while (e && e !== frame) { x += e.offsetLeft; y += e.offsetTop; e = e.offsetParent; }
     return { x, y, w: node.offsetWidth, h: node.offsetHeight, cx: x + node.offsetWidth / 2, cy: y + node.offsetHeight / 2 };
   }
   const A = {};
@@ -522,7 +523,7 @@
 
     // camera
     const cam = sample(camKeys, t, ['x', 'y', 's', 'blur']);
-    const drift = Math.sin(t * .35) * 4;   // subtle handheld float
+    const drift = REDUCED ? 0 : Math.sin(t * .35) * 4;   // subtle handheld float
     css(camera, 'transform', `translate(${960 - cam.x * cam.s + drift}px, ${540 - cam.y * cam.s + drift * .6}px) scale(${cam.s})`);
     css(camera, 'filter', `brightness(${lerp(.4, 1, desk)})`);
 
@@ -593,8 +594,8 @@
   // ---------- player ----------
   const player = {
     t: 0, playing: true, speed: 1, loop: true, last: 0,
-    play() { if (explore.on) explore.exit(); if (this.t >= DURATION) this.t = 0; this.playing = true; this.last = performance.now(); app.classList.add('playing'); ui(); },
-    pause() { this.playing = false; app.classList.remove('playing'); ui(); },
+    play() { if (explore.on) explore.exit(); if (this.t >= DURATION) this.t = 0; this.playing = true; this.last = performance.now(); app.classList.add('playing'); if (sound.on) sound.set(true); ui(); },
+    pause() { this.playing = false; app.classList.remove('playing'); if (sound.ctx) sound.master.gain.setTargetAtTime(0, sound.ctx.currentTime, .2); ui(); },
     toggle() { this.playing ? this.pause() : this.play(); },
     seek(t, announce = false) {
       if (explore.on) explore.exit();
@@ -618,16 +619,18 @@
       if (!location.hash.startsWith('#t=')) history.replaceState(null, '', '#' + ch.id);
     }
   }
-  function frame(now) {
+  function tick(now) {
     if (player.playing) {
       const dt = Math.min(.1, (now - player.last) / 1000) * player.speed;
+      const prev = player.t;
       player.last = now; player.t += dt;
+      soundEvents(prev, player.t);
       if (player.t >= DURATION) {
         if (player.loop) { player.t = 0; } else { player.t = DURATION; player.pause(); }
       }
       render(player.t); ui();
     } else player.last = now;
-    requestAnimationFrame(frame);
+    requestAnimationFrame(tick);
   }
 
   // controls
@@ -644,6 +647,70 @@
   $('#btn-chapters').onclick = () => openPanel('chapters');
   $('#btn-notes').onclick = () => { openPanel('notes'); $('#btn-notes').classList.toggle('on', $('#panel-notes').classList.contains('open')); };
   $('#btn-help').onclick = () => openPanel('help');
+
+
+  // ---------- sound (optional, generated with WebAudio; no files) ----------
+  const sound = {
+    on: false, ctx: null, pad: null, noise: null,
+    init() {
+      const ctx = (this.ctx = new (window.AudioContext || window.webkitAudioContext)());
+      this.master = ctx.createGain(); this.master.gain.value = 0; this.master.connect(ctx.destination);
+      // ambient pad: three detuned voices through a slow low-pass
+      this.filter = ctx.createBiquadFilter(); this.filter.type = 'lowpass'; this.filter.frequency.value = 900; this.filter.connect(this.master);
+      this.voices = [0, 1, 2].map((i) => {
+        const o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = i === 1 ? 'triangle' : 'sine'; o.detune.value = (i - 1) * 6; g.gain.value = .06;
+        o.connect(g).connect(this.filter); o.start(); return o;
+      });
+      const len = ctx.sampleRate; const buf = ctx.createBuffer(1, len, ctx.sampleRate); const d = buf.getChannelData(0);
+      for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+      this.noise = buf;
+    },
+    chord(t) { // a slow progression that follows the chapters
+      const roots = [220, 196, 174.6, 196, 220, 246.9, 220, 196, 164.8, 174.6, 196, 220];
+      const idx = CHAPTERS.indexOf(chapterAt(t));
+      const r = roots[idx] || 220, ratios = [1, 1.25, 1.5];
+      this.voices.forEach((o, i) => o.frequency.setTargetAtTime(r * ratios[i] / 2, this.ctx.currentTime, .8));
+      this.filter.frequency.setTargetAtTime(600 + 500 * Math.sin(t / 9) ** 2, this.ctx.currentTime, 1.5);
+    },
+    burst(kind) {
+      const ctx = this.ctx, src = ctx.createBufferSource(), g = ctx.createGain(), f = ctx.createBiquadFilter(), now = ctx.currentTime;
+      src.buffer = this.noise; src.connect(f).connect(g).connect(ctx.destination);
+      if (kind === 'click') { f.type = 'highpass'; f.frequency.value = 2500; g.gain.setValueAtTime(.35, now); g.gain.exponentialRampToValueAtTime(.001, now + .05); src.start(now, Math.random(), .06); }
+      else if (kind === 'key') { f.type = 'bandpass'; f.frequency.value = 3500; g.gain.setValueAtTime(.12, now); g.gain.exponentialRampToValueAtTime(.001, now + .03); src.start(now, Math.random(), .04); }
+      else { f.type = 'bandpass'; f.Q.value = .7; f.frequency.setValueAtTime(300, now); f.frequency.exponentialRampToValueAtTime(2400, now + .6); g.gain.setValueAtTime(.001, now); g.gain.exponentialRampToValueAtTime(.12, now + .25); g.gain.exponentialRampToValueAtTime(.001, now + .75); src.start(now, Math.random(), .8); }
+    },
+    set(on) {
+      this.on = on; if (on && !this.ctx) this.init();
+      if (this.ctx) { this.ctx.resume(); this.master.gain.setTargetAtTime(on && player.playing ? .5 : 0, this.ctx.currentTime, .3); }
+      $('#btn-sound').classList.toggle('on', on);
+    },
+  };
+  const KEY_TIMES = Array.from({ length: 9 }, (_, i) => 34 + i * .16);
+  const WHOOSH = [6.4, 14.6, 28.6, 36.2, 41.2, 54.1, 60.5, 70.8, 76.5, 84.2];
+  function soundEvents(prev, t) {
+    if (!sound.on || !sound.ctx || t < prev || t - prev > .5) return;
+    const crossed = (list) => list.some((x) => x > prev && x <= t);
+    if (crossed(CLICKS)) sound.burst('click');
+    if (crossed(KEY_TIMES)) sound.burst('key');
+    if (crossed(WHOOSH)) sound.burst('whoosh');
+    sound.chord(t);
+  }
+  $('#btn-sound').onclick = () => sound.set(!sound.on);
+
+  // share a link to this moment
+  $('#btn-share').onclick = async () => {
+    const url = `${location.origin}${location.pathname}#t=${player.t.toFixed(1)}`;
+    try { await navigator.clipboard.writeText(url); toast('Link to this moment copied'); } catch { toast(url); }
+  };
+  $('#btn-aspect').onclick = () => setAspect((aspect + 1) % ASPECTS.length);
+
+  // pause when the tab is hidden, resume when it returns
+  let hiddenPaused = false;
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && player.playing) { hiddenPaused = true; player.pause(); }
+    else if (!document.hidden && hiddenPaused) { hiddenPaused = false; player.play(); }
+  });
 
   // scrubber
   const scrub = $('#scrubber');
@@ -672,6 +739,9 @@
     else if (k === 'k' || k === 'K') $('#btn-cc').click();
     else if (k === 'e' || k === 'E') $('#btn-explore').click();
     else if (k === 'l' || k === 'L') $('#btn-loop').click();
+    else if (k === 'a' || k === 'A') $('#btn-aspect').click();
+    else if (k === 'm' || k === 'M') $('#btn-sound').click();
+    else if (k === 'u' || k === 'U') $('#btn-share').click();
     else if (k === 'n' || k === 'N') $('#btn-notes').click();
     else if (k === 'c' || k === 'C') $('#btn-chapters').click();
     else if (k === 'h' || k === 'H') app.classList.toggle('clean');
@@ -682,11 +752,18 @@
   });
 
   // fit the 1920×1080 stage into the viewport
+  const ASPECTS = [['16:9', 1920], ['1:1', 1080], ['9:16', 608]];
+  let aspect = 0;
   function fit() {
-    const w = viewport.clientWidth, h = viewport.clientHeight, s = Math.min(w / 1920, h / 1080);
+    const cw = ASPECTS[aspect][1];
+    stage.style.setProperty('--clip-w', cw + 'px');
+    app.style.setProperty('--layer-k', String(cw / 1920));
+    app.classList.toggle('cut', aspect > 0);
+    const w = viewport.clientWidth, h = viewport.clientHeight, s = Math.min(w / cw, h / 1080);
     stage.style.transform = `scale(${s})`;
-    stage.style.left = (w - 1920 * s) / 2 + 'px'; stage.style.top = (h - 1080 * s) / 2 + 'px';
+    stage.style.left = (w - cw * s) / 2 + 'px'; stage.style.top = (h - 1080 * s) / 2 + 'px';
   }
+  function setAspect(i) { aspect = i; $('#btn-aspect').textContent = ASPECTS[i][0]; fit(); toast(`${ASPECTS[i][0]} cut`); }
   window.addEventListener('resize', fit);
   new ResizeObserver(fit).observe(viewport);
 
@@ -702,14 +779,17 @@
   async function start() {
     fit();
     try { await document.fonts.ready; } catch { /* fonts are optional */ }
-    stage.style.left = stage.style.left; stage.style.left = stage.style.left; // keep fit
-    const cs = stage.style.transform; stage.style.transform = 'none'; measure(); stage.style.transform = cs;
+    measure();
     buildTracks();
     player.t = fromHash();
-    if (new URLSearchParams(location.search).has('paused')) player.pause();
+    const q = new URLSearchParams(location.search);
+    if (q.has('paused')) player.pause();
+    const cut = ASPECTS.findIndex(([name]) => name === q.get('cut'));
+    if (cut > 0) setAspect(cut);
+    if (q.has('clean')) app.classList.add('clean');
     render(player.t); ui();
     player.last = performance.now();
-    requestAnimationFrame(frame);
+    requestAnimationFrame(tick);
     window.GaugeFilm = { player, render, seek: (t) => player.seek(t), chapters: CHAPTERS, duration: DURATION };
   }
   start();
