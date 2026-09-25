@@ -34,6 +34,8 @@ class Suite {
 
 	events = $state<SignalEvent[]>(initialEvents());
 	playing = $state(true);
+	/** Random background signals. The product film turns this off and scripts them instead. */
+	autoSignals = $state(true);
 	fast = $state(false);
 	latest = $state<SignalEvent | null>(null);
 	latestAt = $state(0);

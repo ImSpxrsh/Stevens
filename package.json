@@ -2,11 +2,17 @@
   "name": "gauge-challenge",
   "private": true,
   "version": "2.0.0",
-  "workspaces": ["demo"],
+  "workspaces": [
+    "demo",
+    "film"
+  ],
   "scripts": {
     "dev": "npm run dev --workspace demo",
     "build": "npm run build --workspace demo",
     "check": "npm run check --workspace demo",
-    "serve": "npm run serve --workspace demo"
+    "serve": "npm run serve --workspace demo",
+    "film": "npm run dev --workspace film",
+    "film:build": "npm run build --workspace film",
+    "film:preview": "npm run preview --workspace film"
   }
 }

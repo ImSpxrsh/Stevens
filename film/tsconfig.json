@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "Bundler",
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true,
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"strict": false,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"target": "esnext",
+		"module": "esnext",
+		"resolveJsonModule": true,
+		"paths": {
+			"@ivisyx/*": ["../demo/src/components/apps/Ivisyx/*"]
+		}
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.svelte"]
+}

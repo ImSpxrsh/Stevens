@@ -89,7 +89,7 @@
 			timer = setTimeout(
 				() => {
 					if (disposed) return;
-					if (suite.playing && !document.hidden) suite.addSignal();
+					if (suite.playing && suite.autoSignals && !document.hidden) suite.addSignal();
 					schedule();
 				},
 				suite.fast ? 2600 + Math.random() * 2400 : 7000 + Math.random() * 7000,
