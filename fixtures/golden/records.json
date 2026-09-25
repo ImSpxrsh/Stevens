@@ -1,0 +1,255 @@
+[
+  {
+    "address": {
+      "city": "Hoboken",
+      "postal_code": "07030",
+      "state": "NJ",
+      "street": "100 River St"
+    },
+    "cik": "0009000001",
+    "form_d": {
+      "date_of_first_sale": "2026-04-20",
+      "entity_type": "Corporation",
+      "incorporated_within_five_years": true,
+      "industry_group": "Other Technology",
+      "is_amendment": false,
+      "is_pooled_investment_fund": false,
+      "jurisdiction_of_incorporation": "DE",
+      "revenue_range": "No Revenues",
+      "securities_offered": [
+        "Equity"
+      ],
+      "total_amount_sold": 1250000.0,
+      "total_offering_amount": 3000000.0,
+      "year_of_incorporation": 2024
+    },
+    "name": "Halyard Sensors, Inc.",
+    "provenance": {
+      "source_date": "2026-05-12",
+      "source_id": "0009000001-26-000001",
+      "source_type": "sec_form_d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/9000001/000900000126000001/primary_doc.xml"
+    }
+  },
+  {
+    "address": {
+      "city": "Princeton",
+      "postal_code": "08540",
+      "state": "NJ",
+      "street": "20 Nassau St"
+    },
+    "name": "Pinewood Therapeutics LLC",
+    "provenance": {
+      "source_date": "2026-03-01",
+      "source_id": "SBIR-FIXTURE-0002",
+      "source_type": "sbir_sttr",
+      "source_url": "https://www.sbir.gov/awards/sbir-fixture-0002"
+    },
+    "sbir": {
+      "agency": "HHS",
+      "award_amount": 300000.0,
+      "award_end": "2027-02-28",
+      "award_start": "2026-03-01",
+      "employee_count": 8,
+      "phase": "phase_i",
+      "place_of_performance_state": "NJ",
+      "program": "SBIR",
+      "topic_title": "RNA-targeted therapeutics for pancreatic cancer"
+    }
+  },
+  {
+    "address": {
+      "city": "Newark",
+      "postal_code": "07102",
+      "state": "NJ",
+      "street": "1 Broad St"
+    },
+    "cik": "0009000003",
+    "form_d": {
+      "entity_type": "Corporation",
+      "incorporated_within_five_years": true,
+      "industry_group": "Computers",
+      "is_amendment": false,
+      "is_pooled_investment_fund": false,
+      "jurisdiction_of_incorporation": "DE",
+      "revenue_range": "$1 - $1,000,000",
+      "securities_offered": [
+        "Equity"
+      ],
+      "total_amount_sold": 1500000.0,
+      "total_offering_amount": 1500000.0,
+      "year_of_incorporation": 2023
+    },
+    "name": "Northbeam Analytics, Inc.",
+    "provenance": {
+      "source_date": "2025-06-10",
+      "source_id": "0009000003-25-000001",
+      "source_type": "sec_form_d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/9000003/000900000325000001/primary_doc.xml"
+    }
+  },
+  {
+    "address": {
+      "city": "Newark",
+      "postal_code": "07102",
+      "state": "NJ",
+      "street": "1 Broad St"
+    },
+    "name": "Northbeam Analytics LLC",
+    "provenance": {
+      "source_date": "2025-09-01",
+      "source_id": "SBIR-FIXTURE-0003",
+      "source_type": "sbir_sttr",
+      "source_url": "https://www.sbir.gov/awards/sbir-fixture-0003"
+    },
+    "sbir": {
+      "agency": "NSF",
+      "award_amount": 275000.0,
+      "award_end": "2026-08-31",
+      "award_start": "2025-09-01",
+      "employee_count": 12,
+      "phase": "phase_i",
+      "place_of_performance_state": "NJ",
+      "program": "SBIR",
+      "topic_title": "Supply-chain demand forecasting software"
+    }
+  },
+  {
+    "address": {
+      "city": "Newark",
+      "postal_code": "07102",
+      "state": "NJ",
+      "street": "1 Broad St"
+    },
+    "cik": "0009000003",
+    "form_d": {
+      "entity_type": "Corporation",
+      "incorporated_within_five_years": true,
+      "industry_group": "Computers",
+      "is_amendment": false,
+      "is_pooled_investment_fund": false,
+      "jurisdiction_of_incorporation": "DE",
+      "revenue_range": "$1 - $1,000,000",
+      "securities_offered": [
+        "Equity"
+      ],
+      "total_amount_sold": 2000000.0,
+      "total_offering_amount": 6000000.0,
+      "year_of_incorporation": 2023
+    },
+    "name": "Northbeam Analytics, Inc.",
+    "provenance": {
+      "source_date": "2026-07-15",
+      "source_id": "0009000003-26-000002",
+      "source_type": "sec_form_d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/9000003/000900000326000002/primary_doc.xml"
+    }
+  },
+  {
+    "address": {
+      "city": "Morristown",
+      "postal_code": "07960",
+      "state": "NJ",
+      "street": "5 Park Pl"
+    },
+    "cik": "0009000004",
+    "form_d": {
+      "entity_type": "Limited Partnership",
+      "industry_group": "Pooled Investment Fund",
+      "is_amendment": false,
+      "is_pooled_investment_fund": true,
+      "jurisdiction_of_incorporation": "DE",
+      "securities_offered": [
+        "Pooled Investment Fund Interests"
+      ],
+      "total_offering_amount": 50000000.0
+    },
+    "name": "Garden State Opportunity Fund II, L.P.",
+    "provenance": {
+      "source_date": "2026-01-20",
+      "source_id": "0009000004-26-000001",
+      "source_type": "sec_form_d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/9000004/000900000426000001/primary_doc.xml"
+    }
+  },
+  {
+    "address": {
+      "city": "Trenton",
+      "postal_code": "08608",
+      "state": "NJ",
+      "street": "9 State St"
+    },
+    "cik": "0009000005",
+    "form_d": {
+      "entity_type": "Corporation",
+      "incorporated_within_five_years": true,
+      "industry_group": "Energy Conservation",
+      "is_amendment": false,
+      "is_pooled_investment_fund": false,
+      "jurisdiction_of_incorporation": "NJ",
+      "revenue_range": "No Revenues",
+      "securities_offered": [
+        "Equity"
+      ],
+      "total_amount_sold": 500000.0,
+      "total_offering_amount": 4000000.0,
+      "year_of_incorporation": 2025
+    },
+    "name": "Lumen Grid Systems, Inc.",
+    "provenance": {
+      "source_date": "2026-02-01",
+      "source_id": "0009000005-26-000001",
+      "source_type": "sec_form_d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/9000005/000900000526000001/primary_doc.xml"
+    }
+  },
+  {
+    "address": {
+      "city": "Camden",
+      "postal_code": "08102",
+      "state": "NJ",
+      "street": "3 Cooper St"
+    },
+    "name": "Lumen Grid Systems",
+    "provenance": {
+      "source_date": "2026-06-01",
+      "source_id": "SBIR-FIXTURE-0005",
+      "source_type": "sbir_sttr",
+      "source_url": "https://www.sbir.gov/awards/sbir-fixture-0005"
+    },
+    "sbir": {
+      "agency": "DOE",
+      "award_amount": 250000.0,
+      "award_end": "2027-05-31",
+      "award_start": "2026-06-01",
+      "employee_count": 5,
+      "phase": "phase_i",
+      "program": "STTR",
+      "topic_title": "Grid-edge battery management"
+    }
+  },
+  {
+    "address": {
+      "city": "Paterson",
+      "postal_code": "07501",
+      "state": "NJ",
+      "street": "12 Mill St"
+    },
+    "name": "Old Mill Instruments",
+    "provenance": {
+      "source_date": "2018-05-01",
+      "source_id": "SBIR-FIXTURE-0006",
+      "source_type": "sbir_sttr",
+      "source_url": "https://www.sbir.gov/awards/sbir-fixture-0006"
+    },
+    "sbir": {
+      "agency": "DOD",
+      "award_amount": 150000.0,
+      "award_end": "2018-11-01",
+      "award_start": "2018-05-01",
+      "phase": "phase_i",
+      "program": "SBIR",
+      "topic_title": "Ruggedized field spectrometers"
+    }
+  }
+]

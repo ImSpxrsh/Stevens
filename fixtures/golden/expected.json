@@ -1,0 +1,464 @@
+{
+  "alerts": [
+    {
+      "company_id": "rec:sbir_sttr:SBIR-FIXTURE-0006",
+      "gate": "hold_for_review",
+      "record": "sbir_sttr:SBIR-FIXTURE-0006"
+    },
+    {
+      "company_id": "cik:0009000003",
+      "gate": "automatic",
+      "record": "sec_form_d:0009000003-25-000001"
+    },
+    {
+      "company_id": "cik:0009000003",
+      "gate": "hold_for_review",
+      "record": "sbir_sttr:SBIR-FIXTURE-0003"
+    },
+    {
+      "company_id": "cik:0009000005",
+      "gate": "automatic",
+      "record": "sec_form_d:0009000005-26-000001"
+    },
+    {
+      "company_id": "rec:sbir_sttr:SBIR-FIXTURE-0002",
+      "gate": "hold_for_review",
+      "record": "sbir_sttr:SBIR-FIXTURE-0002"
+    },
+    {
+      "company_id": "cik:0009000001",
+      "gate": "automatic",
+      "record": "sec_form_d:0009000001-26-000001"
+    },
+    {
+      "company_id": "rec:sbir_sttr:SBIR-FIXTURE-0005",
+      "gate": "hold_for_review",
+      "record": "sbir_sttr:SBIR-FIXTURE-0005"
+    },
+    {
+      "company_id": "cik:0009000003",
+      "gate": "automatic",
+      "record": "sec_form_d:0009000003-26-000002"
+    }
+  ],
+  "as_of": "2026-09-01",
+  "companies": {
+    "cik:0009000001": {
+      "classification": {
+        "exclusion": null,
+        "label": "likely_startup",
+        "probability": 0.978,
+        "top_features": [
+          "incorporated_within_5y",
+          "tech_industry",
+          "no_revenue",
+          "first_record_recent"
+        ]
+      },
+      "evidence_card": {
+        "fact": [
+          "Filed SEC Form D on 2026-05-12: $3,000,000 offering",
+          "Listed address in Hoboken, NJ"
+        ],
+        "inferred": [
+          "Likely startup",
+          "CSIT SBIR/STTR Direct Financial Assistance: Not a match",
+          "NJ Angel Investor Tax Credit: Potential match (verify)",
+          "NJEDA Life Sciences & Healthcare Fund: Potential match (verify)"
+        ],
+        "unknown": [
+          "How many full-time employees does the company have (must be under 150)?",
+          "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+          "Is the company's primary focus a life-science or healthcare product?",
+          "How many employees does the company have (maximum 750)?",
+          "Who are the founders and how large is the team today?",
+          "What revenue or customer traction does the company have?"
+        ]
+      },
+      "name": "Halyard Sensors, Inc.",
+      "programs": {
+        "csit_sbir_support": {
+          "result": "not_a_match",
+          "rules_version": "csit-round5-2026-01-15",
+          "verification_questions": []
+        },
+        "nj_angel_investor_tax_credit": {
+          "result": "potential_match_verify",
+          "rules_version": "angel-2026-01-01",
+          "verification_questions": [
+            "How many full-time employees does the company have (must be under 150)?"
+          ]
+        },
+        "njeda_life_sciences_healthcare_fund": {
+          "result": "potential_match_verify",
+          "rules_version": "lshf-2025-10-28",
+          "verification_questions": [
+            "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+            "Is the company's primary focus a life-science or healthcare product?",
+            "How many employees does the company have (maximum 750)?"
+          ]
+        }
+      },
+      "records": [
+        "sec_form_d:0009000001-26-000001"
+      ]
+    },
+    "cik:0009000003": {
+      "classification": {
+        "exclusion": null,
+        "label": "likely_startup",
+        "probability": 0.991,
+        "top_features": [
+          "incorporated_within_5y",
+          "sbir_phase_i",
+          "tech_industry",
+          "small_team"
+        ]
+      },
+      "evidence_card": {
+        "fact": [
+          "Filed SEC Form D on 2025-06-10: $1,500,000 offering",
+          "Won an SBIR Phase I award from NSF on 2025-09-01: $275,000",
+          "Filed SEC Form D on 2026-07-15: $6,000,000 offering",
+          "Listed address in Newark, NJ"
+        ],
+        "inferred": [
+          "Likely startup",
+          "CSIT SBIR/STTR Direct Financial Assistance: Potential match (verify)",
+          "NJ Angel Investor Tax Credit: Strong match",
+          "NJEDA Life Sciences & Healthcare Fund: Potential match (verify)"
+        ],
+        "unknown": [
+          "Has the company completed its Phase I award, and was the final report accepted?",
+          "Has the company submitted a Phase II proposal that is still awaiting a federal decision?",
+          "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+          "Is the company's primary focus a life-science or healthcare product?",
+          "Who are the founders and how large is the team today?",
+          "What revenue or customer traction does the company have?"
+        ]
+      },
+      "name": "Northbeam Analytics, Inc.",
+      "programs": {
+        "csit_sbir_support": {
+          "result": "potential_match_verify",
+          "rules_version": "csit-round5-2026-01-15",
+          "verification_questions": [
+            "Has the company completed its Phase I award, and was the final report accepted?",
+            "Has the company submitted a Phase II proposal that is still awaiting a federal decision?"
+          ]
+        },
+        "nj_angel_investor_tax_credit": {
+          "result": "strong_match",
+          "rules_version": "angel-2026-01-01",
+          "verification_questions": []
+        },
+        "njeda_life_sciences_healthcare_fund": {
+          "result": "potential_match_verify",
+          "rules_version": "lshf-2025-10-28",
+          "verification_questions": [
+            "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+            "Is the company's primary focus a life-science or healthcare product?"
+          ]
+        }
+      },
+      "records": [
+        "sbir_sttr:SBIR-FIXTURE-0003",
+        "sec_form_d:0009000003-25-000001",
+        "sec_form_d:0009000003-26-000002"
+      ]
+    },
+    "cik:0009000004": {
+      "classification": {
+        "exclusion": "fund",
+        "label": "not_startup",
+        "probability": null,
+        "top_features": []
+      },
+      "evidence_card": {
+        "fact": [
+          "Filed SEC Form D on 2026-01-20: $50,000,000 offering",
+          "Listed address in Morristown, NJ"
+        ],
+        "inferred": [
+          "Not a startup"
+        ],
+        "unknown": [
+          "Who are the founders and how large is the team today?",
+          "What revenue or customer traction does the company have?"
+        ]
+      },
+      "name": "Garden State Opportunity Fund II, L.P.",
+      "programs": {},
+      "records": [
+        "sec_form_d:0009000004-26-000001"
+      ]
+    },
+    "cik:0009000005": {
+      "classification": {
+        "exclusion": null,
+        "label": "likely_startup",
+        "probability": 0.978,
+        "top_features": [
+          "incorporated_within_5y",
+          "tech_industry",
+          "no_revenue",
+          "first_record_recent"
+        ]
+      },
+      "evidence_card": {
+        "fact": [
+          "Filed SEC Form D on 2026-02-01: $4,000,000 offering",
+          "Listed address in Trenton, NJ"
+        ],
+        "inferred": [
+          "Likely startup",
+          "CSIT SBIR/STTR Direct Financial Assistance: Not a match",
+          "NJ Angel Investor Tax Credit: Potential match (verify)",
+          "NJEDA Life Sciences & Healthcare Fund: Potential match (verify)"
+        ],
+        "unknown": [
+          "How many full-time employees does the company have (must be under 150)?",
+          "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+          "Is the company's primary focus a life-science or healthcare product?",
+          "How many employees does the company have (maximum 750)?",
+          "Who are the founders and how large is the team today?",
+          "What revenue or customer traction does the company have?"
+        ]
+      },
+      "name": "Lumen Grid Systems, Inc.",
+      "programs": {
+        "csit_sbir_support": {
+          "result": "not_a_match",
+          "rules_version": "csit-round5-2026-01-15",
+          "verification_questions": []
+        },
+        "nj_angel_investor_tax_credit": {
+          "result": "potential_match_verify",
+          "rules_version": "angel-2026-01-01",
+          "verification_questions": [
+            "How many full-time employees does the company have (must be under 150)?"
+          ]
+        },
+        "njeda_life_sciences_healthcare_fund": {
+          "result": "potential_match_verify",
+          "rules_version": "lshf-2025-10-28",
+          "verification_questions": [
+            "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+            "Is the company's primary focus a life-science or healthcare product?",
+            "How many employees does the company have (maximum 750)?"
+          ]
+        }
+      },
+      "records": [
+        "sec_form_d:0009000005-26-000001"
+      ]
+    },
+    "rec:sbir_sttr:SBIR-FIXTURE-0002": {
+      "classification": {
+        "exclusion": null,
+        "label": "likely_startup",
+        "probability": 0.786,
+        "top_features": [
+          "sbir_phase_i",
+          "small_team",
+          "first_record_recent"
+        ]
+      },
+      "evidence_card": {
+        "fact": [
+          "Won an SBIR Phase I award from HHS on 2026-03-01: $300,000",
+          "Listed address in Princeton, NJ"
+        ],
+        "inferred": [
+          "Likely startup",
+          "CSIT SBIR/STTR Direct Financial Assistance: Strong match",
+          "NJ Angel Investor Tax Credit: Strong match",
+          "NJEDA Life Sciences & Healthcare Fund: Potential match (verify)"
+        ],
+        "unknown": [
+          "Which eligible technology is the company's primary business?",
+          "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+          "Is the company's primary focus a life-science or healthcare product?",
+          "Is the company raising now, and what is the total round size (must be under $20M)?",
+          "Who are the founders and how large is the team today?",
+          "What revenue or customer traction does the company have?"
+        ]
+      },
+      "name": "Pinewood Therapeutics LLC",
+      "programs": {
+        "csit_sbir_support": {
+          "result": "strong_match",
+          "rules_version": "csit-round5-2026-01-15",
+          "verification_questions": []
+        },
+        "nj_angel_investor_tax_credit": {
+          "result": "strong_match",
+          "rules_version": "angel-2026-01-01",
+          "verification_questions": [
+            "Which eligible technology is the company's primary business?"
+          ]
+        },
+        "njeda_life_sciences_healthcare_fund": {
+          "result": "potential_match_verify",
+          "rules_version": "lshf-2025-10-28",
+          "verification_questions": [
+            "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+            "Is the company's primary focus a life-science or healthcare product?",
+            "Is the company raising now, and what is the total round size (must be under $20M)?"
+          ]
+        }
+      },
+      "records": [
+        "sbir_sttr:SBIR-FIXTURE-0002"
+      ]
+    },
+    "rec:sbir_sttr:SBIR-FIXTURE-0005": {
+      "classification": {
+        "exclusion": null,
+        "label": "likely_startup",
+        "probability": 0.786,
+        "top_features": [
+          "sbir_phase_i",
+          "small_team",
+          "first_record_recent"
+        ]
+      },
+      "evidence_card": {
+        "fact": [
+          "Won an STTR Phase I award from DOE on 2026-06-01: $250,000",
+          "Listed address in Camden, NJ"
+        ],
+        "inferred": [
+          "Likely startup",
+          "CSIT SBIR/STTR Direct Financial Assistance: Strong match",
+          "NJ Angel Investor Tax Credit: Strong match",
+          "NJEDA Life Sciences & Healthcare Fund: Potential match (verify)"
+        ],
+        "unknown": [
+          "Is the primary place of performance on the federal award a New Jersey address?",
+          "Which eligible technology is the company's primary business?",
+          "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+          "Is the company's primary focus a life-science or healthcare product?",
+          "Is the company raising now, and what is the total round size (must be under $20M)?",
+          "Who are the founders and how large is the team today?",
+          "What revenue or customer traction does the company have?"
+        ]
+      },
+      "name": "Lumen Grid Systems",
+      "programs": {
+        "csit_sbir_support": {
+          "result": "strong_match",
+          "rules_version": "csit-round5-2026-01-15",
+          "verification_questions": [
+            "Is the primary place of performance on the federal award a New Jersey address?"
+          ]
+        },
+        "nj_angel_investor_tax_credit": {
+          "result": "strong_match",
+          "rules_version": "angel-2026-01-01",
+          "verification_questions": [
+            "Which eligible technology is the company's primary business?"
+          ]
+        },
+        "njeda_life_sciences_healthcare_fund": {
+          "result": "potential_match_verify",
+          "rules_version": "lshf-2025-10-28",
+          "verification_questions": [
+            "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+            "Is the company's primary focus a life-science or healthcare product?",
+            "Is the company raising now, and what is the total round size (must be under $20M)?"
+          ]
+        }
+      },
+      "records": [
+        "sbir_sttr:SBIR-FIXTURE-0005"
+      ]
+    },
+    "rec:sbir_sttr:SBIR-FIXTURE-0006": {
+      "classification": {
+        "exclusion": null,
+        "label": "uncertain",
+        "probability": 0.5,
+        "top_features": [
+          "sbir_phase_i"
+        ]
+      },
+      "evidence_card": {
+        "fact": [
+          "Won an SBIR Phase I award from DOD on 2018-05-01: $150,000",
+          "Listed address in Paterson, NJ"
+        ],
+        "inferred": [
+          "Uncertain whether this is a startup",
+          "CSIT SBIR/STTR Direct Financial Assistance: Not a match",
+          "NJ Angel Investor Tax Credit: Potential match (verify)",
+          "NJEDA Life Sciences & Healthcare Fund: Potential match (verify)"
+        ],
+        "unknown": [
+          "How many full-time employees does the company have (must be under 150)?",
+          "Which eligible technology is the company's primary business?",
+          "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+          "Is the company's primary focus a life-science or healthcare product?",
+          "How many employees does the company have (maximum 750)?",
+          "Is the company raising now, and what is the total round size (must be under $20M)?",
+          "Who are the founders and how large is the team today?",
+          "What revenue or customer traction does the company have?"
+        ]
+      },
+      "name": "Old Mill Instruments",
+      "programs": {
+        "csit_sbir_support": {
+          "result": "not_a_match",
+          "rules_version": "csit-round5-2026-01-15",
+          "verification_questions": []
+        },
+        "nj_angel_investor_tax_credit": {
+          "result": "potential_match_verify",
+          "rules_version": "angel-2026-01-01",
+          "verification_questions": [
+            "How many full-time employees does the company have (must be under 150)?",
+            "Which eligible technology is the company's primary business?"
+          ]
+        },
+        "njeda_life_sciences_healthcare_fund": {
+          "result": "potential_match_verify",
+          "rules_version": "lshf-2025-10-28",
+          "verification_questions": [
+            "Is the company headquartered in NJ, or do at least half of its full-time employees live or work in NJ?",
+            "Is the company's primary focus a life-science or healthcare product?",
+            "How many employees does the company have (maximum 750)?",
+            "Is the company raising now, and what is the total round size (must be under $20M)?"
+          ]
+        }
+      },
+      "records": [
+        "sbir_sttr:SBIR-FIXTURE-0006"
+      ]
+    }
+  },
+  "discovery": {
+    "excluded": [
+      "cik:0009000004"
+    ],
+    "not_startup": [],
+    "ranked": [
+      "cik:0009000003",
+      "cik:0009000001",
+      "cik:0009000005",
+      "rec:sbir_sttr:SBIR-FIXTURE-0002",
+      "rec:sbir_sttr:SBIR-FIXTURE-0005"
+    ],
+    "uncertain": [
+      "rec:sbir_sttr:SBIR-FIXTURE-0006"
+    ]
+  },
+  "review_queue": [
+    {
+      "candidate": "cik:0009000005",
+      "kind": "record_match",
+      "score": 1.0,
+      "status": "open",
+      "subject": "sbir_sttr:SBIR-FIXTURE-0005"
+    }
+  ]
+}
