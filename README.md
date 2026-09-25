@@ -8,6 +8,21 @@ The repository contains both the Python evidence and program-matching core and
 an offline-friendly product demo inside the actual
 [PuruVJ/macos-web](https://github.com/PuruVJ/macos-web) Svelte desktop shell.
 
+## Run the app
+
+```bash
+make setup    # Python venv (.[dev,ai,api]) + npm ci
+make api      # API on http://localhost:8000, docs at /docs, health at /health
+make web      # frontend on http://localhost:5173
+make jobs     # one pass of the daily ingestion/watch jobs
+make check    # lint, tests, golden path, frontend build (what CI runs)
+```
+
+Copy `.env.example` to `.env` first. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+for how public records become discoveries and where each part lives:
+`gauge/api/` (backend), `gauge/jobs/` (background jobs), and
+`demo/src/components/apps/Gauge/` (frontend).
+
 ## macOS demo
 
 ```bash
