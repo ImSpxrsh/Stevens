@@ -15,6 +15,7 @@ never proposed again.
 
 from __future__ import annotations
 
+from collections import defaultdict
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from enum import StrEnum
@@ -61,6 +62,45 @@ def _town(rec: NormalizedRecord) -> str:
     return normalize_town(rec.address.city) if rec.address else ""
 
 
+class _NameIndex:
+    """Lookups that keep linking fast on tens of thousands of records.
+
+    Fuzzy candidates are companies sharing a name word or the first four
+    letters of the name with spaces removed ("lumengrid" / "lumen grid").
+    Companies are returned in creation order so ties break as before.
+    """
+
+    def __init__(self) -> None:
+        self.order: dict[str, int] = {}
+        self.exact: dict[tuple[str, str], set[str]] = defaultdict(set)
+        self.keys: dict[str, set[str]] = defaultdict(set)
+
+    def add(self, company_id: str, rec: NormalizedRecord) -> None:
+        self.order.setdefault(company_id, len(self.order))
+        norm = normalize_company_name(rec.name)
+        if _postal5(rec):
+            self.exact[(norm, _postal5(rec))].add(company_id)
+        for key in _block_keys(norm):
+            self.keys[key].add(company_id)
+
+    def exact_matches(self, rec: NormalizedRecord) -> list[str]:
+        if not _postal5(rec):
+            return []
+        found = self.exact.get((normalize_company_name(rec.name), _postal5(rec)), set())
+        return sorted(found, key=self.order.__getitem__)
+
+    def candidates(self, rec: NormalizedRecord) -> list[str]:
+        found: set[str] = set()
+        for key in _block_keys(normalize_company_name(rec.name)):
+            found |= self.keys.get(key, set())
+        return sorted(found, key=self.order.__getitem__)
+
+
+def _block_keys(norm: str) -> set[str]:
+    compact = norm.replace(" ", "")
+    return {f"w:{w}" for w in norm.split()} | ({f"p:{compact[:4]}"} if compact else set())
+
+
 def link_records(
     records: Iterable[NormalizedRecord],
     store: ReviewStore,
@@ -68,6 +108,7 @@ def link_records(
     fuzzy_threshold: float = FUZZY_REVIEW_THRESHOLD,
 ) -> LinkResult:
     result = LinkResult()
+    index = _NameIndex()
     ordered = sorted(records, key=lambda r: (r.source_date, r.key))
 
     def attach(rec: NormalizedRecord, company_id: str, basis: LinkBasis, item_id=None) -> None:
@@ -75,6 +116,7 @@ def link_records(
         if profile is None:
             profile = result.profiles[company_id] = CompanyProfile(company_id, rec.name)
         profile.records.append(rec)
+        index.add(company_id, rec)
         result.links[rec.key] = RecordLink(rec.key, company_id, basis, item_id)
 
     for rec in ordered:
@@ -84,20 +126,14 @@ def link_records(
     for rec in ordered:
         if rec.cik:
             continue
-        norm, postal = normalize_company_name(rec.name), _postal5(rec)
-        exact = [
-            p.company_id
-            for p in result.profiles.values()
-            if postal
-            and any(
-                normalize_company_name(r.name) == norm and _postal5(r) == postal for r in p.records
-            )
-        ]
+        exact = index.exact_matches(rec)
         if len(exact) == 1:
             attach(rec, exact[0], LinkBasis.EXACT_NAME_POSTAL)
             continue
 
-        candidate = _best_candidate(rec, result.profiles.values(), fuzzy_threshold)
+        candidate = _best_candidate(
+            rec, [result.profiles[c] for c in index.candidates(rec)], fuzzy_threshold
+        )
         if candidate is None:
             attach(rec, f"rec:{rec.key}", LinkBasis.NEW_COMPANY)
             continue
