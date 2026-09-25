@@ -130,9 +130,7 @@ def test_form_d_quarter_keeps_live_filings_from_requested_state(tmp_path):
     (rec,) = formd.read_quarter(tmp_path / "2022q1_d.zip")
     assert rec.name == "Halyard Sensors, Inc." and rec.cik == "0000001234"
     assert rec.source_date == date(2022, 3, 31)
-    assert (
-        rec.provenance.source_url == "https://www.sec.gov/Archives/edgar/data/1234/000122000001/"
-    )
+    assert rec.provenance.source_url == "https://www.sec.gov/Archives/edgar/data/1234/000122000001/"
     assert rec.address.city == "Hoboken" and rec.address.postal_code == "07030"
     fd = rec.form_d
     assert fd.total_offering_amount is None and fd.total_amount_sold == 500_000

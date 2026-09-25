@@ -141,15 +141,24 @@ def _audit_one(
     candidates = sorted(set(names.get(norm, [])))
     how = "exact"
     if not candidates:
+        # "JOGO Health" vs "JogoHealth, Inc.": the same name once spaces are ignored.
+        compact = norm.replace(" ", "")
+        candidates = sorted(
+            {c for n, cids in names.items() if n.replace(" ", "") == compact for c in cids}
+        )
+        how = "exact (ignoring spaces)"
+    if not candidates:
         scored = [(name_similarity(ref.name, n), cid) for n, cids in names.items() for cid in cids]
         best = max((s for s, _ in scored), default=0.0)
         if best >= FUZZY_MATCH_THRESHOLD:
             candidates = sorted({cid for s, cid in scored if s == best})
             how = f"fuzzy {best:.2f}"
     if not candidates:
-        return CoverageRow(
-            ref, Outcome.NO_PUBLIC_SIGNAL, None, "", MISS_EXPLANATIONS[Outcome.NO_PUBLIC_SIGNAL]
-        )
+        detail = MISS_EXPLANATIONS[Outcome.NO_PUBLIC_SIGNAL]
+        hints = _legal_name_hints(norm, out, names)
+        if hints:
+            detail += " Check by hand, possible legal names: " + "; ".join(hints)
+        return CoverageRow(ref, Outcome.NO_PUBLIC_SIGNAL, None, "", detail)
     if len(candidates) > 1 and ref.town:
         in_town = [c for c in candidates if normalize_town(ref.town) in _towns(out, c)]
         candidates = in_town or candidates
@@ -171,6 +180,22 @@ def _audit_one(
     else:
         outcome, detail = Outcome.CLASSIFIED_NOT_STARTUP, f"probability {c.probability:.2f}"
     return CoverageRow(ref, outcome, cid, how, detail)
+
+
+def _legal_name_hints(norm: str, out: PipelineOutput, names: dict[str, list[str]]) -> list[str]:
+    """Record names that start with the reference name ("Balcony" -> "Balcony Technology
+    Group, Inc."). Shown for a person to check, never counted: the same rule would also
+    match unrelated funds ("Gather" -> "Gather Ventures Fund II LP")."""
+    compact = norm.replace(" ", "")
+    if len(compact) < 6:
+        return []
+    hits = {
+        out.profiles[c].name
+        for n, cids in names.items()
+        if n.replace(" ", "").startswith(compact)
+        for c in cids
+    }
+    return sorted(hits)[:3]
 
 
 def to_markdown(report: CoverageReport) -> str:

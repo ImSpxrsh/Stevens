@@ -58,3 +58,30 @@ labels):
 
 These are the classifier fixes to make *after* this sample is labeled, then
 re-measure on a fresh sample.
+
+## #23 Coverage audit (as of 2026-06-30)
+
+Reference list: [coverage/reference_startups.csv](coverage/reference_startups.csv),
+50 New Jersey startups, each with its source: the 40 honorees of NJBIZ's
+*In the Lead 2025: Startups*, and 10 companies NJEDA announced as NJ
+Innovation Evergreen Fund investments. Neither source is derived from Form D
+or SBIR data. Full report: [coverage/coverage-2026-06-30.md](coverage/coverage-2026-06-30.md).
+
+| | |
+|---|---|
+| **Found (discovery or uncertain list)** | **15/50 = 30%** (95% CI 19%–44%) |
+| Found as likely startup | 11/50 = 22% |
+| No Form D or SBIR/STTR record in NJ data | 34/50 |
+| Ambiguous (two same-name SBIR companies) | 1 |
+
+- **The main gap is sources, not the classifier.** Of the 34 with no NJ record, a
+  nationwide name search found only 4 filing anywhere else, and 2 of those look
+  like unrelated companies with the same name. Most of these startups
+  (pre-seed, SAFE-funded, grant-funded outside SBIR) never file Form D, so
+  Form D + SBIR alone see about a third of recognized NJ startups.
+- Two misses are legal-name mismatches the audit now flags for a manual check
+  (e.g. *Balcony* files as *Balcony Technology Group, Inc.*); space-insensitive
+  names (*JOGO Health* = *JogoHealth, Inc.*) now match automatically.
+- Bias: an awards list over-represents very young companies, which makes coverage
+  look lower than it would against a list of venture-backed companies. The
+  list was compiled by Claude from the cited pages; spot-check it before quoting.
