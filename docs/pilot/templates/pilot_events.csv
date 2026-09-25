@@ -1,0 +1,6 @@
+date,company_id,channel,event,actor,notes
+2026-10-01,cik:0001900001,gauge,sourced,gauge-alert,Form D alert
+2026-10-02,cik:0001900001,gauge,outreach_sent,partner-a,
+2026-10-09,cik:0001900001,gauge,meeting_booked,partner-a,
+2026-10-16,cik:0001900001,gauge,meeting_held,partner-a,
+2026-10-17,cik:0001900001,gauge,qualified,partner-a,Asked for data room

@@ -17,6 +17,9 @@ class ReviewKind(StrEnum):
     RECORD_MATCH = "record_match"
     # Two existing company profiles might be the same company.
     DUPLICATE_COMPANIES = "duplicate_companies"
+    # A model-extracted fact needs a person to accept it. Approve accepts the
+    # extraction, reject discards it; there is no candidate company.
+    EXTRACTION = "extraction"
 
 
 class ReviewStatus(StrEnum):
@@ -30,6 +33,9 @@ class Action(StrEnum):
     APPROVE_MERGE = "approve_merge"
     REJECT_MERGE = "reject_merge"
     LEAVE_UNCERTAIN = "leave_uncertain"
+    # An opinion that does not change the item's status (e.g. a low-confidence
+    # model assessment). The item stays in the queue.
+    ANNOTATE = "annotate"
 
 
 class ActorType(StrEnum):
@@ -56,8 +62,9 @@ class Decision:
     details: dict[str, Any] = field(default_factory=dict)
 
     @property
-    def status(self) -> ReviewStatus:
-        return _STATUS_FOR_ACTION[self.action]
+    def status(self) -> ReviewStatus | None:
+        """The status this decision sets, or None for an annotation."""
+        return _STATUS_FOR_ACTION.get(self.action)
 
 
 @dataclass
@@ -76,12 +83,19 @@ class ReviewItem:
         return review_item_id(self.kind, self.subject, self.candidate_company_id)
 
     @property
+    def resolution(self) -> Decision | None:
+        """The latest decision that set a status; annotations are skipped."""
+        return next((d for d in reversed(self.decisions) if d.status is not None), None)
+
+    @property
     def status(self) -> ReviewStatus:
-        return self.decisions[-1].status if self.decisions else ReviewStatus.OPEN
+        r = self.resolution
+        return r.status if r is not None and r.status is not None else ReviewStatus.OPEN
 
     @property
     def resolved_by_human(self) -> bool:
-        return bool(self.decisions) and self.decisions[-1].actor_type is ActorType.HUMAN
+        r = self.resolution
+        return r is not None and r.actor_type is ActorType.HUMAN
 
 
 def review_item_id(kind: ReviewKind, subject: str, candidate_company_id: str) -> str:
