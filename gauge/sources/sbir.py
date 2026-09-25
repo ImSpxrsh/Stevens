@@ -11,7 +11,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import sys
-from collections.abc import Collection
+from collections.abc import Collection, Iterator
 from datetime import date, datetime
 from pathlib import Path
 
@@ -78,17 +78,31 @@ def _number(v: str | None) -> float | None:
         return None
 
 
-def read_awards(path: str | Path, states: Collection[str] = ("NJ",)) -> list[NormalizedRecord]:
-    wanted = {s.upper() for s in states}
+def award_rows(path: str | Path) -> Iterator[dict[str, str]]:
+    """Rows restricted to ``COLUMNS``: contact and PI fields are dropped on read."""
     csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
-    seen: dict[str, NormalizedRecord] = {}
     with open(path, newline="", encoding="utf-8", errors="replace") as f:
         for row in csv.DictReader(f):
-            if (row.get("State") or "").strip().upper() not in wanted:
-                continue
-            rec = _record({k: row.get(k) or "" for k in COLUMNS})
-            if rec is not None:
-                seen.setdefault(rec.provenance.source_id, rec)
+            yield {k: row.get(k) or "" for k in COLUMNS}
+
+
+def row_state(row: dict[str, str]) -> str:
+    return row["State"].strip().upper()
+
+
+def row_to_record(row: dict[str, str]) -> NormalizedRecord | None:
+    return _record(row)
+
+
+def read_awards(path: str | Path, states: Collection[str] = ("NJ",)) -> list[NormalizedRecord]:
+    wanted = {s.upper() for s in states}
+    seen: dict[str, NormalizedRecord] = {}
+    for row in award_rows(path):
+        if row_state(row) not in wanted:
+            continue
+        rec = _record(row)
+        if rec is not None:
+            seen.setdefault(rec.provenance.source_id, rec)
     return sorted(seen.values(), key=lambda r: (r.source_date, r.key))
 
 
