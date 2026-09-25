@@ -14,7 +14,7 @@ import pytest
 
 from gauge.classifier import PRIOR_MODEL, ExclusionReason, StartupLabel, classify
 from gauge.classifier.features import FEATURE_NAMES, extract_features
-from gauge.core.models import Address
+from gauge.core.models import Address, SbirPhase
 from gauge.pipeline import run
 from gauge.programs import angel_tax_credit, csit_sbir, life_sciences_fund
 from gauge.programs.base import MatchResult
@@ -213,3 +213,24 @@ def test_unapproved_fuzzy_matches_never_alert_for_the_candidate(action):
     assert gate in (AlertGate.BLOCKED, AlertGate.HOLD_FOR_REVIEW)
     if action is Action.REJECT_MERGE:
         assert gate is AlertGate.BLOCKED
+
+
+# --- Alert feed: dedupe and exact-ID-only readiness --------------------------
+
+
+def test_alert_feed_dedupes_and_only_exact_ids_are_ready():
+    from gauge.alerts import AlertLog, AlertStatus, generate
+
+    recs = [
+        form_d("Acme Robotics, Inc.", cik="0001", filed=date(2025, 3, 1)),
+        form_d("Acme Robotics, Inc.", cik="0001", filed=date(2026, 5, 1)),
+        sbir("Acme Robotics", address=NEWARK, awarded=date(2026, 4, 1), phase=SbirPhase.PHASE_II),
+    ]
+    store, log = ReviewStore(), AlertLog()
+    for _ in range(3):
+        log.add(generate(run(recs, AS_OF, store), store, since=date(2026, 1, 1)))
+    alerts = log.alerts()
+    assert len({a.alert_id for a in alerts}) == len(alerts) == 2
+    for a in alerts:
+        linked_by_cik = a.record_key != recs[2].key
+        assert (a.status is AlertStatus.READY) == linked_by_cik
