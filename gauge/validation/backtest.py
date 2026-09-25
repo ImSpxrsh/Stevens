@@ -91,6 +91,8 @@ class GroupResult:
     positives: int  # candidates with the outcome, at any rank
     gauge: RankingResult
     baselines: tuple[RankingResult, ...]
+    # Candidates sharing Gauge's score at rank k; their order is arbitrary.
+    gauge_ties_at_k: int = 0
 
     @property
     def best_baseline(self) -> RankingResult | None:
@@ -201,12 +203,18 @@ def _evaluate(
         top = _rank(profiles, scorer, cutoff, k)
         return RankingResult(name, description, top, sum(cid in positives for cid in top))
 
+    gauge = result("gauge", "Gauge likely-startup probability", _gauge_score)
+    ties = 0
+    if gauge.top and len(profiles) > k:
+        kth = round(_gauge_score(profiles[gauge.top[-1]], cutoff), 6)
+        ties = sum(round(_gauge_score(p, cutoff), 6) == kth for p in profiles.values())
     return GroupResult(
         label=label,
         candidates=len(profiles),
         positives=sum(cid in positives for cid in profiles),
-        gauge=result("gauge", "Gauge likely-startup probability", _gauge_score),
+        gauge=gauge,
         baselines=tuple(result(n, d, s) for n, (d, s) in BASELINES.items()),
+        gauge_ties_at_k=ties if ties > 1 else 0,
     )
 
 
@@ -234,6 +242,12 @@ def _group_markdown(g: GroupResult) -> list[str]:
         g_ci, b_ci = wilson_interval(g.gauge.hits, g.gauge.k), wilson_interval(best.hits, best.k)
         if g_ci and b_ci and g_ci[0] <= b_ci[1] and b_ci[0] <= g_ci[1]:
             lines.append("The 95% intervals overlap, so this difference is not conclusive.")
+    if g.gauge_ties_at_k:
+        lines.append(
+            f"Warning: {g.gauge_ties_at_k} candidates share Gauge's score at rank {g.gauge.k}, "
+            "so which of them make the top k is arbitrary. The classifier scores how "
+            "startup-like a company is; it saturates and is not a follow-on predictor."
+        )
     return lines + [""]
 
 

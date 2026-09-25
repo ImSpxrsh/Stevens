@@ -109,3 +109,22 @@ def test_cli_and_template(tmp_path, capsys):
     assert main([str(RECORDS), str(path), "--as-of", "2026-09-01", "--csv", str(csv_out)]) == 0
     assert "found" in csv_out.read_text()
     assert "Coverage audit" in capsys.readouterr().out
+
+
+def test_space_insensitive_names_match_and_prefixes_are_only_hints():
+    records = [
+        form_d(
+            "JogoHealth, Inc.",
+            cik="0006000001",
+            filed=date(2026, 3, 1),
+            revenue_range="No Revenues",
+        ),
+        form_d("Balcony Technology Group, Inc.", cik="0006000002", filed=date(2026, 3, 1)),
+    ]
+    out = run(records, date(2026, 9, 1), ReviewStore())
+    report = audit([ref("JOGO Health"), ref("Balcony")], out)
+    jogo, balcony = report.rows
+    assert jogo.outcome in (Outcome.FOUND, Outcome.FOUND_UNCERTAIN)
+    assert jogo.match == "exact (ignoring spaces)"
+    assert balcony.outcome is Outcome.NO_PUBLIC_SIGNAL
+    assert "Balcony Technology Group, Inc." in balcony.detail

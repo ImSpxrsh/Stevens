@@ -1,0 +1,760 @@
+sample_id,company_name,towns,sec_company_ids,public_records,form_d_summary,sbir_summary,label,labeler,notes
+S001,"Goldin Parent, Inc.","Runnemede, NJ",0001846289,sec_form_d 2021-03-04 https://www.sec.gov/Archives/edgar/data/1846289/000184628921000002/,2021-03-04: Other; revenue Decline to Disclose; incorporated 2020,,,,
+S002,Jersey Mike's Management Aggregator LLC,"Manasquan, NJ",0002070994,sec_form_d 2025-07-22 https://www.sec.gov/Archives/edgar/data/2070994/000207099425000002/,2025-07-22: Restaurants; revenue Decline to Disclose; incorporated 2025,,,,
+S003,JP LABORATORIES INC,"Piscataway, NJ",,"sbir_sttr 1985-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1877
+sbir_sttr 1986-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4804
+sbir_sttr 1986-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4803
+sbir_sttr 1986-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1877",,"1985-01-01: EPA SBIR phase_i; A SUBSTITUTE FOR CHROMIC ACID ETCHING OF PLASTIC FOR PLATING; employees 0
+1986-01-01: HHS SBIR phase_i; THERE IS A NEED FOR RADIOAGRAPHIC FILM FOR HIGH-ENERGY X- RAYS THAT CAN PROVIDE HIGH CONTRAST BETWEEN DIFFERENT TISSUES, SUCH AS NORMAL TISSUES AND TUMOR.; employees 0
+1986-01-01: HHS SBIR phase_i; HOUSES IN SEVERAL STATES HAVE HIGH CONCENTRATIONS OF RADON.; employees 0
+1986-01-01: EPA SBIR phase_ii; A SUBSTITUTE FOR CHROMIC ACID ETCHING OF PLASTIC FOR PLATING; employees 0",,,
+S004,Ashwin-Ushas Corporation,"Holmdel, NJ",,"sbir_sttr 2011-02-18 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=NNX11CG21P
+sbir_sttr 2012-03-08 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W911QY-12-C-0032
+sbir_sttr 2012-04-30 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=NNX12CA64C
+sbir_sttr 2014-05-16 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W912HZ-14-P-0059
+sbir_sttr 2014-06-15 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44AG039897-02
+sbir_sttr 2015-09-22 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W81XWH-15-C-0164
+sbir_sttr 2015-09-30 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43OH010799-01
+sbir_sttr 2015-12-18 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W912HZ-16-C-0003
+sbir_sttr 2016-09-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W911QY-16-C-0103
+sbir_sttr 2017-06-09 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=NNX17CP26P
+sbir_sttr 2017-09-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44OH010799-02
+sbir_sttr 2018-07-02 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0018868
+sbir_sttr 2018-10-16 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W912HZ-16-C-0003
+sbir_sttr 2020-09-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43OH012080-01A1
+sbir_sttr 2022-01-30 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=80NSSC22C0006",,"2011-02-18: NASA SBIR phase_i; High Turndown Ratio, High Delta-Emittance, Variable Emissivity Electrochromics; employees 5
+2012-03-08: DOD SBIR phase_ii; Functionalized-Conducting-Polymer - Microporous-Membrane Based Voltammetric Sensor Skins With High Selectivity/Sensitivity, Multiple Analyte Sensing i; employees 6
+2012-04-30: NASA SBIR phase_ii; High Turndown Ratio, High Delta-Emittance, Variable Emissivity Electrochromics; employees 5
+2014-05-16: DOD SBIR phase_i; Inexpensive, Field-Portable, Rugged, Voltammetric Sensors Based on Functionalized Microporous Membranes, with ppb Sensitivity, Multi-Analyte Dis; employees 7
+2014-06-15: HHS SBIR phase_ii; Fast-Switching, High-Contrast, Electrochromic Sunwear for Persons with Age-Relate; employees None
+2015-09-22: DOD SBIR phase_i; Inexpensive, Small, Biocompatible, Multi-Analyte, Voltammetric Blood Sensors Based on Functionalized Microporous Membranes, with, Impervious; employees 7
+2015-09-30: HHS SBIR phase_i; Electrochromic + Anti-Fog Personal-Protective Eyewear (PPE) Based on Unique, Very Low Power, Conductive Coatings and Leveraging Unique, ANSI Z87.1-/Military-Qualified Electrochromic Eyewear Technology; employees None
+2015-12-18: DOD SBIR phase_ii; Inexpensive, Field-Portable, Rugged, Voltammetric Sensors Based on Functionalized Microporous Membranes; employees 7
+2016-09-01: DOD SBIR phase_ii; Functionalized-Conducting-Polymer - Microporous-Membrane Based Voltammetric Sensor Skins With High Selectivity/Sensitivity, Multiple Analyte Sensing in Single Interrogation, Wide Operating Temperature; employees 7
+2017-06-09: NASA SBIR phase_i; Unique, Voltammetric Electrochemical Sensors for Organic Contaminants, with Excellent Discrimination, Based on Conducting Polymer-, Aptamer- and Other-Functionalized Sensing Electrodes; employees 7
+2017-09-01: HHS SBIR phase_ii; Electrochromic + Anti-Fog Personal-Protective Eyewear (PPE) Based on Unique, Very Low Power, Conductive Coatings and Leveraging Unique, ANSI Z87.1-/Military-Qualified Electrochromic Eyewear Technology; employees None
+2018-07-02: DOE SBIR phase_i; Electrochromic Auto-Darkening Windows for Buildings for Energy Conservation Based on Unique Conducting Polymers and Already Demonstrated in Sunglasses; employees 8
+2018-10-16: DOD SBIR phase_ii; Inexpensive, Field-Portable, Rugged, Voltammetric Sensors Based on Functionalized Microporous Membranes, with ppb Sensitivity, Multi-Analyte Discrimination, Microchip Controller and Network-Connected Android Phone Control; employees 8
+2020-09-01: HHS SBIR phase_i; Electrochromic + Anti-Fog + Prescription Lens Personal-Protective Equipment (PPE) Eyewear Based on Unique, Very Low Power, Conductive Coatings and Leveraging Unique, ANSI Z87.1-/Military-Qualified Ele; employees None
+2022-01-30: NASA SBIR phase_ii; Thermal Control in Lunar Rovers and Structures with Novel Electrochromic Variable-Emissivity Skins; employees 6",,,
+S005,"Orchid BioAdvisory, LLC","Mendham, NJ",0001826673,sec_form_d 2020-09-30 https://www.sec.gov/Archives/edgar/data/1826673/000182667320000001/,2020-09-30: Other; revenue Decline to Disclose; incorporated 2020,,,,
+S006,"RoboBurger Enterprises, Inc.","Newark, NJ",0001951099,sec_form_d 2022-10-21 https://www.sec.gov/Archives/edgar/data/1951099/000195109922000001/,2022-10-21: Restaurants; revenue Decline to Disclose; incorporated 2021,,,,
+S007,"Pharmaseq, Inc","Monmouth Jct., NJ; Monmouth Junction, NJ",,"sbir_sttr 2003-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43HL074607-01
+sbir_sttr 2004-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43HG003264-01
+sbir_sttr 2004-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43CA110815-01
+sbir_sttr 2005-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43EB006049-01
+sbir_sttr 2006-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9R44RR022969-02A1
+sbir_sttr 2008-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44HL074607-04A2
+sbir_sttr 2008-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N43CN0800020
+sbir_sttr 2008-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43CA132547-01A1
+sbir_sttr 2009-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43GM087834-01
+sbir_sttr 2013-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1248465
+sbir_sttr 2014-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N44CO140050
+sbir_sttr 2014-12-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1430956
+sbir_sttr 2015-02-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43CA193087-01
+sbir_sttr 2015-09-07 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R44HG008714-01
+sbir_sttr 2015-09-07 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R44HG008714-01
+sbir_sttr 2017-09-14 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43GM123903-01
+sbir_sttr 2019-05-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43GM133228-01
+sbir_sttr 2020-09-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43CK000576-01A1",,"2003-01-01: HHS SBIR phase_i; Rapid Cystic Fibrosis DNA Mutation Screening Test; employees 0
+2004-01-01: HHS SBIR phase_i; Flow instrument for two-color assays on microtransponder; employees 0
+2004-01-01: HHS SBIR phase_i; Cell-based Assay on Microtransponders; employees 0
+2005-01-01: HHS SBIR phase_i; Fluidic Sorter for Microtransponders; employees 0
+2006-01-01: HHS SBIR phase_ii; Flow Instrument for Two-color Assay on Microtransponders; employees 0
+2008-01-01: HHS SBIR phase_ii; Rapid Cystic Fibrosis Mutation Screening Test; employees 0
+2008-01-01: HHS SBIR phase_i; SBIR PHASE I ANTIBODY ARRAY FOR CANCER DETECTION (TOPIC236); employees 0
+2008-01-01: HHS SBIR phase_i; Use of Silver Nanostructures on Microtransponders in Ultra-sensitive Assay; employees 0
+2009-01-01: HHS SBIR phase_i; Tagging of Laboratory Mice with Microtransponders; employees 0
+2013-01-01: NSF SBIR phase_i; SBIR Phase I: A Radio p-Chip for intracellular sensing and communication; employees 14
+2014-01-01: HHS SBIR phase_ii; HHSN261201400050C;TOPIC 309?DEVELOPMENT OF LOW COST, SMALL SAMPLE MULTI-ANALYTE TECH. FOR CANCER DIAGNOSIS,PROGNOSISandEARLY DETECTION?;TITLE:HIGHLY SENSITIVE AND SPECIFIC MULTIPLEX PROSTATE CANCER ASSA; employees 0
+2014-12-01: NSF SBIR phase_ii; SBIR Phase II: A microscopic electronic chip with sensors that can be implanted into living cells to monitor events in real time; employees 15
+2015-02-01: HHS SBIR phase_i; Sequenece-specific detection of proteases using electronic p-Chips in multiplex format; employees None
+2015-09-07: HHS SBIR phase_i; Genome-scale De Novo DNA Synthesis on Electronic p-Chips with Sorting; employees None
+2015-09-07: HHS SBIR phase_ii; Genome-scale De Novo DNA Synthesis on Electronic p-Chips with Sorting; employees None
+2017-09-14: HHS SBIR phase_i; Method for High Throughput Assembly of Long DNA Fragments in vitro; employees None
+2019-05-01: HHS SBIR phase_i; Engineered enzyme sensors based on allosteric regulation; employees None
+2020-09-01: HHS SBIR phase_i; Portable Bioassay System Based on Electronic p-Chips: Application to Detect Dengue Antibodies; employees None",,,
+S008,"Universal Global Products, LLC","Dover, NJ",,"sbir_sttr 2007-12-13 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15QKN-08-C-0064
+sbir_sttr 2009-09-25 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15QKN-09-C-0152
+sbir_sttr 2009-11-12 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15QKN-10-C-0024
+sbir_sttr 2010-09-28 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15QKN-10-C-0122",,"2007-12-13: DOD SBIR phase_i; Boron Nanotubes for Ultra High Strength Light Weight Composites; employees 2
+2009-09-25: DOD SBIR phase_ii; Boron Nanotubes for Ultra High Strength Light Weight Composites; employees 2
+2009-11-12: DOD SBIR phase_i; Innovative Coatings for Lightweight Alloys; employees 2
+2010-09-28: DOD SBIR phase_ii; Innovative Coatings for Lightweight Alloys; employees 2",,,
+S009,"PALATIN TECHNOLOGIES, INC.","Princeton, NJ",,"sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=40339
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=43775
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=43775
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43DK055470-01
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=44002
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43GM060144-01
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43DA013058-01
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43CA083417-01
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=PHS2001-2
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=PHS2001-2",,"1998-01-01: HHS STTR phase_i; IMAGING THROMBOEMBOLISM WITH TC-99M-PEPTIDE, TP1201; employees 0
+1999-01-01: HHS SBIR phase_ii; N/A; employees 0
+1999-01-01: HHS SBIR phase_i; N/A; employees 0
+1999-01-01: HHS SBIR phase_i; MELANOCORTIN-4 RECEPTOR SPECIFIC METALLOPEPTIDE ANALOG; employees 0
+1999-01-01: HHS STTR phase_i; IMAGING COLORECTAL CANCER WITH TC 99M VIP; employees 0
+1999-01-01: HHS SBIR phase_i; INTRANASAL DELIVERY OF NOVEL PEPTIDE THERAPEUTICS; employees 0
+1999-01-01: HHS SBIR phase_i; NOVEL METALOPEPTIDES AS OPIOID ANALGESICS; employees 0
+2000-01-01: HHS SBIR phase_i; N/A; employees 0
+2001-01-01: HHS STTR phase_ii; IMAGING THROMBOEMBOLISM WITH FIBRIN AVID TC-99M-PEPTIDE; employees 0
+2001-01-01: HHS STTR phase_i; IMAGING THROMBOEMBOLISM WITH FIBRIN AVID TC-99M-PEPTIDE; employees 0",,,
+S010,Vuln/eval Associates,"Holmdel, NJ",,"sbir_sttr 1990-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=13119
+sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=13119",,"1990-01-01: DOD SBIR phase_i; EW VULNERABILITY EVALUATION METHODOLOGY FOR COMMUNICATION SYSTEMS; employees 1
+1991-01-01: DOD SBIR phase_ii; EW VULNERABILITY EVALUATION METHODOLOGY FOR COMMUNICATION SYSTEMS; employees 1",,,
+S011,"TEAM OF CARE SOLUTIONS, LLC","Fort Lee, NJ",,"sbir_sttr 2020-03-09 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8649-20-P-0572
+sbir_sttr 2021-03-10 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8649-21-P-0843",,"2020-03-09: DOD SBIR phase_i; Technology-Enabled Active Management; employees None
+2021-03-10: DOD SBIR phase_ii; Workflow Management System for Air Force Continuous Process Improvement (CPI) Initiatives; employees 2",,,
+S012,"TERI RESEARCH, INC.","Holmdel, NJ",,"sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=32595
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=32595
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=36830
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=36830
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=40480
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=41607
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=40629
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=41607
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-00-C-0202
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-00-C-0202
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DAAB07-00-C-J852
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DAAB07-00-C-K518",,"1996-01-01: DOD SBIR phase_i; Extended Mission Low Power Concepts for Portable Computing Environment (T-103-96); employees 25
+1997-01-01: DOD SBIR phase_ii; Extended Mission Low Power Concepts for Portable Computing Environment (T-103-96); employees 25
+1997-01-01: DOD SBIR phase_i; Soldier Situational Awareness and Well-being; employees 25
+1997-01-01: DOD SBIR phase_ii; Soldier Situational Awareness and Well-being; employees 25
+1998-01-01: DOD SBIR phase_i; Weapon System Operator Tactical Operation Aids; employees 25
+1998-01-01: DOD SBIR phase_i; High Accuracy Speech Recognition in Noisy Environments; employees 9
+1998-01-01: DOD SBIR phase_i; Advanced Speech Recognition Technologies; employees 12
+1998-01-01: DOD SBIR phase_ii; High Accuracy Speech Recognition in Noisy Environments; employees 9
+2000-01-01: DOD SBIR phase_i; N/A; employees 12
+2000-01-01: DOD SBIR phase_ii; N/A; employees 12
+2000-01-01: DOD SBIR phase_i; N/A; employees 8
+2001-01-01: DOD SBIR phase_ii; Products that implement the ROSAA (Reconfigurable, Open-Systems, Avionics Architecture); employees 8",,,
+S013,Other Side Dispensary LLC,"Jersey City, NJ",0001972720,"sec_form_d 2023-06-26 https://www.sec.gov/Archives/edgar/data/1972720/000188663823000002/
+sec_form_d 2024-02-21 https://www.sec.gov/Archives/edgar/data/1972720/000197272024000002/","2023-06-26: Retailing; revenue No Revenues; incorporated 2022
+2024-02-21: Retailing; revenue No Revenues; incorporated 2022",,,,
+S014,"Chaat Company, LLC","Piscataway, NJ",0001623834,sec_form_d 2019-09-06 https://www.sec.gov/Archives/edgar/data/1623834/000162383419000002/,2019-09-06: Other; revenue Decline to Disclose; incorporated 2014,,,,
+S015,"Aspargo Laboratories, Inc.","Englewood Cliffs, NJ",0001805092,"sec_form_d 2020-03-03 https://www.sec.gov/Archives/edgar/data/1805092/000175392620000030/
+sec_form_d 2020-07-28 https://www.sec.gov/Archives/edgar/data/1805092/000175392620000209/
+sec_form_d 2020-10-15 https://www.sec.gov/Archives/edgar/data/1805092/000175392620000335/
+sec_form_d 2022-03-28 https://www.sec.gov/Archives/edgar/data/1805092/000175392622000348/
+sec_form_d 2022-12-05 https://www.sec.gov/Archives/edgar/data/1805092/000175392622001525/","2020-03-03: Pharmaceuticals; revenue No Revenues; incorporated 2019
+2020-07-28: Pharmaceuticals; revenue No Revenues; incorporated 2019
+2020-10-15: Pharmaceuticals; revenue No Revenues; incorporated 2019
+2022-03-28: Pharmaceuticals; revenue No Revenues; incorporated 2019
+2022-12-05: Pharmaceuticals; revenue $1 - $1,000,000; incorporated 2019",,,,
+S016,"Iron Hills Therapeutics, Inc.","Andover, NJ",0001837437,"sec_form_d 2020-12-28 https://www.sec.gov/Archives/edgar/data/1837437/000183743720000001/
+sec_form_d 2022-03-22 https://www.sec.gov/Archives/edgar/data/1837437/000183743722000003/","2020-12-28: Other Health Care; revenue Decline to Disclose; incorporated 2020
+2022-03-22: Biotechnology; revenue Decline to Disclose; incorporated 2020",,,,
+S017,Dragon Interactive Corp,"New Brunswick, NJ",0002018293,"sec_form_d 2024-06-06 https://www.sec.gov/Archives/edgar/data/2018293/000121390024050404/
+sec_form_d 2024-09-30 https://www.sec.gov/Archives/edgar/data/2018293/000121390024082948/","2024-06-06: Other; revenue Decline to Disclose; incorporated 2022
+2024-09-30: Other; revenue Decline to Disclose; incorporated 2022",,,,
+S018,"Audience Town, Inc.","Newark, NJ",0001822684,"sec_form_d 2020-08-26 https://www.sec.gov/Archives/edgar/data/1822684/000182268420000001/
+sec_form_d 2021-02-01 https://www.sec.gov/Archives/edgar/data/1822684/000182268421000001/
+sec_form_d 2021-11-16 https://www.sec.gov/Archives/edgar/data/1822684/000182268421000003/
+sec_form_d 2023-11-07 https://www.sec.gov/Archives/edgar/data/1822684/000182268423000001/","2020-08-26: Other Technology; revenue Decline to Disclose; incorporated 2019
+2021-02-01: Other Technology; revenue Decline to Disclose; incorporated 2019
+2021-11-16: Other Technology; revenue Decline to Disclose; incorporated 2019
+2023-11-07: Other Technology; revenue Decline to Disclose; incorporated 2019",,,,
+S019,MAXENTRIC TECHNOLOGIES LLC,"Fo, NJ; Fort Lee, NJ",,"sbir_sttr 2010-12-22 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-11-C-0092
+sbir_sttr 2011-01-20 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8650-11-M-1077
+sbir_sttr 2011-02-16 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-11-C-0171
+sbir_sttr 2011-04-29 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15P7T-11-C-S410
+sbir_sttr 2011-05-09 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N00014-11-M-0264
+sbir_sttr 2011-05-23 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=HQ0147-11-C-7560
+sbir_sttr 2011-08-12 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N00167-11-P-0399
+sbir_sttr 2011-09-28 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W31P4Q-11-C-0329
+sbir_sttr 2011-11-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-12-C-0036
+sbir_sttr 2012-05-08 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-12-C-0191
+sbir_sttr 2012-05-10 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=M67854-12-C-6539
+sbir_sttr 2012-06-22 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W911NF-12-C-0052
+sbir_sttr 2012-06-28 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W31P4Q-12-C-0232
+sbir_sttr 2012-11-05 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-13-C-0006
+sbir_sttr 2013-02-12 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W81XWH-13-C-0026
+sbir_sttr 2013-03-20 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N00024-13-C-4520
+sbir_sttr 2013-06-17 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=H92222-13-P-0038
+sbir_sttr 2013-07-15 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-13-C-0182
+sbir_sttr 2013-07-17 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-13-C-0194
+sbir_sttr 2013-07-23 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-13-C-0252",,"2010-12-22: DOD STTR phase_ii; Agnostic Wireless Communications Waveform Gateway; employees 21
+2011-01-20: DOD SBIR phase_i; X-Band and Ka Band Low Noise Block Downconverter; employees 20
+2011-02-16: DOD SBIR phase_i; Modular Antenna System for Tracking Satellites by adaptations of existing terminals; employees 20
+2011-04-29: DOD SBIR phase_i; Optimized Demodulation Techniques; employees 15
+2011-05-09: DOD SBIR phase_i; Combined spectral management/ satellite receiver modem; employees 15
+2011-05-23: DOD SBIR phase_i; Wideband Scalable Multi-channel Digital Receiver/Exciter (DREX); employees 20
+2011-08-12: DOD SBIR phase_i; High Performance Cost Effective Circulators/Isolators; employees 15
+2011-09-28: DOD SBIR phase_i; High Bandwidth Terahertz Communication Link; employees 18
+2011-11-01: DOD SBIR phase_i; SATCOM X-band Digital Beamforming Network; employees 18
+2012-05-08: DOD SBIR phase_i; W-band Transmitter; employees 16
+2012-05-10: DOD SBIR phase_i; Distributed storage in wireless mesh networks; employees 16
+2012-06-22: DOD SBIR phase_i; Advanced Order Linearizer for Satellite Communications; employees 16
+2012-06-28: DOD STTR phase_i; Tunable High Quality Factor Radio Frequency Filters; employees 18
+2012-11-05: DOD SBIR phase_ii; SATCOM X-band Digital Beamforming Network; employees 18
+2013-02-12: DOD SBIR phase_i; Self Powered Biosensors; employees 18
+2013-03-20: DOD SBIR phase_ii; High Performance Cost Effective Circulators/Isolators; employees 20
+2013-06-17: DOD SBIR phase_i; Next Generation Portable Power Amplifier; employees 20
+2013-07-15: DOD SBIR phase_ii; W-band Transmitter; employees 20
+2013-07-17: DOD SBIR phase_i; New wavefroms for anti-jam satellite communications; employees 20
+2013-07-23: DOD SBIR phase_i; Channel and Interference adaptive SATCOM Digital beam-former; employees 20",,,
+S020,"BioStream Technologies, LLC","Moorestown, NJ",0001716551,"sbir_sttr 2018-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1747058
+sec_form_d 2021-01-22 https://www.sec.gov/Archives/edgar/data/1716551/000119248221000089/
+sec_form_d 2021-08-13 https://www.sec.gov/Archives/edgar/data/1716551/000119248221000664/","2021-01-22: Other Technology; revenue Decline to Disclose; incorporated None
+2021-08-13: Other Technology; revenue Decline to Disclose; incorporated None","2018-01-01: NSF STTR phase_i; STTR Phase I: An immersive gaze-controlled video game to help children on the autism spectrum improve their eye contact, emotion recognition, and joint attention skills; employees 2",,,
+S021,"VASADE BIOSCIENCES, INC.","North Brunswick, NJ",,"sbir_sttr 2012-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R44HL112512-01
+sbir_sttr 2012-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43HL116052-01
+sbir_sttr 2013-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4R44HL112512-02",,"2012-01-01: HHS SBIR phase_i; AC5 inhibitor for heart failure; employees 0
+2012-01-01: HHS SBIR phase_i; Acute Coronary Syndrome animal model; employees 0
+2013-01-01: HHS SBIR phase_ii; AC5 inhibitor for heart failure; employees 0",,,
+S022,Cognitive Network Solutions Inc,"Ridgefield Park, NJ",0002060335,"sec_form_d 2025-03-13 https://www.sec.gov/Archives/edgar/data/2060335/000206033525000001/
+sec_form_d 2025-09-22 https://www.sec.gov/Archives/edgar/data/2060335/000206033525000003/","2025-03-13: Telecommunications; revenue No Revenues; incorporated 2024
+2025-09-22: Telecommunications; revenue No Revenues; incorporated 2024",,,,
+S023,"Cash Mgt Solutions, LLC","Summit, NJ",0001940714,"sec_form_d 2022-08-02 https://www.sec.gov/Archives/edgar/data/1940714/000194071422000001/
+sec_form_d 2026-01-12 https://www.sec.gov/Archives/edgar/data/1940714/000194071426000001/","2022-08-02: Other; revenue Decline to Disclose; incorporated 2022
+2026-01-12: Other; revenue Decline to Disclose; incorporated 2022",,,,
+S024,Endpoint Technologies Inc.,"Warren, NJ",,"sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=27509
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=27509
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9561184
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=34718
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9660853
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9561184",,"1994-01-01: NSF SBIR phase_i; REAL-TIME IN-SITU PROCESS CONTROL FOR CHEMICAL-MECHANICAL POLISHING PLANARIZATION; employees 0
+1995-01-01: NSF SBIR phase_ii; REAL-TIME IN-SITU PROCESS CONTROL FOR CHEMICAL-MECHANICAL POLISHING PLANARIZATION; employees 0
+1996-01-01: NSF SBIR phase_i; SBIR PHASE I:  Actively Controlled Chemical Mechanical      Polishing Process; employees 0
+1996-01-01: NSF SBIR phase_ii; Real-Time, In-Situ, Process Control for...; employees 0
+1997-01-01: NSF SBIR phase_i; SBIR Phase I: Advanced Metal Film Polishing Planarization   Process Control; employees 0
+1997-01-01: NSF SBIR phase_ii; SBIR PHASE I:  Actively Controlled Chemical Mechanical      Polishing Process; employees 0",,,
+S025,"Initrade, Inc.","Maplewood, NJ",0001983107,sec_form_d 2023-07-13 https://www.sec.gov/Archives/edgar/data/1983107/000198310723000002/,2023-07-13: Other Technology; revenue Decline to Disclose; incorporated 2023,,,,
+S026,"Evallo's Laboratories, Corp.","Montville, NJ",0002125057,sec_form_d 2026-05-18 https://www.sec.gov/Archives/edgar/data/2125057/000212505726000001/,2026-05-18: Other Technology; revenue No Revenues; incorporated 2025,,,,
+S027,Smash the Mirror LLC,"Summit, NJ",0002135388,sec_form_d 2026-05-18 https://www.sec.gov/Archives/edgar/data/2135388/000213538826000003/,2026-05-18: Other; revenue No Revenues; incorporated 2026,,,,
+S028,"Tinkercast, LLC","Montclair, NJ",,"sbir_sttr 2019-02-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1843693
+sbir_sttr 2020-09-15 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1951141",,"2019-02-01: NSF SBIR phase_i; SBIR Phase I: Interactive Podcast Platform For Listening Comprehension; employees 3
+2020-09-15: NSF SBIR phase_ii; SBIR Phase II: Interactive Podcast Platform; employees 6",,,
+S029,"VASADE BIOSCIENCES, INC.","North Brunswick, NJ",,"sbir_sttr 2010-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R41DK083826-01A1
+sbir_sttr 2010-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R42HL079729-02A2",,"2010-01-01: HHS STTR phase_i; AC5 Inhibitor for Obesity; employees 0
+2010-01-01: HHS STTR phase_ii; Prevention of Cardiac Cell Death by Mst1 inhibitor; employees 0",,,
+S030,Bedaggered Productions Ltd Liability Co,"Ridgewood, NJ",0001800224,sec_form_d 2020-01-30 https://www.sec.gov/Archives/edgar/data/1800224/000180022420000001/,2020-01-30: Other; revenue Decline to Disclose; incorporated 2018,,,,
+S031,WESTWAY STUDIOS LLC,"Pine Brook, NJ",0002105848,sec_form_d 2026-01-16 https://www.sec.gov/Archives/edgar/data/2105848/000210584826000001/,2026-01-16: Other; revenue Decline to Disclose; incorporated 2025,,,,
+S032,"Optimal Dynamics, Inc.","Princeton, NJ",0001811941,sec_form_d 2020-05-14 https://www.sec.gov/Archives/edgar/data/1811941/000181194120000001/,2020-05-14: Other Technology; revenue Decline to Disclose; incorporated 2017,,,,
+S033,U.s. Laser Corp.,"Wyckoff, NJ",,"sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=20116
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=20116
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=28882
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=37020",,"1993-01-01: DOD SBIR phase_i; Fiber Optic System for Delivery of High Power Laser Radiation; employees 16
+1994-01-01: DOD SBIR phase_ii; Fiber Optic System for Delivery of High Power Laser Radiation; employees 16
+1995-01-01: DOD SBIR phase_i; Optical Fiber Coupled Integrated High-Low Energy Laser; employees 0
+1997-01-01: DOD SBIR phase_i; Passive, Low Cost, Diffraction-Limited Fiber Optic Laser Beam Delivery; employees 18",,,
+S034,VYTRAN CORP.,"Morganville, NJ",,"sbir_sttr 2006-02-23 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA9451-06-M-0079
+sbir_sttr 2006-08-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N00164-06-C-6009
+sbir_sttr 2007-05-31 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA9451-07-C-0071",,"2006-02-23: DOD SBIR phase_i; High Energy Laser (HEL) Beam Combination; employees 24
+2006-08-01: DOD SBIR phase_i; Novel Techniques to Combine Optical Radiation from Fiber Lasers; employees 24
+2007-05-31: DOD SBIR phase_ii; High Energy Laser (HEL) Beam Combination; employees 24",,,
+S035,Bella Ray Beverage LLC,"Colts Neck, NJ",0002024038,sec_form_d 2024-06-27 https://www.sec.gov/Archives/edgar/data/2024038/000202403824000001/,2024-06-27: Other; revenue Decline to Disclose; incorporated 2023,,,,
+S036,"Nuvvon, Inc.","Bordentown, NJ",0002018938,sec_form_d 2024-04-12 https://www.sec.gov/Archives/edgar/data/2018938/000156761924000257/,2024-04-12: Other; revenue Decline to Disclose; incorporated 2022,,,,
+S037,MENSSANA RESEARCH INC,"Fort Lee, NJ",,"sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=CA77098-01
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=40364
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=HL059715
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=44000
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9R44HL070411-02A1
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9R44HL070411-02A1
+sbir_sttr 2002-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43AI052504-01
+sbir_sttr 2004-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43DE015923-01
+sbir_sttr 2005-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44AI052504-02A1
+sbir_sttr 2005-11-07 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W31P4Q-06-C-0013
+sbir_sttr 2007-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9R44HL070411-04A1
+sbir_sttr 2007-08-28 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W31P4Q-07-C-0018
+sbir_sttr 2010-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44HL059715-04A1
+sbir_sttr 2010-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43RR030689-01
+sbir_sttr 2014-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43HL123907-01
+sbir_sttr 2015-02-05 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43AI107968-01A1
+sbir_sttr 2016-04-05 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R44CA203019-01A1
+sbir_sttr 2019-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=75N91019C00052",,"1997-01-01: HHS SBIR phase_i; BREATH TEST FOR LUNG CANCER; employees 0
+1998-01-01: HHS STTR phase_i; BREATH COLLECTION APPARATUS FOR DIAGNOSIS OF DISEASE; employees 0
+1998-01-01: HHS SBIR phase_i; BREATH TEST FOR HEART TRANSPLANT REJECTION; employees 0
+1999-01-01: HHS STTR phase_i; NEW BIOMARKER OF BREAST CANCER IN BREATH; employees 0
+2001-01-01: HHS SBIR phase_ii; A BREATH TEST FOR LUNG CANCER; employees 0
+2001-01-01: HHS SBIR phase_i; A BREATH TEST FOR LUNG CANCER; employees 0
+2002-01-01: HHS SBIR phase_i; VOLATILE MARKERS OF PULMONARY TUBERCULOSIS IN THE BREATH; employees 0
+2004-01-01: HHS SBIR phase_i; VOLATILE MARKERS OF ORAL MALODOR IN THE BREATH; employees 0
+2005-01-01: HHS SBIR phase_ii; VOLATILE MARKERS OF PULMONARY TUBERCULOSIS IN THE BREATH; employees 0
+2005-11-07: DOD SBIR phase_i; Rapid, Non-Invasive Radiation Bio-Dosimeter; employees 7
+2007-01-01: HHS SBIR phase_ii; A BREATH TEST FOR LUNG CANCER; employees None
+2007-08-28: DOD SBIR phase_ii; Rapid, Non-Invasive Radiation Bio-Dosimeter; employees 6
+2010-01-01: HHS SBIR phase_ii; VALIDATION OF HEARTSBREATH TEST FOR HEART TRANSPLANT REJECTION; employees 0
+2010-01-01: HHS SBIR phase_i; POINT-OF-CARE BREATH TEST FOR DISEASES; employees 0
+2014-01-01: HHS SBIR phase_i; Point of Care Breath Test for Biomarkers of COPD; employees 0
+2015-02-05: HHS SBIR phase_i; Validation of Point-of-Care Breath Test for Pulmonary TB; employees None
+2016-04-05: HHS SBIR phase_ii; Validation of a rapid point-of-care breath test for breast cancer; employees None
+2019-01-01: HHS SBIR phase_i; TOPIC 393: BREATH TEST FOR BIOMARKERS OF RADIATION EXPOSURE; employees None",,,
+S038,One Wager Inc.,"Stewartsville, NJ",0001867791,"sec_form_d 2021-06-16 https://www.sec.gov/Archives/edgar/data/1867791/000186779121000001/
+sec_form_d 2021-08-13 https://www.sec.gov/Archives/edgar/data/1867791/000186779121000002/","2021-06-16: Other Technology; revenue No Revenues; incorporated 2021
+2021-08-13: Other Technology; revenue No Revenues; incorporated 2021",,,,
+S039,"NEOCERA, LLC","Piscataway, NJ",,"sbir_sttr 1989-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=10785
+sbir_sttr 1990-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=12041
+sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=12041",,"1989-01-01: DOE SBIR phase_i; TECHNIQUES FOR THE PULSED ENERGY DEPOSITION OF PARTICLE-FREE, ULTRA-SMOOTH HIGH CRITICAL TEMPERATURE SUPERCONDUCTING THIN FILMS; employees 0
+1990-01-01: NASA SBIR phase_i; MICROWAVE-COMPATIBLE, HIGH-TC SUPERCONDUCTING FILMS ON SAPPHIRE SUBSTRATES; employees 0
+1991-01-01: NASA SBIR phase_ii; MICROWAVE-COMPATIBLE, HIGH-TC SUPERCONDUCTING FILMS ON SAPPHIRE SUBSTRATES; employees 0",,,
+S040,"Five Springs, LLC","Sparta, NJ",0002052910,sec_form_d 2025-01-27 https://www.sec.gov/Archives/edgar/data/2052910/000205291025000001/,2025-01-27: Other; revenue No Revenues; incorporated 2024,,,,
+S041,HOSANNA TOUR LLC,"Summit, NJ",0001739541,sec_form_d 2019-05-28 https://www.sec.gov/Archives/edgar/data/1739541/000173954119000001/,2019-05-28: Other; revenue No Revenues; incorporated 2018,,,,
+S042,"SOVOZ, INC.","Princeton Jct., NJ",,"sbir_sttr 2005-11-09 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N61339-06-C-0008
+sbir_sttr 2006-09-11 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N61339-06-C-0151",,"2005-11-09: DOD SBIR phase_i; Control Interface for Driving Interactive Characters in Immersive Virtual Environments; employees 4
+2006-09-11: DOD SBIR phase_ii; Control Interface for Driving Interactive Characters in Immersive Virtual Environments; employees 3",,,
+S043,Galaxy Scientific Corp.,"Egg Harbor Townsh, NJ",,"sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=32171
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=32171",,"1996-01-01: DOD SBIR phase_i; 3D Virtual Environment for Team Training; employees 37
+1997-01-01: DOD SBIR phase_ii; 3D Virtual Environment for Team Training; employees 37",,,
+S044,INNOVATIVE EDUCATIONAL RESOURCES,"Stewartsville, NJ",,"sbir_sttr 2010-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2010-00298
+sbir_sttr 2011-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2011-02610",,"2010-01-01: USDA SBIR phase_i; A Multifaceted Community Approach Preventing Child Obesity Through Standards-Based Classroom Instruction Using an Interactive Inform Tech; employees 1
+2011-01-01: USDA SBIR phase_ii; A Community Focused Participatory Research Program to Evaluate COSolutions; employees 2",,,
+S045,SINGLETO2 THERAPEUTICS LLC,"New Providence, NJ",,"sbir_sttr 2016-09-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R41DE026083-01A1
+sbir_sttr 2019-09-16 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44DE026083-03
+sbir_sttr 2021-08-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2112257",,"2016-09-01: HHS STTR phase_i; Superhydrophobic Implantable Surface and  D Printing Technology for Targeted Dental Photodynamic Therapy; employees None
+2019-09-16: HHS SBIR phase_ii; 3D-Printed Superhydrophobic-Tipped Optical Fiber for Targeted Periodontal Photodynamic Therapy; employees None
+2021-08-01: NSF STTR phase_i; STTR Phase I: Safe Disinfection and Oxygen-Level Enrichment in Recirculating Aquaculture Systems (RAS) Using Singlet Oxygen; employees 2",,,
+S046,"Syml Lyfe, LLC","Madison, NJ",0001815154,sec_form_d 2020-06-17 https://www.sec.gov/Archives/edgar/data/1815154/000181515420000001/,2020-06-17: Computers; revenue Decline to Disclose; incorporated 2018,,,,
+S047,SYNABRIDGE CORPORATION,"Raritan, NJ",,"sbir_sttr 2003-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43EY015015-01
+sbir_sttr 2006-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44EY015015-02
+sbir_sttr 2008-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43MH083364-01A1",,"2003-01-01: HHS SBIR phase_i; Instrument for Glaucoma Early Detection and Monitoring; employees 0
+2006-01-01: HHS SBIR phase_ii; Instrument for Glaucoma Early Detection and Monitoring; employees 0
+2008-01-01: HHS SBIR phase_i; DEVICE AND METHOD FOR BIOMARKERS IN SCHIZOPHRENIA; employees 0",,,
+S048,BEZWADA BIOMEDICAL LLC,"Hillsborough, NJ",,"sbir_sttr 2020-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1937713
+sbir_sttr 2023-01-15 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2221790",,"2020-01-01: NSF SBIR phase_i; SBIR Phase I: Development of a bioabsorbable tissue adhesive; employees 3
+2023-01-15: NSF SBIR phase_ii; SBIR Phase II:Development of a bioabsorbable tissue adhesive; employees None",,,
+S049,"CARDSMART TECHNOLOGIES, INC.","Basking Ridge, NJ",,"sbir_sttr 2016-05-02 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=HSHQDC-16-C-00063
+sbir_sttr 2017-03-24 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=HSHQDC-17-C-00017
+sbir_sttr 2019-06-03 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=70RSAT19C00000038
+sbir_sttr 2019-06-03 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=70RSAT19C00000022",,"2016-05-02: DHS SBIR phase_i; Composite Identity Model for Optimizing Next Generation Remote Identity Proofing Methods; employees 8
+2017-03-24: DHS SBIR phase_ii; Composite Identity for High Assurance Remote Identity Proofing; employees 8
+2019-06-03: DHS SBIR phase_i; ICAM On-the-Fly; employees 6
+2019-06-03: DHS SBIR phase_i; Cyber Risk Collaboration and Knowledge Tool (CRiCKeT); employees 6",,,
+S050,1435 Capital SLLC,"Princeton, NJ",0001842902,sec_form_d 2021-06-07 https://www.sec.gov/Archives/edgar/data/1842902/000184290221000001/,2021-06-07: Other; revenue Decline to Disclose; incorporated 2020,,,,
+S051,PERSYST DEVELOPMENT CORPORATION,"Wayside, NJ",,"sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=16831
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=16831",,"1991-01-01: HHS SBIR phase_i; EXPERT SYSTEM DETECTION OF EEG SHARP & SPIKE WAVES; employees 0
+1993-01-01: HHS SBIR phase_ii; EXPERT SYSTEM DETECTION OF EEG SHARP & SPIKE WAVES; employees 0",,,
+S052,OPTIMAL SOLUTIONS INC,"Bridgewater, NJ",,"sbir_sttr 2012-02-20 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-FG02-12ER90224
+sbir_sttr 2013-02-19 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-FG02-13ER90512
+sbir_sttr 2014-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1346452
+sbir_sttr 2014-04-08 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0009495
+sbir_sttr 2017-02-21 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0017047
+sbir_sttr 2018-05-21 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0017047
+sbir_sttr 2019-07-02 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2019-00602
+sbir_sttr 2019-08-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8100-19-P-0018
+sbir_sttr 2021-08-31 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2021-06411",,"2012-02-20: DOE SBIR phase_i; Optimization-Based Production Scheduling for Complex Manufacturing Plants Delivered as a Service using High Performance Computing Architecture &amp;amp; Algorithms; employees 6
+2013-02-19: DOE SBIR phase_i; Optimal production planning, sourcing, distribution and routing for complex energy intensive manufacturing companies using High Performance Computing; employees 8
+2014-01-01: NSF STTR phase_i; STTR Phase I: Using Big Data to Support Supply Chain Analytics and Optimization; employees 6
+2014-04-08: DOE SBIR phase_ii; Optimal Production Planning, Sourcing, Distribution and Routing for Complex Energy Intensive Manufacturing Companies Using High Performance Computing; employees 8
+2017-02-21: DOE STTR phase_i; Fast fingerprinting & detection of materials using portable / hand-held devices and high performance computing for use in manufacturing and supply chain applications.; employees 6
+2018-05-21: DOE STTR phase_ii; Fast fingerprinting & detection of materials using portable / hand-held devices and high performance computing for use in manufacturing and supply chain applications.; employees 6
+2019-07-02: USDA SBIR phase_i; Rapid Soil Testing Using Portable Sensing Technologies; employees None
+2019-08-01: DOD SBIR phase_i; Field-level Aviation Fuel Contamination Analysis via Integrated Suite of Miniaturized Sensors including Near Infrared (NIR) Spectroscopy; employees 16
+2021-08-31: USDA SBIR phase_ii; Rapid Soil Testing Using Portable Sensing Technologies; employees None",,,
+S053,TELLURIC LABS LLC,"Tinton Falls, NJ",,"sbir_sttr 2017-02-21 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0017156
+sbir_sttr 2017-06-12 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0017878
+sbir_sttr 2018-05-21 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0017156
+sbir_sttr 2019-02-19 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0019581
+sbir_sttr 2020-04-06 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-SC0019581",,"2017-02-21: DOE SBIR phase_i; IP Access Gateway Electronics; employees 2
+2017-06-12: DOE STTR phase_i; Blockchain-Based Energy Systems; employees 2
+2018-05-21: DOE STTR phase_ii; IP Access Gateway; employees 3
+2019-02-19: DOE SBIR phase_i; TTDAQ: A Continuous Flow, Timing and Trigger DAQ System; employees 3
+2020-04-06: DOE STTR phase_ii; TTDAQ: A Continuous Flow, Timing and Trigger DAQ System; employees 2",,,
+S054,Castle Point Research Technolo,"Hoboken, NJ",,"sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=5623
+sbir_sttr 1988-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=5623",,"1987-01-01: DOD SBIR phase_i; DETERMINATION OF THE ULTIMATE STRENGTH OF A COMPOSITE MATERIAL BY CONSIDERATION OF CRITICAL MANUFACTURING FLAWS; employees 1
+1988-01-01: DOD SBIR phase_ii; DETERMINATION OF THE ULTIMATE STRENGTH OF A COMPOSITE MATERIAL BY CONSIDERATION OF CRITICAL MANUFACTURING FLAWS; employees 1",,,
+S055,SOTS Development Ltd Liability Co,"Mendham, NJ",0001991756,sec_form_d 2023-09-15 https://www.sec.gov/Archives/edgar/data/1991756/000199175623000001/,2023-09-15: Other; revenue Decline to Disclose; incorporated 2022,,,,
+S056,Ashwin-Ushas Corporation,"Freehold, NJ",,"sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=21024
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=20481
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=21024
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=29000
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=28916
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=29000
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=40701
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=42330
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=40701
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44EY012176-02
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44EY012176-02
+sbir_sttr 2002-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=M67854-02-C-1106
+sbir_sttr 2003-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=NAS5-03063
+sbir_sttr 2004-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=NNG04CA20C
+sbir_sttr 2005-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43ES013803-01
+sbir_sttr 2005-01-21 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=NNA05AC14C
+sbir_sttr 2006-04-19 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W9132T-06-C-0014
+sbir_sttr 2006-04-24 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8650-06-M-6664
+sbir_sttr 2007-04-12 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W9132T-07-C-0012
+sbir_sttr 2008-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44ES013803-02A2
+sbir_sttr 2008-01-14 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W31P4Q-08-C-0186
+sbir_sttr 2008-01-18 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=NNX08CB96P",,"1993-01-01: DOE SBIR phase_i; FLEXIBLE ELECTROCHROMIC WINDOW MATERIALS BASED ON POLY(DIPHENYLAMINE) AND RELATED CONDUCTING POLYMERS; employees 0
+1993-01-01: DOD SBIR phase_i; Mineralization of TNT; employees 2
+1994-01-01: DOE SBIR phase_ii; FLEXIBLE ELECTROCHROMIC WINDOW MATERIALS BASED ON POLY(DIPHENYLAMINE) AND RELATED CONDUCTING POLYMERS; employees 0
+1995-01-01: DOD SBIR phase_i; Flexible, Visible/IR Flat Panel Electrochromics Based on Poly(Diphenyl Amine) and Related Conducting Polymers; employees 8
+1995-01-01: DOD SBIR phase_i; Corrosion Prevention Coatings Based on Soluble Conducting Polymers; employees 8
+1996-01-01: DOD SBIR phase_ii; Flexible, Visible/IR Flat Panel Electrochromics Based on Poly(Diphenyl Amine) and Related Conducting Polymers; employees 8
+1998-01-01: DOD SBIR phase_i; Conducting Polymer Based Actively IR Modulating Electrochromics; employees 8
+1998-01-01: HHS SBIR phase_i; ELECTROCHROMIC FAST DARKENING SUNWEAR FOR ARMD; employees 0
+1999-01-01: DOD SBIR phase_ii; N/A; employees 8
+2000-01-01: HHS SBIR phase_i; N/A; employees 0
+2000-01-01: HHS SBIR phase_ii; N/A; employees 0
+2002-01-01: DOD SBIR phase_i; Enhanced, Unique Microwave Methodologies for Remediation of CW and BW Agents and Medical Waste; employees 8
+2003-01-01: NASA SBIR phase_i; Intelligent Variable Emittance Panels Using New, """"True"""" Solid Electrolyte; employees 8
+2004-01-01: NASA SBIR phase_ii; Intelligent Variable Emittance Panels Using New, """"""""True"""""""" Solid Electrolyte; employees 8
+2005-01-01: HHS SBIR phase_i; Microwave remediation of hazardous medical wastes; employees 0
+2005-01-21: NASA SBIR phase_i; Spacecraft Thermal Protection Systems (TPS) Based on Polybenzoxazole (PBO) With Unique UV, Atomic-O and Solar Wind Protective Coatings; employees 8
+2006-04-19: DOD SBIR phase_i; Unique Conducting Polymer-Coated, Metallized Microporous Membranes with High Electro-Osmotic Function for Chem-Bio Protection; employees 8
+2006-04-24: DOD SBIR phase_i; Unique Thin-Film, Flexible Electrochromics for Helmet Visor Application; employees 8
+2007-04-12: DOD SBIR phase_ii; Unique Conducting Polymer-Coated, Metallized Microporous Membranes with High Electro-Osmotic Function for Chem-Bio Protection; employees 8
+2008-01-01: HHS SBIR phase_ii; MICROWAVE REMEDIATION OF HAZARDOUS MEDICAL WASTES; employees 0
+2008-01-14: DOD SBIR phase_i; Unique, Highly IR- and Visible-Reflective, Highly Stretchable Membranes For Reflective Sights, Adapted From IR Electrochromics Technology; employees 6
+2008-01-18: NASA SBIR phase_i; Variable Emissivity Electrochromics Using Ionic Electrolytes and Low Solar Absorptance Coatings; employees 6",,,
+S057,Measurement Concept Corp,"Colts Neck, NJ",,"sbir_sttr 1983-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=330
+sbir_sttr 1986-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4132
+sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=5378
+sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4132",,"1983-01-01: DOE SBIR phase_i; POLARIMETER FOR APPLICATION TO THE NON-DESTRUCTIVE EVALUATION (NDE) OF MATERIALS; employees 0
+1986-01-01: DOD SBIR phase_i; DIGITAL SPECTROSCOPY OF PIEZOELECTRIC CRYSTALLINE MEDIA; employees 4
+1987-01-01: NSF SBIR phase_i; ABSORPTION DIGITAL REFRACTOMETRY; employees 0
+1987-01-01: DOD SBIR phase_ii; DIGITAL SPECTROSCOPY OF PIEZOELECTRIC CRYSTALLINE MEDIA; employees 4",,,
+S058,"COLLAGEN MATRIX, INC.","Franklin Lakes, NJ",,"sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=21945
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1 N43 DK52225-000,
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1 R43 AR43549-01,
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=33999
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=34000
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=39796
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=39805
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=42109
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43HL061049-01A1
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43NS040630-01
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9R44DE014664-02
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9R44DE014664-02
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44HL061049-02
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44HL061049-02
+sbir_sttr 2002-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43HL069217-01
+sbir_sttr 2003-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44NS040630-02
+sbir_sttr 2003-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44NS040630-02",,"1993-01-01: HHS SBIR phase_i; Evaluation of a Resorbable Collagen Template; employees 0
+1995-01-01: HHS SBIR phase_i; Resorbable Tubular Collagen Implant--Endoscopic Repair; employees 0
+1995-01-01: HHS SBIR phase_i; Collagen Based Ligament Template for ACL Reconstruction; employees 0
+1996-01-01: HHS SBIR phase_i; COLLAGEN STENT TO IMPROVE PATENCY RATES IN TIPS; employees 0
+1996-01-01: HHS SBIR phase_i; SBIR Phase I: Commercially Viable Deposition of Catalytic   Films Onto Proton Conducting Membranes; employees 0
+1997-01-01: HHS SBIR phase_ii; Structures; employees 0
+1997-01-01: HHS SBIR phase_ii; Structures; employees 0
+1998-01-01: HHS SBIR phase_i; TYPE I COLLAGEN MATRIX REFERENCE MATERIALS FOR TISSUES; employees 0
+1999-01-01: HHS SBIR phase_i; NOVEL COLLAGEN-BASED PERIPHERAL ENDOPROSTHESIS; employees 0
+2000-01-01: HHS SBIR phase_i; N/A; employees 0
+2001-01-01: HHS SBIR phase_ii; Type 1 Collagen Matrix Reference Materials for Tissues; employees 0
+2001-01-01: HHS SBIR phase_i; Type 1 Collagen Matrix Reference Materials for Tissues; employees 0
+2001-01-01: HHS SBIR phase_ii; Novel Collagen-Based Peripheral Endoprosthesis; employees 0
+2001-01-01: HHS SBIR phase_i; Novel Collagen-Based Peripheral Endoprosthesis; employees 0
+2002-01-01: HHS SBIR phase_i; COLLAGEN-BASED TEMPLATE FOR TREATMENT /CEREBRAL ANEURYSM; employees 0
+2003-01-01: HHS SBIR phase_i; Collagen -based Coil for Treatment of Cerebral Aneurysms; employees 0
+2003-01-01: HHS SBIR phase_ii; Collagen -based Coil for Treatment of Cerebral Aneurysms; employees 0",,,
+S059,ANSOFT CORP.,"Elmwood Park, NJ",,"sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=40926
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=40926",,"1998-01-01: DOD SBIR phase_i; AUTOMATED DEVICE MODEL EXTRACTION; employees 15
+1999-01-01: DOD SBIR phase_ii; N/A; employees 15",,,
+S060,"VUESONIX SENSORS, INC.","Moorestown, NJ",,"sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43HL065771-01
+sbir_sttr 2002-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44HL065771-02
+sbir_sttr 2002-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=2R44HL065771-02",,"2000-01-01: HHS SBIR phase_i; N/A; employees 0
+2002-01-01: HHS SBIR phase_i; 3-D ULTRASOUND VASCULAR BLOOD FLOW IMAGING; employees 0
+2002-01-01: HHS SBIR phase_ii; 3-D ULTRASOUND VASCULAR BLOOD FLOW IMAGING; employees 0",,,
+S061,"Embleema, Inc.","Metuchen, NJ",0001739860,sec_form_d 2019-01-09 https://www.sec.gov/Archives/edgar/data/1739860/000173986019000001/,2019-01-09: Other Technology; revenue Decline to Disclose; incorporated 2018,,,,
+S062,COMPACT POWER INC,"Dover, NJ",,"sbir_sttr 2015-01-06 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15QKN-15-C-0004
+sbir_sttr 2015-07-23 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N00024-15-P-4552
+sbir_sttr 2015-09-24 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15QKN-16-C-0012",,"2015-01-06: DOD SBIR phase_i; Novel Power Solutions for Fuzing and Munitions Applications; employees 4
+2015-07-23: DOD SBIR phase_i; Power Technologies for Navy Conventional Ammunition Fuzes; employees 4
+2015-09-24: DOD SBIR phase_ii; Novel Power Solutions for Fuzing and Munitions Applications; employees 0",,,
+S063,"License Lounge, Inc.","Montclair, NJ",0001952024,sec_form_d 2022-10-25 https://www.sec.gov/Archives/edgar/data/1952024/000195202422000001/,"2022-10-25: Other Technology; revenue $1 - $1,000,000; incorporated 2022",,,,
+S064,Ashbry Inc.,"Holmdel, NJ",0001857134,"sec_form_d 2021-05-21 https://www.sec.gov/Archives/edgar/data/1857134/000185713421000001/
+sec_form_d 2021-06-14 https://www.sec.gov/Archives/edgar/data/1857134/000185713421000002/","2021-05-21: Other; revenue Decline to Disclose; incorporated 2020
+2021-06-14: Other; revenue Decline to Disclose; incorporated 2020",,,,
+S065,BLOQCUBE INC.,"Piscataway, NJ",0001774971,"sec_form_d 2019-06-19 https://www.sec.gov/Archives/edgar/data/1774971/000177235519000005/
+sec_form_d 2020-10-30 https://www.sec.gov/Archives/edgar/data/1774971/000177497120000001/","2019-06-19: Other Technology; revenue Decline to Disclose; incorporated 2017
+2020-10-30: Other Technology; revenue Decline to Disclose; incorporated 2017",,,,
+S066,"STATPOINT, LLC.","Ft. Lee, NJ",,"sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=ED-01-25
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=ED-01-25",,"2001-01-01: ED SBIR phase_ii; Toward Value-Added Productivity Analysis & Reporting: Building School-level Capacity to Analyze and Improve Performance; employees 0
+2001-01-01: ED SBIR phase_i; Toward Value-Added Productivity Analysis & Reporting: Building School-level Capacity to Analyze and Improve Performance; employees 0",,,
+S067,"Silhouette Technology, Inc.","Morristown, NJ",,"sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=15540
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=15540",,"1991-01-01: DOD SBIR phase_i; IMAGE SENSOR EHANCEMENT AND INTERPRETATION UNIT; employees 0
+1993-01-01: DOD SBIR phase_ii; IMAGE SENSOR EHANCEMENT AND INTERPRETATION UNIT; employees 0",,,
+S068,L. C. PEGASUS CORP.,"Basking Ridge, NJ",,"sbir_sttr 2002-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DAAB07-02-C-E002
+sbir_sttr 2003-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DAAB07-03-C-L436
+sbir_sttr 2004-12-10 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N61339-05-C-0027
+sbir_sttr 2005-09-25 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N61339-05-C-0122
+sbir_sttr 2006-11-03 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W911NF-07-C-0020
+sbir_sttr 2008-08-21 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W911NF-08-C-0118
+sbir_sttr 2008-11-06 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W911NF-09-C-0007
+sbir_sttr 2009-09-25 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W911NF-09-C-0096",,"2002-01-01: DOD SBIR phase_i; Fiber Optic Dynamic Strain Sensors for Seismic Monitoring; employees 3
+2003-01-01: DOD SBIR phase_ii; Fiber Optic Dynamic Strain Sensors for Seismic Monitoring; employees 8
+2004-12-10: DOD SBIR phase_i; Innovative Wireless Network Modeling And Simulation Technology In Support of Training, Testing And Range Instrumentation Requirements; employees 7
+2005-09-25: DOD SBIR phase_ii; Innovative Wireless Network Modeling And Simulation Technology In Support of Training, Testing And Range Instrumentation Requirements; employees 7
+2006-11-03: DOD SBIR phase_i; Fluctuation-Enhanced Chemical & Biological Sensor Systems; employees 8
+2008-08-21: DOD SBIR phase_ii; Fluctuation-Enhanced Chemical & Biological Sensor Systems; employees 7
+2008-11-06: DOD SBIR phase_i; Fast-Scan, High-Performance, Portable Imaging Spectrometer for Chemical-Biological Sensing; employees 9
+2009-09-25: DOD SBIR phase_ii; Fast-Scan, High-Performance, Portable Imaging Spectrometer for Chemical-Biological Sensing; employees 8",,,
+S069,AOA DX Inc.,"Jersey City, NJ",0001869920,"sec_form_d 2021-07-07 https://www.sec.gov/Archives/edgar/data/1869920/000186992021000001/
+sec_form_d 2021-11-18 https://www.sec.gov/Archives/edgar/data/1869920/000186992021000002/","2021-07-07: Biotechnology; revenue Decline to Disclose; incorporated 2020
+2021-11-18: Biotechnology; revenue Decline to Disclose; incorporated 2020",,,,
+S070,PREDICTION SYSTEMS INC,"Manasquan, NJ",,"sbir_sttr 1986-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4276
+sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=6285
+sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=6287
+sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=6288
+sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=6286
+sbir_sttr 1988-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=6288
+sbir_sttr 1988-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=6287
+sbir_sttr 1988-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4276
+sbir_sttr 1988-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=6285
+sbir_sttr 1990-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=12857",,"1986-01-01: DOD SBIR phase_i; INTERACTIVE SYMBOLIC SIMULATOR FOR RAPID ANALYSIS COMMUNICATIONS SYSTEMS; employees 15
+1987-01-01: DOD SBIR phase_i; EXPERT SYSTEM SIMULATOR TO EVALUATE AI TECHNIQUES FOR COMMUNICATIONS SYSTEM ECCM; employees 25
+1987-01-01: DOD SBIR phase_i; ADVANCED FACILITIES TO EXPEDITE DESIGN AND EVALUATION OF PACKET SWITCHED SYSTEMS; employees 25
+1987-01-01: DOD SBIR phase_i; SYMBOLIC MODEL DEVELOPMENT FACILITIES FOR EVALUATION OF MSE ACCESS NETWORKS; employees 25
+1987-01-01: DOD SBIR phase_i; APPLICATION OF AI TECHNIQUES TO THE DEVELOPMENT OF ADAPTIVE JAMMER POWER MANAGEMENT; employees 25
+1988-01-01: DOD SBIR phase_ii; SYMBOLIC MODEL DEVELOPMENT FACILITIES FOR EVALUATION OF MSE ACCESS NETWORKS; employees 25
+1988-01-01: DOD SBIR phase_ii; ADVANCED FACILITIES TO EXPEDITE DESIGN AND EVALUATION OF PACKET SWITCHED SYSTEMS; employees 25
+1988-01-01: DOD SBIR phase_ii; INTERACTIVE SYMBOLIC SIMULATOR FOR RAPID ANALYSIS COMMUNICATIONS SYSTEMS; employees 15
+1988-01-01: DOD SBIR phase_ii; EXPERT SYSTEM SIMULATOR TO EVALUATE AI TECHNIQUES FOR COMMUNICATIONS SYSTEM ECCM; employees 25
+1990-01-01: DOD SBIR phase_i; MULTI-BEAM PHASED-ARRAY SENSOR FOR TANK DEFENSE; employees 32",,,
+S071,Ignite Venture Studio LLC,"Princeton, NJ",0001957811,sec_form_d 2022-12-30 https://www.sec.gov/Archives/edgar/data/1957811/000195781122000001/,2022-12-30: Other; revenue Decline to Disclose; incorporated 2022,,,,
+S072,"Do a Huddle, Inc.","Manalapan, NJ",0001851161,sec_form_d 2021-04-07 https://www.sec.gov/Archives/edgar/data/1851161/000185116121000001/,2021-04-07: Other Technology; revenue Decline to Disclose; incorporated 2020,,,,
+S073,"NOVAFLUX TECHNOLOGIES, INC.","Princeton, NJ",,"sbir_sttr 2010-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R43HL105178-01
+sbir_sttr 2011-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=1R44DK093307-01
+sbir_sttr 2012-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4R44DK093307-02",,"2010-01-01: HHS SBIR phase_i; A Novel Device for Managing Hypervolemia in CHF Patients; employees 0
+2011-01-01: HHS SBIR phase_i; Enabling Technology to Prepare Ultrapure Dialysate in Dialysis Clinics; employees 0
+2012-01-01: HHS SBIR phase_ii; Enabling Technology to Prepare Ultrapure Dialysate in Dialysis Clinics; employees 0",,,
+S074,Savit Corporation,"Rockaway, NJ",,"sbir_sttr 2017-09-22 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15QKN-17-C-0103
+sbir_sttr 2019-08-22 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W15QKN-19-C-0003",,"2017-09-22: DOD SBIR phase_i; Munition-Delivered Non-Kinetic Effects (NKE); employees 25
+2019-08-22: DOD SBIR phase_ii; Munition-Delivered Non-Kinetic Effects (NKE); employees 25",,,
+S075,Arc Ventures Inc.,"Shiloh, NJ",,"sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=14753
+sbir_sttr 1992-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=14753",,"1991-01-01: USDA SBIR phase_i; DEVELOPING A GREENHOUSE GROWING SYSTEM FOR SINGLE CLUSTER TOMATO PRODUCTION; employees 0
+1992-01-01: USDA SBIR phase_ii; DEVELOPING A GREENHOUSE GROWING SYSTEM FOR SINGLE CLUSTER TOMATO PRODUCTION; employees 0",,,
+S076,"UltronAI, Inc.","Princeton, NJ",0001982820,sec_form_d 2024-07-16 https://www.sec.gov/Archives/edgar/data/1982820/000198282024000002/,2024-07-16: Other Technology; revenue Decline to Disclose; incorporated 2023,,,,
+S077,Nursing Systems International,"Bordentown, NJ",,"sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=7396
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=22909
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=22909",,"1987-01-01: HHS SBIR phase_i; INFORMATION SYSTEM FOR PATIENT SELF-CARE; employees 0
+1993-01-01: HHS SBIR phase_i; INFORMATION SYSTEM FOR PATIENT SELF-CARE; employees 0
+1993-01-01: HHS SBIR phase_ii; INFORMATION SYSTEM FOR PATIENT SELF-CARE; employees 0",,,
+S078,"AVIONIC INSTRUMENTS, INC.","Avenel, NJ",,"sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N992-4563
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DAAB15-00-C-1002
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N00421-01-C-0016
+sbir_sttr 2001-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DAAB15-01-C-0001",,"1999-01-01: DOD SBIR phase_i; Development of a Regulated Transformer Rectifier Unit (RTRU) for the V-22 CV Requirement; employees 0
+2000-01-01: DOD SBIR phase_i; N/A; employees 22
+2001-01-01: DOD SBIR phase_ii; Fast Pattern Recognizer Program; employees 22
+2001-01-01: DOD SBIR phase_ii; Novel, Ultra-Wideband Direction Finding VHF/UHF Array for UAV Installations; employees 22",,,
+S079,Orthios Innovations LLC,"Kearny, NJ; North Bergen, NJ",0002052134,"sec_form_d 2025-01-28 https://www.sec.gov/Archives/edgar/data/2052134/000205213425000003/
+sec_form_d 2026-04-20 https://www.sec.gov/Archives/edgar/data/2052134/000205213426000004/","2025-01-28: Other Health Care; revenue Decline to Disclose; incorporated 2023
+2026-04-20: Other Technology; revenue Decline to Disclose; incorporated 2023",,,,
+S080,"Grier Forensics, LLC","Lakeview, NJ; Lakewood, NJ",,"sbir_sttr 2014-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=70NANB14H297
+sbir_sttr 2014-06-24 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-14-C-0170
+sbir_sttr 2015-05-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=HSHQDC-15-C-00019
+sbir_sttr 2015-07-30 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-15-C-0229
+sbir_sttr 2015-09-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=70NANB14H290
+sbir_sttr 2015-11-10 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8750-16-C-0262",,"2014-01-01: DOC SBIR phase_i; Secure Email Agent Using the Domain Name System (DNS) as a Trust Infrastructure; employees None
+2014-06-24: DOD SBIR phase_i; Architecture for Enterprise Anonymization; employees 4
+2015-05-01: DHS SBIR phase_i; Enhanced Distributed Denial of Service Defense through Single Packet Abuse Interdiction Network (SPAIN); employees 4
+2015-07-30: DOD SBIR phase_i; Cyber Hardening and Agility Technologies for Tactical IP Networks (CHATTIN); employees 4
+2015-09-01: DOC SBIR phase_ii; Secure Email Agent Using the Domain Name System (DNS) as a Trust Infrastructure; employees None
+2015-11-10: DOD SBIR phase_ii; Architecture for Enterprise Anonymization; employees 4",,,
+S081,RAGNAROK INDUSTRIES INC,"West New York, NJ",,"sbir_sttr 2019-12-12 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8649-20-P-0083
+sbir_sttr 2020-06-05 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8649-20-C-0187
+sbir_sttr 2021-02-04 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8649-21-P-0322
+sbir_sttr 2023-06-20 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA2401230015",,"2019-12-12: DOD SBIR phase_i; Radiation-Hardened, Resilient SmallSat Power Management & Distribution (PMAD) above Low Earth Orbit; employees 4
+2020-06-05: DOD SBIR phase_ii; Radiation-Hardened, Resilient SmallSat Power Management & Distribution (PMAD) above Low Earth Orbit; employees 0
+2021-02-04: DOD SBIR phase_i; Radiation-hardened, Reconfigurable Flight Computer for SmallSats in Cis-Lunar Space; employees 4
+2023-06-20: DOD SBIR phase_ii; Radiation-Hardened, Reconfigurable Flight Computer for SmallSats in Cis-Lunar Space; employees 4",,,
+S082,New Life Health Products Corp.,"Randolf, NJ",,"sbir_sttr 1989-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=11341
+sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=11341",,"1989-01-01: HHS SBIR phase_i; CLINICAL EVALUATION OF AN OTC SMOKING DETERRENT LOZENGE; employees 0
+1991-01-01: HHS SBIR phase_ii; CLINICAL EVALUATION OF AN OTC SMOKING DETERRENT LOZENGE; employees 0",,,
+S083,Cambridge Hydrodyn Inc,"Princeton, NJ",,"sbir_sttr 1989-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=10652
+sbir_sttr 1989-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=10409
+sbir_sttr 1989-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9522
+sbir_sttr 1990-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=10409
+sbir_sttr 1990-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=12305
+sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=17077
+sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=15732
+sbir_sttr 1991-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=16856
+sbir_sttr 1992-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=14632
+sbir_sttr 1992-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=16856
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=21599
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=27153
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=22713
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=25992
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=25992
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=22713
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=21599
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=27153
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9560876
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=43375
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=43376",,"1989-01-01: NSF SBIR phase_i; COMPUTATIONAL DYNAMICS OF TWO-PHASE FLOWS; employees 0
+1989-01-01: NASA SBIR phase_i; NUMERICAL MODELLING OF TURBULENCE AND COMBUSTION PROCESSES IN STRONGLY SEPARATED, NON-STATIONARY FLOWS; employees 0
+1989-01-01: DOD SBIR phase_i; COMPUTATIONAL MODEL OF PROJECTILE IMPACT INTO FUEL TANKS; employees 9
+1990-01-01: NASA SBIR phase_ii; NUMERICAL MODELLING OF TURBULENCE AND COMBUSTION PROCESSES IN STRONGLY SEPARATED, NON-STATIONARY FLOWS; employees 0
+1990-01-01: DOD SBIR phase_i; SLUGLESS MULTIPLE HIGH VELOCITY PULSE SHAPED CHARGE JETS; employees 7
+1991-01-01: NASA SBIR phase_i; LARGE-EDDY SIMULATION OF COMBUSTION OF LIQUID FUEL ROCKETS; employees 0
+1991-01-01: DOD SBIR phase_i; SLUGLESS MULTIPLE HIGH VELOCITY PULSE SHAPED CHARGE JETS; employees 0
+1991-01-01: NASA SBIR phase_i; ADVANCED TURBOMACHINERY CFD DESIGN AND ANALYSIS PROGRAM; employees 0
+1992-01-01: NASA SBIR phase_i; A MATHEMATICALLY BASED REYNOLDS-STRESS MODEL OF TURBULENCE; employees 0
+1992-01-01: NASA SBIR phase_ii; ADVANCED TURBOMACHINERY CFD DESIGN AND ANALYSIS PROGRAM; employees 0
+1993-01-01: NSF SBIR phase_i; COMPUTATIONAL LABORATORY FOR THE SIMULATION OF; employees 0
+1994-01-01: DOE SBIR phase_i; A MOLECULAR DYNAMIC AIDED ADVANCED DIAGNOSTIC TOOL FOR GRANULAR FLOWS; employees 0
+1994-01-01: NASA SBIR phase_i; Parallel, Large Eddy Simulation Code for Geophysical and Space Physical Applications; employees 0
+1994-01-01: DOD SBIR phase_i; Advanced Turbulence Models for High Mach Number Wall-Bounded Flows; employees 15
+1995-01-01: DOD SBIR phase_ii; Advanced Turbulence Models for High Mach Number Wall-Bounded Flows; employees 15
+1995-01-01: NASA SBIR phase_ii; Parallel, Large Eddy Simulation Code for Geophysical and Space Physical Applications; employees 0
+1995-01-01: NSF SBIR phase_ii; COMPUTATIONAL LABORATORY FOR THE SIMULATION OF; employees 0
+1995-01-01: DOE SBIR phase_ii; A MOLECULAR DYNAMIC AIDED ADVANCED DIAGNOSTIC TOOL FOR GRANULAR FLOWS; employees 0
+1996-01-01: NSF SBIR phase_i; SBIR Phase I:  Theory and Simulation of Strongly AnisotropicTurbulence:  Applications to Separation and Purification    Technology; employees 0
+1998-01-01: NSF SBIR phase_i; SBIR Phase I:  Theory and Simulation of Dense Phase Granular Materials; employees 0
+1998-01-01: NSF SBIR phase_i; SBIR Phase I:  Automated Design-Rule Generator for Optimal  Electronic Chip Manufacture; employees 0",,,
+S084,"Allied Health MSO Holdco, LLC","West Long Branch, NJ",0001932158,"sec_form_d 2022-06-14 https://www.sec.gov/Archives/edgar/data/1932158/000193215822000001/
+sec_form_d 2022-06-22 https://www.sec.gov/Archives/edgar/data/1932158/000193215822000002/
+sec_form_d 2023-01-13 https://www.sec.gov/Archives/edgar/data/1932158/000089552723000001/
+sec_form_d 2023-08-22 https://www.sec.gov/Archives/edgar/data/1932158/000193215823000001/
+sec_form_d 2024-09-27 https://www.sec.gov/Archives/edgar/data/1932158/000193215824000001/","2022-06-14: Other Health Care; revenue Decline to Disclose; incorporated 2021
+2022-06-22: Other Health Care; revenue Decline to Disclose; incorporated 2021
+2023-01-13: Other Health Care; revenue Decline to Disclose; incorporated 2021
+2023-08-22: Other Health Care; revenue Decline to Disclose; incorporated 2021
+2024-09-27: Other Health Care; revenue Decline to Disclose; incorporated 2021",,,,
+S085,MarketsAI Corp.,"Short Hill, NJ",0002026293,sec_form_d 2024-06-10 https://www.sec.gov/Archives/edgar/data/2026293/000202629324000001/,2024-06-10: Other Technology; revenue Decline to Disclose; incorporated 2024,,,,
+S086,"Atman Labs, Inc.","Monroe Township, NJ",0002001030,sec_form_d 2023-11-17 https://www.sec.gov/Archives/edgar/data/2001030/000200103023000001/,2023-11-17: Other Technology; revenue Decline to Disclose; incorporated 2023,,,,
+S087,"Ciphertext Solutions, Inc.","Carlstadt, NJ",0001707454,sec_form_d 2019-09-03 https://www.sec.gov/Archives/edgar/data/1707454/000089706919000398/,2019-09-03: Other Technology; revenue Decline to Disclose; incorporated 2016,,,,
+S088,"Fork & Goode, Inc.","Nutley, NJ",0001765187,sec_form_d 2019-01-17 https://www.sec.gov/Archives/edgar/data/1765187/000176518719000001/,2019-01-17: Other; revenue Decline to Disclose; incorporated 2018,,,,
+S089,RideAlongNow Inc.,"Paramus, NJ",0001875751,sec_form_d 2021-07-29 https://www.sec.gov/Archives/edgar/data/1875751/000187575121000001/,2021-07-29: Other Technology; revenue Decline to Disclose; incorporated 2021,,,,
+S090,ZEREN RESEARCH,"Mountain Lakes, NJ",,"sbir_sttr 1992-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=18446
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=18446",,"1992-01-01: DOD SBIR phase_i; DEVICE FOR MEASURING THE DECOMPOSITION SHEAR RATE OF HIGHLY SOLIDS FILLED ENERGETIC MATERIALS; employees 11
+1994-01-01: DOD SBIR phase_ii; DEVICE FOR MEASURING THE DECOMPOSITION SHEAR RATE OF HIGHLY SOLIDS FILLED ENERGETIC MATERIALS; employees 11",,,
+S091,NEI CORPORATION,"Somerset, NJ",,"sbir_sttr 2011-07-26 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W31P4Q-11-C-0194
+sbir_sttr 2011-09-25 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W56HZV-11-C-0296
+sbir_sttr 2011-10-15 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8651-12-M-0060
+sbir_sttr 2011-10-24 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-12-C-0073
+sbir_sttr 2011-10-28 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W911W6-12-C-0006
+sbir_sttr 2011-11-15 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W9132T-12-C-0004
+sbir_sttr 2012-06-21 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68936-12-C-0152
+sbir_sttr 2012-10-31 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8651-13-C-0015
+sbir_sttr 2013-05-24 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8650-13-M-5070
+sbir_sttr 2013-06-28 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8651-13-M-0183
+sbir_sttr 2013-07-03 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=H92222-13-P-0051
+sbir_sttr 2013-10-09 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68936-13-C-0115",,"2011-07-26: DOD SBIR phase_ii; Nano-Lubricant/Fluid for Improved Weapons System; employees 23
+2011-09-25: DOD SBIR phase_i; Multiscale Fiber Reinforced Polymer Nanocomposite for Wide-span Field Assembled Bridges; employees 20
+2011-10-15: DOD SBIR phase_i; Multi-scale and Multi-functional Self Healing Fiber Reinforced Composites; employees 23
+2011-10-24: DOD SBIR phase_i; Lightweight Electromagnetic Interference (EMI) Shielding System for Aircraft Avionics; employees 23
+2011-10-28: DOD SBIR phase_i; Self-healing Superhydrophobic Anti-icing Coatings; employees 24
+2011-11-15: DOD SBIR phase_i; Multi-functional, self-regenerative, high-efficiency filter for removal of toxic industrial chemicals from air ducts; employees 24
+2012-06-21: DOD SBIR phase_i; Engineered Nanoscale Materials for use in Thermal Batteries; employees 25
+2012-10-31: DOD SBIR phase_ii; Multi-scale and Multi-functional Self Healing Fiber Reinforced Composites; employees 24
+2013-05-24: DOD SBIR phase_i; Chromate-free self-healing coating (SHC) system for repaired and restored aluminum alloy surfaces; employees 24
+2013-06-28: DOD SBIR phase_i; A novel process to produce air-stable core-shell nanoparticles for energetic applications; employees 24
+2013-07-03: DOD SBIR phase_i; Nano-scale Coatings for the Protection of Electronics and Sensitive Equipment in Marine Environments; employees 24
+2013-10-09: DOD SBIR phase_ii; Engineered Nanoscale Materials for use in Thermal Batteries; employees 24",,,
+S092,Fontus Applied Technologies Inc,"Plainsboro, NJ",,"sbir_sttr 2014-12-22 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=HQ0147-15-C-7126
+sbir_sttr 2016-05-19 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-16-C-0201
+sbir_sttr 2016-06-07 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA8650-16-M-1813
+sbir_sttr 2016-06-23 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA9453-16-M-0521
+sbir_sttr 2017-06-06 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-17-C-0470
+sbir_sttr 2018-08-03 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-18-C-0669
+sbir_sttr 2019-06-17 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA9101-19-P-0077
+sbir_sttr 2021-03-17 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=FA9101-21-C-0007",,"2014-12-22: DOD SBIR phase_i; Robust Phase Modulators and Polarization Controllers for High Power Fiber Lasers; employees 3
+2016-05-19: DOD SBIR phase_i; Large Aperture Agile Scanning Mirror; employees 3
+2016-06-07: DOD SBIR phase_i; Broadband Beam Steering Devices for Midwave Infrared (MWIR); employees 3
+2016-06-23: DOD SBIR phase_i; Resilient Structural Sensing Technologies for Responsive Anomaly Resolution; employees 3
+2017-06-06: DOD STTR phase_i; Electro-Optic Transmissive Scanner; employees 3
+2018-08-03: DOD STTR phase_ii; Electro-Optic Transmissive Scanner; employees 2
+2019-06-17: DOD SBIR phase_i; High Speed MWIR Laser Attenuator; employees 2
+2021-03-17: DOD SBIR phase_ii; A High-speed MWIR Laser Attenuator; employees 3",,,
+S093,Shoppes of Midtown Mobile LLC,"Franklin Lakes, NJ",0002140137,sec_form_d 2026-06-10 https://www.sec.gov/Archives/edgar/data/2140137/000214013726000001/,2026-06-10: Other; revenue No Revenues; incorporated 2026,,,,
+S094,"VITALIEF, INC.","New Brunswick, NJ",0001927172,"sec_form_d 2022-05-05 https://www.sec.gov/Archives/edgar/data/1927172/000192717222000002/
+sec_form_d 2023-04-26 https://www.sec.gov/Archives/edgar/data/1927172/000192717223000001/","2022-05-05: Other; revenue Decline to Disclose; incorporated 2021
+2023-04-26: Other; revenue Decline to Disclose; incorporated 2021",,,,
+S095,"Folk Revival, LLC","Tenafly, NJ",0001992951,sec_form_d 2024-10-15 https://www.sec.gov/Archives/edgar/data/1992951/000199295124000001/,2024-10-15: Retailing; revenue Decline to Disclose; incorporated 2021,,,,
+S096,Princeton Optronics,"Princeton, NJ",,"sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=14.01-2228
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=14.01-2228
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=33048
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-FG02-96ER82260
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=14.02-6500
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=33049
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=34761
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=36574
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=36229
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=14.02-6500
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-FG02-97ER82462
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=35681
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=37043
+sbir_sttr 1997-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=35992
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=41298
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=35681
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=37267
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=41375
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=41375
+sbir_sttr 1998-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=41562
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=99SB10349
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=35992
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=44353
+sbir_sttr 1999-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=36574
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=NAS5 00071
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-FG02-99ER82870
+sbir_sttr 2000-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=DE-FG02-99ER82870
+sbir_sttr 2004-03-31 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-04-C-0138
+sbir_sttr 2004-11-22 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=W31P4Q-05-C-R058
+sbir_sttr 2005-04-29 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-05-C-0204
+sbir_sttr 2007-09-12 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-07-C-0473
+sbir_sttr 2008-05-28 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N65538-08-M-0078
+sbir_sttr 2008-11-17 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N68335-09-C-0071",,"1995-01-01: NASA SBIR phase_i; Epitaxial Lift-Off Gallium-Arsenide On Diamond For High Power Devices; employees 0
+1996-01-01: NASA SBIR phase_ii; Epitaxial Lift-Off Gallium-Arsenide On Diamond For High Power Devices; employees 0
+1996-01-01: DOD SBIR phase_i; Portable Raman Spectrometer for Non-Invasive and Real Time Analysis of Vital Human Fluids; employees 10
+1996-01-01: DOE SBIR phase_i; Transmission of Highly Compressed Imagery in Real Time Through Satellite Channels; employees 0
+1996-01-01: NASA SBIR phase_i; DEVELOPMENT OF OPTO-ELECTRONIC INTEGRATED CIRCUITS FOR PHASED ARRAY SYSTEMS; employees 0
+1996-01-01: DOD SBIR phase_i; Development of a Low Light Level Imaging System Using Microlenses for Improved Performance and Digital Systems Interface Capability; employees 10
+1996-01-01: DOD SBIR phase_ii; Prototype 10 Gigabite per Second CDMA Network Interface Unit for; employees 15
+1997-01-01: DOD SBIR phase_i; Low-cost High-Speed Optical Links for Advanced Avionics Data networks; employees 25
+1997-01-01: DOD SBIR phase_i; Development of High Gain, High Sensitivity Imaging Detectors for Laser Radar Systems; employees 17
+1997-01-01: NASA SBIR phase_ii; DEVELOPMENT OF OPTO-ELECTRONIC INTEGRATED CIRCUITS FOR PHASED ARRAY SYSTEMS; employees 0
+1997-01-01: DOE SBIR phase_i; Neutron Detection With a Lithium Fluoride Bolometer; employees 0
+1997-01-01: DOD SBIR phase_i; Development of a Low Light Level Camera with a High Density Focal Plane Array for Wide Field of View Applications; employees 17
+1997-01-01: DOD SBIR phase_i; Development of a Low Light Level Solid State Sensor; employees 6
+1997-01-01: DOD SBIR phase_i; Optical Delay Line Correlator; employees 17
+1998-01-01: DOD SBIR phase_i; A High Performance Telemaintenance System for Support and Analysis; employees 25
+1998-01-01: DOD SBIR phase_ii; Development of a Low Light Level Camera with a High Density Focal Plane Array for Wide Field of View Applications; employees 17
+1998-01-01: DOE SBIR phase_ii; Neutron Detection With a Lithium Fluoride Bolometer; employees 0
+1998-01-01: DOD SBIR phase_i; Attenuated Total Reflectance (ATR) Sensor; employees 17
+1998-01-01: DOD SBIR phase_ii; Attenuated Total Reflectance (ATR) Sensor; employees 17
+1998-01-01: DOD SBIR phase_i; Real-Time Image Fusion Processor; employees 25
+1999-01-01: DOD SBIR phase_i; Low Cost, High Performance Lasers for Photonic Applications; employees 0
+1999-01-01: DOD SBIR phase_ii; N/A; employees 17
+1999-01-01: DOE SBIR phase_i; Low Cost 10 Gb/s Optical Links for Gigabit Networks; employees 0
+1999-01-01: DOD SBIR phase_ii; N/A; employees 25
+2000-01-01: NASA SBIR phase_i; N/A; employees 0
+2000-01-01: DOE SBIR phase_i; N/A; employees 0
+2000-01-01: DOE SBIR phase_ii; N/A; employees 0
+2004-03-31: DOD SBIR phase_i; Ruggedized Laser Diode Package for Wavelength Division Multiplexed (WDM) Networks; employees 40
+2004-11-22: DOD SBIR phase_i; Narrow-Linewidth 1550 Nanometer Laser Oscillator; employees 38
+2005-04-29: DOD SBIR phase_ii; RUGGEDIZED LASER DIODE PACKAGE FOR WAVELENGTH DIVISION MULTIPLEXED(WDM) NETWORKS; employees 25
+2007-09-12: DOD SBIR phase_i; High Power, High Repetition Rate, Pulsed, Blue Laser for ASW Purposes; employees 24
+2008-05-28: DOD SBIR phase_i; A Low Noise Tunable Wavelength Laser for Fiber Optic Sensor Systems; employees 20
+2008-11-17: DOD SBIR phase_ii; High Power, High Repetition Rate, Pulsed, Blue Laser for ASW Purposes; employees 22",,,
+S097,"STRUCTURED MATERIALS INDUSTRIES, INC.","Newark, NJ",,"sbir_sttr 1992-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=18043
+sbir_sttr 1992-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=18266
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=19625
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=18043
+sbir_sttr 1993-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=21004
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=26224
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=26340
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=26215
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=26215
+sbir_sttr 1995-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=26340",,"1992-01-01: DOD SBIR phase_i; Light Emitting Thin Films Containing Germanium Quantum Nanocrystals; employees 4
+1992-01-01: DOD SBIR phase_i; Infra Red Detector Array on a Silicon Compatible Substrate; employees 4
+1993-01-01: DOD SBIR phase_i; Porous Polycrystalline Silicon Solar Cells; employees 5
+1993-01-01: DOD SBIR phase_ii; Light Emitting Thin Films Containing Germanium Quantum Nanocrystals; employees 4
+1993-01-01: DOE SBIR phase_i; DEVELOPMENT OF LONG WAVELENGTH INFRARED DETECTORS FOR TRACE GAS DETECTION; employees 0
+1994-01-01: DOD SBIR phase_i; Quantum Nanocrystal Sensor; employees 5
+1994-01-01: DOD SBIR phase_i; Production of Morphologically Smooth And Transparent Diamond Like Films for Wear Resistant Coatings; employees 2
+1994-01-01: DOD SBIR phase_i; Carbon Nitride Films; employees 5
+1995-01-01: DOD SBIR phase_ii; Carbon Nitride Films; employees 5
+1995-01-01: DOD SBIR phase_ii; Production of Morphologically Smooth And Transparent Diamond Like Films for Wear Resistant Coatings; employees 2",,,
+S098,"PROLONG PHARMACEUTICALS, INC.","South Plainfield, NJ",,"sbir_sttr 2008-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N43HL0800010
+sbir_sttr 2008-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=N44HB0900038
+sbir_sttr 2009-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=4R44HL093959-02",,"2008-01-01: HHS SBIR phase_i; Not Available; employees 0
+2008-01-01: HHS SBIR phase_ii; N/A; employees None
+2009-01-01: HHS SBIR phase_ii; Development of PEG Hemoglobin blood substitute to treat hemorrhagic shock; employees 0",,,
+S099,Gain Electronics Corp,"Somerville, NJ",,"sbir_sttr 1986-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=3952
+sbir_sttr 1986-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=3951
+sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=3952
+sbir_sttr 1987-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=5895",,"1986-01-01: DOD SBIR phase_i; PATTERNING OF GAAS AND ALGAAS ULTRA-SUBMICRON DEVICE STRUCTURES; employees 10
+1986-01-01: DOD SBIR phase_i; MODULATION DOPED FETS ON HETEROSTRUCTURE LAYERS (SDHT, HEMT, TEGFET, MODFET) ARE OF PRIME INTEREST FOR FUTURE HIGH SPEED CIRCUITS WITH IMPROVED PERFORMANCE CHARACTERISTICS.; employees 10
+1987-01-01: DOD SBIR phase_ii; PATTERNING OF GAAS AND ALGAAS ULTRA-SUBMICRON DEVICE STRUCTURES; employees 10
+1987-01-01: DOD SBIR phase_i; HIGH EFFICIENCY MONOLITHIC GUNN OSCILLATORS; employees 30",,,
+S100,Cambridge Hydrodyn Inc,"Princeton, NJ",,"sbir_sttr 1989-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9523
+sbir_sttr 1989-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9524
+sbir_sttr 1990-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=9523
+sbir_sttr 1994-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=27417
+sbir_sttr 1996-01-01 https://data.www.sbir.gov/awarddatapublic/award_data.csv#contract=27417",,"1989-01-01: DOD SBIR phase_i; NUMERICAL MODELLING OF KINETICS-TURBULENCE INTERACTION IN HIGH MACH NUMBER FLOWS; employees 9
+1989-01-01: DOD SBIR phase_i; NUMERICAL MODELLING OF MIXING AND CHEMICAL REACTIONS IN TURBULENT FLOWS; employees 9
+1990-01-01: DOD SBIR phase_ii; NUMERICAL MODELLING OF KINETICS-TURBULENCE INTERACTION IN HIGH MACH NUMBER FLOWS; employees 9
+1994-01-01: NSF SBIR phase_i; PARALLEL FLUENT/RNG: A THREE-DIMENSIONAL FINITE-VOLUME TURBULENT FLOW SIMULATION TOOL; employees 0
+1996-01-01: NSF SBIR phase_ii; PARALLEL FLUENT/RNG: A THREE-DIMENSIONAL FINITE-VOLUME TURBULENT FLOW SIMULATION TOOL; employees 0",,,
