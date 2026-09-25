@@ -34,3 +34,5 @@ select = ["E", "F", "I", "B", "UP"]
 # SQL strings read better unwrapped.
 "gauge/db/*.py" = ["E501"]
 "tests/db/*.py" = ["E501"]
+# Fixtures mirror SEC's fixed-width index and XML formats.
+"tests/sources/test_watch.py" = ["E501"]

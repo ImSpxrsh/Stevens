@@ -31,7 +31,7 @@ def db(tmp_path):
 
 def test_migrations_create_a_clean_database_and_are_idempotent(tmp_path):
     conn = connect(tmp_path / "x.sqlite3")
-    assert migrate(conn) == ["0001_initial"]
+    assert migrate(conn) == ["0001_initial", "0002_announcements"]
     assert migrate(conn) == []
     tables = {r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}
     for t in ("importer_runs", "raw_source_records", "source_records", "companies",
