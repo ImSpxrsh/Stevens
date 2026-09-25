@@ -1,0 +1,10 @@
+{
+  "start": "2026-10-01",
+  "end": "2026-12-29",
+  "default_hourly_rate": 85,
+  "hourly_rates": {"partner-a": 250},
+  "monthly_fixed": {
+    "gauge": {"hosting": 150, "llm_usage": 100},
+    "current": {"data_subscription": 1200}
+  }
+}
