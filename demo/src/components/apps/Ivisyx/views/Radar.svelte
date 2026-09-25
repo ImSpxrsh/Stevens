@@ -5,7 +5,6 @@
 	import ArrowLeft from '~icons/lucide/arrow-left';
 	import ArrowUpRight from '~icons/lucide/arrow-up-right';
 	import Crosshair from '~icons/lucide/crosshair';
-	import Flame from '~icons/lucide/flame';
 	import Layers from '~icons/lucide/layers';
 	import MapPin from '~icons/lucide/map-pin';
 	import Maximize from '~icons/lucide/maximize';
@@ -23,7 +22,7 @@
 	import { age, suite } from '../state.svelte';
 	import { money } from '../suite-data';
 	import Logo from '../ui/Logo.svelte';
-	import Ring from '../ui/Ring.svelte';
+	import Score from '../ui/Score.svelte';
 	import Sparkline from '../ui/Sparkline.svelte';
 
 	let W = $state(640);
@@ -52,7 +51,7 @@
 	let hoverCounty = $state<string | null>(null);
 	let cursor = $state<[number, number] | null>(null);
 	let query = $state('');
-	let layers = $state({ heat: true, labels: true, companies: true, trails: true, sweep: true });
+	let layers = $state({ heat: true, labels: true, companies: true, trails: false });
 	let layersOpen = $state(false);
 
 	const town = $derived(townId ? towns.find((t) => t.id === townId) ?? null : null);
@@ -63,7 +62,6 @@
 	const sx = (x: number) => tx + x * k;
 	const sy = (y: number) => ty + y * k;
 
-	const level = $derived(k < 1.8 ? 'State' : k < 5 ? 'County' : k < 14 ? 'Municipal' : 'Street');
 	const visibleTowns = $derived(
 		towns.filter((t) => {
 			const p = townXY.get(t.id)!;
@@ -311,16 +309,11 @@
 					<stop offset="0" stop-color="#123b31" />
 					<stop offset="1" stop-color="#0a231c" />
 				</linearGradient>
-				<filter id="rd-glow" x="-20%" y="-20%" width="140%" height="140%">
-					<feGaussianBlur stdDeviation="3" result="b" />
-					<feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
-				</filter>
 			</defs>
 
 			<g transform="translate({tx},{ty}) scale({k})">
 				<path d={graticule} class="graticule" />
 				{#each neighborShapes as n}<path d={n.d} class="neighbor" />{/each}
-				<path d={statePath} class="land-glow" />
 				<path d={statePath} class="land" />
 				{#each countyShapes as c (c.id)}
 					<path
@@ -338,7 +331,7 @@
 					/>
 				{/each}
 				<path d={meshPath} class="mesh" />
-				<path d={statePath} class="outline" filter="url(#rd-glow)" />
+				<path d={statePath} class="outline" />
 			</g>
 
 			{#if layers.heat}
@@ -415,10 +408,7 @@
 						onkeydown={(e) => e.key === 'Enter' && focusTown(t)}
 					>
 						<circle r={r + 7} class="hit" />
-						{#if townId === t.id}
-							<circle r="16" class="lock" /><circle r="26" class="lock outer" />
-							<path d="M-34 0h-10M34 0h10M0-34v-10M0 34v10" class="reticle" />
-						{/if}
+						{#if townId === t.id}<circle r="11" class="lock" />{/if}
 						{#if t.weight >= 7}<circle r={r + 3.2} class="halo" />{/if}
 						<circle {r} class="node" />
 						{#if labelled.has(t.id)}
@@ -434,19 +424,16 @@
 				{#if e?.coordinates}
 					{@const p = projection(e.coordinates) as [number, number]}
 					<g transform="translate({sx(p[0])},{sy(p[1])})" class="ping">
-						<circle r="6" /><circle r="6" class="late" />
+						<circle r="6" />
 					</g>
 				{/if}
 			{/if}
 		</svg>
 
-		{#if layers.sweep}<div class="sweep" aria-hidden="true"></div>{/if}
-		<div class="scanlines" aria-hidden="true"></div>
-		<div class="frame-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
 		<!-- HUD: title -->
 		<div class="hud top-left">
-			<div class="hud-title"><i class="live-dot" class:paused={!suite.playing}></i><strong>NJ SIGNAL RADAR</strong><span>v4.2</span></div>
+			<div class="hud-title"><i class="live-dot" class:paused={!suite.playing}></i><strong>New Jersey</strong></div>
 			<div class="hud-stats">
 				<span><b class="num">{towns.length}</b>municipalities</span>
 				<span><b class="num">{totals.startups.toLocaleString()}</b>startups indexed</span>
@@ -465,7 +452,7 @@
 		<div class="hud top-right">
 			<label class="map-search">
 				<Search />
-				<input bind:value={query} placeholder="Fly to a town, county or company" aria-label="Search the map" />
+				<input bind:value={query} placeholder="Search towns, counties, companies" aria-label="Search the map" />
 				{#if query}<button onclick={() => (query = '')} aria-label="Clear"><X /></button>{/if}
 			</label>
 			{#if results.length}
@@ -479,7 +466,7 @@
 				<button class="hud-btn" class:on={layersOpen} onclick={() => (layersOpen = !layersOpen)} aria-label="Map layers"><Layers /></button>
 				{#if layersOpen}
 					<div class="layers" transition:fly={{ y: -4, duration: 140 }}>
-						{#each [['heat', 'Signal heat'], ['labels', 'Town labels'], ['companies', 'Company nodes'], ['trails', 'Signal trails'], ['sweep', 'Radar sweep']] as [key, label]}
+						{#each [['heat', 'Signal density'], ['labels', 'Town labels'], ['companies', 'Companies'], ['trails', 'Recent signal path']] as [key, label]}
 							<label><input type="checkbox" bind:checked={layers[key as keyof typeof layers]} /><span>{label}</span></label>
 						{/each}
 					</div>
@@ -503,7 +490,6 @@
 				<span>LAT <b class="num">{cursor ? cursor[1].toFixed(4) : '—'}°</b></span>
 				<span>LON <b class="num">{cursor ? cursor[0].toFixed(4) : '—'}°</b></span>
 				<span>ZOOM <b class="num">{k.toFixed(1)}×</b></span>
-				<span>LEVEL <b>{level.toUpperCase()}</b></span>
 			</div>
 			<div class="scalebar"><i style:width="{scaleBar.px}px"></i><span>{scaleBar.label}</span></div>
 			<div class="legend">
@@ -539,7 +525,7 @@
 			{@const e = entityById.get(pingActive.companyId)!}
 			<button class="arrival" onclick={() => focusCompany(e)} transition:fly={{ y: 10, duration: 220 }}>
 				<span class="arrival-icon"><Zap /></span>
-				<span><small>INCOMING · {pingActive.kind.toUpperCase()}</small><strong>{pingActive.title}</strong><em>{e.name} · {e.town} · simulated</em></span>
+				<span><small>New signal: {pingActive.kind}</small><strong>{pingActive.title}</strong><em>{e.name}, {e.town} (simulated)</em></span>
 				<ArrowUpRight />
 			</button>
 		{/if}
@@ -576,7 +562,7 @@
 					<button class="company-row" onclick={() => suite.open(e.id)}>
 						<Logo name={e.name} hue={e.hue} src={e.logo} seed={e.id} size={24} />
 						<span><strong>{e.name}</strong><small>{e.real ? 'Real company · official source' : `${e.sector} · ${e.stage}`}</small></span>
-						{#if fit !== null}<Ring value={fit} size={22} stroke={2.4} />{:else}<em class="pill">Real</em>{/if}
+						{#if fit !== null}<Score value={fit} />{:else}<em class="pill">Real</em>{/if}
 					</button>
 				{/each}
 			</div>
@@ -615,7 +601,7 @@
 				<div class="kpi"><small>Capital raised</small><strong>{money(totals.raised)}</strong></div>
 				<div class="kpi"><small>Counties</small><strong>21</strong></div>
 			</div>
-			<div class="section-label"><Flame /> Hottest towns</div>
+			<div class="section-label">Most active towns</div>
 			<div class="town-list">
 				{#each hottest as t, i (t.id)}
 					<button onclick={() => focusTown(t)}>
@@ -669,11 +655,8 @@
 		overflow: hidden;
 		border: 1px solid rgba(120, 240, 190, 0.18);
 		border-radius: 12px;
-		background:
-			radial-gradient(circle at 55% 38%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 55%),
-			radial-gradient(circle at 20% 100%, rgba(214, 169, 87, 0.12), transparent 40%),
-			#051310;
-		box-shadow: 0 18px 40px rgba(4, 18, 13, 0.35), inset 0 0 60px rgba(0, 0, 0, 0.45);
+		background: radial-gradient(circle at 55% 40%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%), #061410;
+		box-shadow: 0 8px 22px rgba(4, 18, 13, 0.2);
 		color: #d8f5e8;
 	}
 
@@ -705,13 +688,6 @@
 		vector-effect: non-scaling-stroke;
 	}
 
-	.land-glow {
-		fill: none;
-		stroke: var(--mint);
-		stroke-width: 14;
-		opacity: 0.07;
-		vector-effect: non-scaling-stroke;
-	}
 
 	.land {
 		fill: url(#rd-land);
@@ -750,7 +726,7 @@
 
 	.heat {
 		mix-blend-mode: screen;
-		opacity: 0.72;
+		opacity: 0.5;
 		pointer-events: none;
 	}
 
@@ -808,8 +784,6 @@
 		fill: #c9fbe6;
 		stroke: #051310;
 		stroke-width: 0.8;
-		filter: drop-shadow(0 0 3px var(--mint));
-		transition: r 0.2s ease;
 	}
 
 	.town:hover .node {
@@ -825,34 +799,16 @@
 
 	.town.selected .node {
 		fill: #ffd27a;
-		filter: drop-shadow(0 0 5px #ffb347);
 	}
 
 	.lock {
 		fill: none;
 		stroke: #ffd27a;
-		stroke-width: 1;
-		stroke-dasharray: 4 3;
-		animation: spin 6s linear infinite;
+		stroke-width: 1.2;
 	}
 
-	.lock.outer {
-		stroke-opacity: 0.35;
-		stroke-dasharray: 2 5;
-		animation-direction: reverse;
-	}
 
-	.reticle {
-		stroke: #ffd27a;
-		stroke-width: 1;
-		opacity: 0.8;
-	}
 
-	@keyframes spin {
-		to {
-			transform: rotate(360deg);
-		}
-	}
 
 	.town-label {
 		fill: #e6fff4;
@@ -886,7 +842,6 @@
 	.company .dot {
 		stroke: rgba(255, 255, 255, 0.85);
 		stroke-width: 1;
-		filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.35));
 	}
 
 	.company:hover .dot {
@@ -897,7 +852,6 @@
 		fill: white;
 		stroke: var(--mint);
 		stroke-width: 1.5;
-		filter: drop-shadow(0 0 5px var(--mint));
 	}
 
 	.initial {
@@ -924,9 +878,6 @@
 		animation: ping 1.6s ease-out infinite;
 	}
 
-	.ping .late {
-		animation-delay: 0.8s;
-	}
 
 	@keyframes ping {
 		from {
@@ -939,65 +890,13 @@
 		}
 	}
 
-	.sweep {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		width: 160%;
-		aspect-ratio: 1;
-		translate: -50% -50%;
-		border-radius: 50%;
-		background: conic-gradient(from 0deg, transparent 0deg, color-mix(in srgb, var(--accent-glow) 16%, transparent) 40deg, transparent 42deg);
-		mix-blend-mode: screen;
-		animation: sweep 7s linear infinite;
-		pointer-events: none;
-	}
 
-	@keyframes sweep {
-		to {
-			rotate: 360deg;
-		}
-	}
 
-	.scanlines {
-		position: absolute;
-		inset: 0;
-		background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 3px);
-		pointer-events: none;
-	}
 
-	.frame-corners i {
-		position: absolute;
-		width: 14px;
-		height: 14px;
-		border-color: rgba(160, 250, 210, 0.5);
-		border-style: solid;
-		pointer-events: none;
-	}
 
-	.frame-corners i:nth-child(1) {
-		left: 8px;
-		top: 8px;
-		border-width: 1px 0 0 1px;
-	}
 
-	.frame-corners i:nth-child(2) {
-		right: 8px;
-		top: 8px;
-		border-width: 1px 1px 0 0;
-	}
 
-	.frame-corners i:nth-child(3) {
-		left: 8px;
-		bottom: 8px;
-		border-width: 0 0 1px 1px;
-	}
 
-	.frame-corners i:nth-child(4) {
-		right: 8px;
-		bottom: 8px;
-		border-width: 0 1px 1px 0;
-	}
 
 	/* ————— HUD ————— */
 	.hud {
@@ -1014,18 +913,10 @@
 		display: flex;
 		align-items: center;
 		gap: 7px;
-		font-size: 9px;
-		letter-spacing: 0.16em;
+		font-size: 11px;
+		letter-spacing: -0.01em;
 	}
 
-	.hud-title span {
-		padding: 1px 4px;
-		border: 1px solid rgba(160, 250, 210, 0.3);
-		border-radius: 3px;
-		color: rgba(200, 250, 225, 0.6);
-		font-size: 5.8px;
-		letter-spacing: 0.08em;
-	}
 
 	.hud-stats {
 		display: flex;
@@ -1137,11 +1028,9 @@
 		grid-row: span 2;
 		align-self: center;
 		color: #ffd27a;
-		font-size: 5.8px;
+		font-size: 6.6px;
 		font-style: normal;
-		font-weight: 700;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
+		font-weight: 600;
 	}
 
 	.results span {
@@ -1378,7 +1267,7 @@
 		background: rgba(10, 26, 20, 0.9);
 		color: white;
 		text-align: left;
-		box-shadow: 0 0 30px rgba(255, 190, 90, 0.18), 0 14px 30px rgba(0, 0, 0, 0.35);
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 		backdrop-filter: blur(12px);
 	}
 
@@ -1401,9 +1290,8 @@
 
 	.arrival small {
 		color: #ffd27a;
-		font-size: 5.8px;
-		font-weight: 700;
-		letter-spacing: 0.1em;
+		font-size: 6.8px;
+		font-weight: 600;
 	}
 
 	.arrival strong {

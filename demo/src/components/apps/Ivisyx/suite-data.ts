@@ -40,7 +40,7 @@ export type FirmProfile = {
 
 export const firmPresets: FirmProfile[] = [
 	{
-		id: '1435', name: '1435 Capital', initials: '14', thesis: 'Pre-seed and seed technology companies building in New Jersey.',
+		id: '59', name: '59 Capital', initials: '59', thesis: 'Pre-seed and seed technology companies building in New Jersey.',
 		sectors: ['Deep tech', 'Life sciences', 'Climate', 'AI & software'], stages: ['Pre-seed', 'Seed'], check: '$250K–$1.5M',
 		geography: 'New Jersey', fund: 'Fund I', fundSize: 50, vintage: 2024, accent: '#1d6751',
 	},

@@ -7,7 +7,7 @@
 	import { age, suite } from '../state.svelte';
 
 	const sources = [
-		{ key: 'SEC', title: 'EDGAR filings', desc: 'Company disclosures and exempt-offering notices in the SEC’s official database.', url: 'https://www.sec.gov/edgar/search/', freq: 'Every 15 min' },
+		{ key: 'SEC', title: 'EDGAR filings', desc: "Company disclosures and exempt-offering notices in the SEC's official database.", url: 'https://www.sec.gov/edgar/search/', freq: 'Every 15 min' },
 		{ key: 'PTO', title: 'Patents & applications', desc: 'Published applications and granted patents. Publication and grant are different events.', url: 'https://www.uspto.gov/patents/search/patent-public-search', freq: 'Daily' },
 		{ key: 'SBIR', title: 'Federal research awards', desc: 'The official SBIR/STTR award database for research and development activity.', url: 'https://www.sbir.gov/awards', freq: 'Weekly' },
 	];
@@ -37,17 +37,16 @@
 
 <header class="page-head">
 	<div>
-		<span class="eyebrow">Evidence pipeline</span>
 		<h1>Data sources</h1>
-		<p>Where signals come from, how they're resolved, and what's simulated in this demo.</p>
+		<p>Where the data comes from, and which parts of this demo are simulated.</p>
 	</div>
 	<div class="actions"><button class="btn" onclick={() => suite.toast('Re-sync queued for 14 sources (demo)', 'success')}><RefreshCw /> Sync now</button></div>
 </header>
 
 <section class="flow hero-dark">
 	{#each pipeline as step, i}
-		<div class="flow-step rise" style:animation-delay="{i * 70}ms">
-			<small>{step.label.toUpperCase()}</small>
+		<div class="flow-step">
+			<small>{step.label}</small>
 			<strong class="num">{step.value}</strong>
 			<span>{step.sub}</span>
 		</div>
@@ -61,7 +60,7 @@
 		{#each sources as s}
 			<article class="card source">
 				<span class="mono">{s.key}</span>
-				<div><h2>{s.title}</h2><p>{s.desc}</p><span class="status"><i class="live-dot"></i>Reference link · live ingestion simulated · {s.freq}</span></div>
+				<div><h2>{s.title}</h2><p>{s.desc}</p><span class="status"><i class="live-dot"></i>Official source. Ingestion is simulated here ({s.freq.toLowerCase()}).</span></div>
 				<a href={s.url} target="_blank" rel="noreferrer" aria-label="Open {s.title}"><ArrowUpRight /></a>
 			</article>
 		{/each}
@@ -91,7 +90,7 @@
 </div>
 
 <section class="explainer hero-dark">
-	<h2>A clear line between fact and demo.</h2>
+	<h2>What's real and what's simulated</h2>
 	<div>
 		<p><strong>Real company profiles</strong>Six companies with names, towns and descriptions linked to official sources. Logos belong to their owners. They never receive simulated metrics or events.</p>
 		<p><strong>Everything else is synthetic</strong>Every other company, deal, portfolio mark, fund figure, LP and signal is generated locally for the demo. Town coordinates are approximate centres.</p>
@@ -121,9 +120,8 @@
 	}
 
 	.flow-step small {
-		color: #8fb0a2;
-		font-size: 5.8px;
-		letter-spacing: 0.1em;
+		color: #9dbcae;
+		font-size: 7px;
 	}
 
 	.flow-step strong {

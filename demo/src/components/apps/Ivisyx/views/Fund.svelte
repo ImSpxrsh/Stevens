@@ -42,10 +42,10 @@
 	}
 </script>
 
-<section class="hero hero-dark rise">
+<section class="hero hero-dark">
 	<div class="hero-top">
 		<div>
-			<span class="label">{suite.firm.name.toUpperCase()} · {suite.firm.fund.toUpperCase()} · {suite.firm.vintage} VINTAGE</span>
+			<span class="label">{suite.firm.name}, {suite.firm.fund} ({suite.firm.vintage} vintage)</span>
 			<h1>{money(f.committed)} fund, <em>{f.tvpi.toFixed(2)}× TVPI</em></h1>
 			<p>Net of fees and carry. Marks as of September 30, 2026. Synthetic demo figures.</p>
 		</div>
@@ -58,16 +58,16 @@
 		<div><small>TVPI</small><strong class="num">{f.tvpi.toFixed(2)}×</strong><span>Total value / paid-in</span></div>
 		<div><small>DPI</small><strong class="num">{f.dpi.toFixed(2)}×</strong><span>Distributions / paid-in</span></div>
 		<div><small>RVPI</small><strong class="num">{f.rvpi.toFixed(2)}×</strong><span>Residual value / paid-in</span></div>
-		<div><small>NET IRR</small><strong class="num">{f.irr.toFixed(1)}%</strong><span>Top quartile for vintage*</span></div>
-		<div><small>CALLED</small><strong class="num">{Math.round((f.called / f.committed) * 100)}%</strong><span>{money(f.called)} of {money(f.committed)}</span></div>
+		<div><small>Net IRR</small><strong class="num">{f.irr.toFixed(1)}%</strong><span>Top quartile for vintage*</span></div>
+		<div><small>Called</small><strong class="num">{Math.round((f.called / f.committed) * 100)}%</strong><span>{money(f.called)} of {money(f.committed)}</span></div>
 	</div>
 	<div class="charts">
 		<div>
-			<span class="label">TVPI BY QUARTER</span>
+			<span class="label">TVPI by quarter</span>
 			<AreaChart dark labels={quarters} height={120} series={[{ name: 'TVPI', values: f.tvpiSeries, color: '#ffd27a' }]} format={(v) => `${v.toFixed(2)}×`} />
 		</div>
 		<div>
-			<span class="label">J-CURVE · NET CASH FLOW, % OF COMMITMENTS</span>
+			<span class="label">Net cash flow as % of commitments (J-curve)</span>
 			<AreaChart dark zero labels={quarters} height={120} series={[{ name: 'Net cash flow', values: jCurve, color: '#7fe3b5' }]} format={(v) => `${v}%`} />
 		</div>
 	</div>
@@ -76,7 +76,7 @@
 {#if report}
 	<article class="card report" transition:fly={{ y: 8, duration: 240 }}>
 		<div class="doc">
-			<span class="eyebrow">Q3 2026 · Partner letter · Draft</span>
+			<span class="eyebrow">Q3 2026 partner letter, draft</span>
 			<h2>Dear partners,</h2>
 			<p>{suite.firm.fund} ended the quarter at <b>{f.tvpi.toFixed(2)}× TVPI</b> and <b>{f.irr.toFixed(1)}% net IRR</b>. We called {money(f.committed * 0.06)} for follow-ons in our two breakout companies and returned {money(f.committed * 0.035)} from a partial secondary. Our pipeline added {Object.keys(suite.pipeline).length} companies, with {Object.values(suite.pipeline).filter((s) => s === 'IC review').length} at investment committee…</p>
 		</div>
@@ -137,10 +137,8 @@
 	}
 
 	.label {
-		color: rgba(200, 240, 222, 0.55);
-		font-size: 6.3px;
-		font-weight: 700;
-		letter-spacing: 0.11em;
+		color: rgba(200, 240, 222, 0.6);
+		font-size: 7.2px;
 	}
 
 	h1 {
@@ -197,9 +195,8 @@
 	}
 
 	.metrics small {
-		color: #8fb0a2;
-		font-size: 6px;
-		letter-spacing: 0.09em;
+		color: #9dbcae;
+		font-size: 7px;
 	}
 
 	.metrics strong {

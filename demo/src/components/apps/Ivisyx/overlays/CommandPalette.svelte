@@ -5,7 +5,7 @@
 	import CornerDownLeft from '~icons/lucide/corner-down-left';
 	import MapPin from '~icons/lucide/map-pin';
 	import Search from '~icons/lucide/search';
-	import Sparkles from '~icons/lucide/sparkles';
+	import Message from '~icons/lucide/message-square';
 	import Zap from '~icons/lucide/zap';
 	import { entities } from '../directory';
 	import { towns } from '../geo';
@@ -35,7 +35,7 @@
 			...firmPresets.filter((f) => f.id !== suite.firmId).map((f) => ({ group: 'Actions', label: `Switch workspace to ${f.name}`, run: () => { suite.firmId = f.id; suite.toast(`Switched to ${f.name}`, 'success'); }, icon: 'action' as const })),
 		];
 		out.push(...actions.filter((a) => has(a.label)));
-		if (q) out.push({ group: 'Ivisyx AI', label: `Ask: “${query.trim()}”`, run: () => suite.ask(query.trim()), icon: 'ai' });
+		if (q) out.push({ group: 'Assistant', label: `Ask the assistant: "${query.trim()}"`, run: () => suite.ask(query.trim()), icon: 'ai' });
 		return out;
 	});
 
@@ -76,7 +76,7 @@
 					<span class="icon">
 						{#if item.entity}<Logo name={item.entity.name} hue={item.entity.hue} src={item.entity.logo} seed={item.entity.id} size={18} />
 						{:else if item.icon === 'town'}<MapPin />
-						{:else if item.icon === 'ai'}<Sparkles />
+						{:else if item.icon === 'ai'}<Message />
 						{:else if item.icon === 'action'}<Zap />
 						{:else}<ArrowRight />{/if}
 					</span>
@@ -145,10 +145,8 @@
 	.group {
 		padding: 7px 8px 4px;
 		color: var(--faint);
-		font-size: 6.3px;
-		font-weight: 700;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
+		font-size: 7px;
+		font-weight: 600;
 	}
 
 	.results button {

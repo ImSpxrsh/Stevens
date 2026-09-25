@@ -30,14 +30,14 @@
 		suite.customFirm = { ...draft, initials, name: draft.name.trim() || 'My Fund' };
 		suite.firmId = 'custom';
 		suite.setupOpen = false;
-		suite.toast(`Workspace tuned for ${suite.customFirm.name}. Scores updated.`, 'success');
+		suite.toast(`Saved. Scores now use ${suite.customFirm.name}'s thesis.`, 'success');
 	}
 </script>
 
 <div class="backdrop" role="presentation" transition:fade={{ duration: 120 }} onclick={(e) => e.target === e.currentTarget && (suite.setupOpen = false)}>
 	<div class="modal" role="dialog" aria-modal="true" aria-label="Set up your firm" transition:scale={{ start: 0.97, duration: 160 }}>
 		<header>
-			<div><span class="eyebrow">Works for any fund</span><h2>Set up your firm</h2><p>Ivisyx re-scores every company, re-weights the radar and re-cuts fund reporting around your thesis.</p></div>
+			<div><h2>Set up your firm</h2><p>Every fit score updates to match your thesis, and fund numbers scale to your fund size.</p></div>
 			<button class="btn icon ghost" onclick={() => (suite.setupOpen = false)} aria-label="Close"><X /></button>
 		</header>
 
@@ -74,7 +74,7 @@
 		<footer>
 			<div class="preview"><i style:background={draft.accent}>{initials}</i><span><strong>{draft.name || 'My Fund'}</strong><small>{draft.fund} · ${draft.fundSize}M · {draft.sectors.length} sectors</small></span></div>
 			<button class="btn" onclick={() => (suite.setupOpen = false)}>Cancel</button>
-			<button class="btn primary" style:--accent={draft.accent} disabled={!draft.sectors.length || !draft.stages.length} onclick={save}>Save & re-score</button>
+			<button class="btn primary" style:--accent={draft.accent} disabled={!draft.sectors.length || !draft.stages.length} onclick={save}>Save</button>
 		</footer>
 	</div>
 </div>

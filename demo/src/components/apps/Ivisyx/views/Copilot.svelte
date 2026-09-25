@@ -4,14 +4,13 @@
 	import ArrowUp from '~icons/lucide/arrow-up';
 	import Check from '~icons/lucide/check';
 	import Database from '~icons/lucide/database';
-	import Sparkles from '~icons/lucide/sparkles';
 	import { entities, entityById, syntheticEntities, type Entity } from '../directory';
 	import { towns } from '../geo';
 	import { suite } from '../state.svelte';
 	import { fitFor, money } from '../suite-data';
 	import logoUrl from '../logo.svg';
 	import Logo from '../ui/Logo.svelte';
-	import Ring from '../ui/Ring.svelte';
+	import Score from '../ui/Score.svelte';
 
 	type Block =
 		| { type: 'h'; text: string }
@@ -29,7 +28,7 @@
 	const suggestions = $derived([
 		`Draft an IC memo for ${topMatch().name}`,
 		'Which portfolio companies need attention?',
-		'Summarize this week’s signals for me',
+		"Summarize this week's signals for me",
 		`Find companies similar to ${entityById.get('quarry')!.name}`,
 		'Prep me for my next meeting',
 	]);
@@ -106,7 +105,7 @@
 		for (const ev of suite.events) kinds.set(ev.kind, (kinds.get(ev.kind) ?? 0) + 1);
 		const found = named ? [named] : entities.filter((e) => p.split(/\s+/).some((w) => w.length > 3 && `${e.name} ${e.sector} ${e.town}`.toLowerCase().includes(w))).slice(0, 5);
 		return [
-			{ type: 'h', text: found.length && !p.includes('signal') ? 'Here’s what I found' : 'This week’s signals' },
+			{ type: 'h', text: found.length && !p.includes('signal') ? 'Matching companies' : "This week's signals" },
 			{ type: 'metrics', items: [...kinds.entries()].slice(0, 4).map(([k, v]) => ({ label: k, value: `${v * 7}` })) },
 			{ type: 'p', text: `Activity is concentrated in ${hotTowns.map((t) => t.name).join(', ')}. ${syntheticEntities.filter((e) => fitFor(e, firm).total >= 80).length} companies now score 80+ against ${firm.name}'s thesis.` },
 			{ type: 'list', items: (found.length ? found : [topMatch(), ...syntheticEntities.slice(0, 3)]).map((e) => ({ title: e.name, sub: `${e.real ? 'Real company' : `${e.sector} · ${e.stage}`} · ${e.town}`, id: e.id, fit: e.real ? undefined : fitFor(e, firm).total })) },
@@ -119,13 +118,13 @@
 		input = '';
 		busy = true;
 		messages.push({ role: 'user', text: prompt, shown: 0, typed: 0, step: 0 });
-		const steps = ['Searching the company graph', `Scoring against ${suite.firm.name}'s thesis`, 'Reading linked source records', 'Drafting'];
+		const steps = ['Working'];
 		messages.push({ role: 'ai', blocks: answer(prompt), shown: 0, typed: 0, steps, step: 0 });
 		const msg = messages[messages.length - 1];
 		await scroll();
 		for (let i = 0; i < steps.length; i++) {
 			msg.step = i;
-			await wait(380);
+			await wait(650);
 		}
 		msg.step = steps.length;
 		for (let b = 0; b < msg.blocks!.length; b++) {
@@ -164,11 +163,10 @@
 		<div class="thread scroll" bind:this={scroller}>
 			{#if !messages.length}
 				<div class="welcome">
-					<span class="orb"><img src={logoUrl} alt="" /></span>
-					<h1>Ask Ivisyx AI</h1>
-					<p>Memos, portfolio checks, lookalikes and meeting prep, grounded in {entities.length.toLocaleString()} company records and {suite.firm.name}'s thesis.</p>
+					<h1>Assistant</h1>
+					<p>Ask about a company, your pipeline or the portfolio. Answers are built from the demo data in this workspace.</p>
 					<div class="suggestions">
-						{#each suggestions as s, i}<button class="rise" style:animation-delay="{i * 50}ms" onclick={() => send(s)}><Sparkles />{s}</button>{/each}
+						{#each suggestions as s}<button onclick={() => send(s)}>{s}</button>{/each}
 					</div>
 				</div>
 			{/if}
@@ -198,7 +196,7 @@
 											<button disabled={!e} onclick={() => e && suite.open(e.id)}>
 												{#if e}<Logo name={e.name} hue={e.hue} src={e.logo} seed={e.id} size={20} />{:else}<i class="bullet"></i>{/if}
 												<span><strong>{item.title}</strong><small>{item.sub}</small></span>
-												{#if item.fit !== undefined}<Ring value={item.fit} size={20} stroke={2} />{/if}
+												{#if item.fit !== undefined}<Score value={item.fit} />{/if}
 											</button>
 										{/each}
 									</div>
@@ -210,28 +208,27 @@
 			{/each}
 		</div>
 		<form class="composer" onsubmit={(e) => { e.preventDefault(); send(); }}>
-			<Sparkles />
-			<input bind:value={input} placeholder="Ask about a company, a town, your pipeline or portfolio…" aria-label="Message Ivisyx AI" disabled={busy} />
+			<input bind:value={input} placeholder="Ask a question" aria-label="Message the assistant" disabled={busy} />
 			<button class="send" disabled={!input.trim() || busy} aria-label="Send"><ArrowUp /></button>
 		</form>
 	</section>
 
 	<aside class="context">
 		<div class="card ctx">
-			<span class="eyebrow">Grounding</span>
+			<span class="eyebrow">Data used</span>
 			<div class="ctx-row"><Database /><span><strong>{entities.length.toLocaleString()} companies</strong><small>{towns.length} NJ municipalities</small></span></div>
 			<div class="ctx-row"><Database /><span><strong>{suite.events.length} live signals</strong><small>SEC, USPTO, SBIR (simulated)</small></span></div>
 			<div class="ctx-row"><Database /><span><strong>{suite.portfolio.length} portfolio companies</strong><small>{suite.firm.fund} marks</small></span></div>
 		</div>
 		<div class="card ctx">
-			<span class="eyebrow">Active thesis</span>
+			<span class="eyebrow">Thesis</span>
 			<p>{suite.firm.thesis}</p>
 			<div class="tags">{#each suite.firm.sectors as s}<i class="pill accent">{s}</i>{/each}{#each suite.firm.stages as s}<i class="pill">{s}</i>{/each}</div>
 			<button class="btn" onclick={() => (suite.setupOpen = true)}>Edit thesis</button>
 		</div>
 		<div class="card ctx demo">
 			<strong>Scripted demo responses</strong>
-			<p>Answers are generated locally from synthetic records. No model or API is called.</p>
+			<p>Answers are generated from the synthetic records in this demo. It does not call a language model.</p>
 		</div>
 	</aside>
 </div>
@@ -265,29 +262,11 @@
 		text-align: center;
 	}
 
-	.orb {
-		width: 52px;
-		height: 52px;
-		display: inline-grid;
-		place-items: center;
-		border-radius: 15px;
-		background: linear-gradient(180deg, #fff, #dfe5e7);
-		box-shadow: 0 0 0 6px var(--accent-soft), 0 14px 30px color-mix(in srgb, var(--accent) 30%, transparent);
-		animation: float 4s ease-in-out infinite;
-	}
 
-	.orb img {
-		width: 34px;
-	}
 
-	@keyframes float {
-		50% {
-			transform: translateY(-4px);
-		}
-	}
 
 	.welcome h1 {
-		margin: 14px 0 6px;
+		margin: 0 0 6px;
 		font-size: 21px;
 		letter-spacing: -0.045em;
 	}
@@ -314,18 +293,13 @@
 		background: rgba(255, 255, 255, 0.6);
 		font-size: 7.8px;
 		text-align: left;
-		transition: transform 0.12s ease, background 0.15s ease;
+		transition: background 0.15s ease;
 	}
 
 	.suggestions button:hover {
-		transform: translateX(2px);
 		background: white;
 	}
 
-	.suggestions :global(svg) {
-		color: var(--accent);
-		font-size: 10px;
-	}
 
 	.user {
 		display: flex;
@@ -519,17 +493,13 @@
 		align-items: center;
 		gap: 8px;
 		margin: 0 14px 14px;
-		padding: 6px 6px 6px 11px;
+		padding: 6px 6px 6px 12px;
 		border: 1px solid rgba(31, 48, 42, 0.12);
 		border-radius: 12px;
 		background: white;
 		box-shadow: 0 8px 24px rgba(13, 35, 28, 0.08);
 	}
 
-	.composer > :global(svg) {
-		color: var(--accent);
-		font-size: 12px;
-	}
 
 	.composer input {
 		flex: 1;

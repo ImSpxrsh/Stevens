@@ -113,11 +113,9 @@
 }
 
 .ivx .eyebrow {
-	color: color-mix(in oklab, var(--accent) 60%, #47665b);
-	font-size: 6.5px;
-	font-weight: 700;
-	letter-spacing: 0.11em;
-	text-transform: uppercase;
+	color: var(--muted);
+	font-size: 7px;
+	font-weight: 600;
 }
 
 /* Glass cards (main-branch look) */
@@ -155,21 +153,19 @@
 	font-size: 6.5px;
 }
 
-/* Dark hero surface (main's proof view) */
+/* Dark surface (main's proof view) */
 .ivx .hero-dark {
 	position: relative;
 	overflow: hidden;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.08);
 	border-radius: 12px;
 	color: #eaf2ee;
 	background:
-		radial-gradient(circle at 84% 8%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 36%),
-		radial-gradient(circle at 10% 110%, rgba(214, 169, 87, 0.16), transparent 40%),
-		linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+		linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
 		color-mix(in oklab, var(--accent) 34%, #03110c);
-	background-size: auto, auto, 24px 24px, 24px 24px, auto;
-	box-shadow: 0 16px 36px rgba(6, 22, 16, 0.22);
+	background-size: 28px 28px, 28px 28px, auto;
+	box-shadow: 0 8px 22px rgba(6, 22, 16, 0.14);
 }
 
 /* Buttons */
@@ -205,13 +201,13 @@
 
 .ivx .btn.primary {
 	border-color: transparent;
-	background: linear-gradient(180deg, color-mix(in oklab, var(--accent) 88%, white), var(--accent-deep));
+	background: var(--accent-deep);
 	color: white;
-	box-shadow: 0 5px 14px color-mix(in srgb, var(--accent) 34%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+	box-shadow: 0 1px 2px rgba(10, 30, 22, 0.2);
 }
 
 .ivx .btn.primary:hover {
-	background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+	background: color-mix(in oklab, var(--accent-deep) 88%, white);
 }
 
 .ivx .btn.ghost {
@@ -371,10 +367,8 @@
 .ivx .kpi small {
 	display: block;
 	color: #718078;
-	font-size: 6px;
-	font-weight: 600;
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
+	font-size: 7px;
+	font-weight: 500;
 }
 
 .ivx .kpi strong {
@@ -417,56 +411,17 @@
 	box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.9);
 }
 
-/* Live dot */
+/* Status dot */
 .ivx .live-dot {
-	position: relative;
 	width: 6px;
 	height: 6px;
 	flex: 0 0 auto;
 	border-radius: 50%;
-	background: #4fc08f;
-	box-shadow: 0 0 8px #4fc08f;
-}
-
-.ivx .live-dot::after {
-	content: '';
-	position: absolute;
-	inset: -3px;
-	border-radius: 50%;
-	border: 1px solid #4fc08f;
-	animation: ivx-ping 1.8s ease-out infinite;
+	background: #4fae86;
 }
 
 .ivx .live-dot.paused {
 	background: #a7b1ac;
-	box-shadow: none;
-}
-
-.ivx .live-dot.paused::after {
-	display: none;
-}
-
-@keyframes ivx-ping {
-	from {
-		transform: scale(0.6);
-		opacity: 1;
-	}
-	to {
-		transform: scale(2.2);
-		opacity: 0;
-	}
-}
-
-/* Entrance animation used by cards and rows */
-.ivx .rise {
-	animation: ivx-rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-@keyframes ivx-rise {
-	from {
-		opacity: 0;
-		transform: translateY(8px);
-	}
 }
 
 /* Progress bars */
@@ -482,18 +437,16 @@
 	position: absolute;
 	inset: 0 auto 0 0;
 	border-radius: inherit;
-	background: linear-gradient(90deg, color-mix(in oklab, var(--accent) 70%, white), var(--accent));
+	background: var(--accent);
 	transition: width 0.6s cubic-bezier(0.3, 0.7, 0.2, 1);
 }
 
 /* Section headers inside panels */
 .ivx .section-label {
 	margin: 14px 0 7px;
-	color: rgba(31, 53, 45, 0.5);
-	font-size: 6.5px;
-	font-weight: 700;
-	letter-spacing: 0.11em;
-	text-transform: uppercase;
+	color: var(--muted);
+	font-size: 7.5px;
+	font-weight: 650;
 }
 
 .ivx kbd {

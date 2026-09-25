@@ -5,15 +5,15 @@ import { deals, firmPresets, fitFor, fundFor, portfolioFor, type FirmProfile, ty
 export type View = 'dashboard' | 'radar' | 'pipeline' | 'companies' | 'portfolio' | 'market' | 'copilot' | 'fund' | 'programs' | 'sources';
 
 export const viewLabels: Record<View, string> = {
-	dashboard: 'Command center', radar: 'Signal radar', pipeline: 'Pipeline', companies: 'Companies', portfolio: 'Portfolio',
-	market: 'Market map', copilot: 'Ivisyx AI', fund: 'Fund & LPs', programs: 'Programs', sources: 'Data sources',
+	dashboard: 'Overview', radar: 'NJ map', pipeline: 'Pipeline', companies: 'Companies', portfolio: 'Portfolio',
+	market: 'Market map', copilot: 'Assistant', fund: 'Fund & LPs', programs: 'Programs', sources: 'Sources',
 };
 
 type Toast = { id: number; text: string; tone: 'default' | 'success' };
 
 class Suite {
 	view = $state<View>('dashboard');
-	firmId = $state('1435');
+	firmId = $state('59');
 	customFirm = $state<FirmProfile | null>(null);
 	firm = $derived<FirmProfile>(
 		(this.firmId === 'custom' && this.customFirm) || firmPresets.find((f) => f.id === this.firmId) || firmPresets[0],

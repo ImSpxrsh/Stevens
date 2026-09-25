@@ -11,11 +11,11 @@
 	import Kanban from '~icons/lucide/kanban';
 	import Landmark from '~icons/lucide/landmark';
 	import Dashboard from '~icons/lucide/layout-dashboard';
-	import MapIcon from '~icons/lucide/map';
-	import Radar from '~icons/lucide/radar';
+	import Grid from '~icons/lucide/layout-grid';
+	import MapPin from '~icons/lucide/map-pinned';
+	import Message from '~icons/lucide/message-square';
 	import Search from '~icons/lucide/search';
 	import Settings from '~icons/lucide/sliders-horizontal';
-	import Sparkles from '~icons/lucide/sparkles';
 	import './ivisyx.css';
 	import logoUrl from './logo.svg';
 	import { entities } from './directory';
@@ -48,17 +48,17 @@
 	const activeDeals = $derived(Object.values(suite.pipeline).filter((s) => s !== 'Closed').length);
 	const unread = $derived(Math.max(0, suite.sequence - seen) + 3);
 
-	const nav: { label?: string; items: { id: View; icon: any; count?: () => string | number; badge?: string }[] }[] = [
+	const nav: { label?: string; items: { id: View; icon: any; count?: () => string | number }[] }[] = [
 		{
 			items: [
 				{ id: 'dashboard', icon: Dashboard },
-				{ id: 'radar', icon: Radar, badge: 'Live' },
+				{ id: 'radar', icon: MapPin },
 				{ id: 'pipeline', icon: Kanban, count: () => activeDeals },
 				{ id: 'companies', icon: Building, count: () => entities.length.toLocaleString() },
 				{ id: 'portfolio', icon: Briefcase, count: () => suite.portfolio.length },
 			],
 		},
-		{ label: 'Intelligence', items: [{ id: 'market', icon: MapIcon }, { id: 'copilot', icon: Sparkles, badge: 'New' }, { id: 'programs', icon: Landmark }] },
+		{ label: 'Research', items: [{ id: 'market', icon: Grid }, { id: 'copilot', icon: Message }, { id: 'programs', icon: Landmark }] },
 		{ label: 'Fund', items: [{ id: 'fund', icon: ChartPie }, { id: 'sources', icon: Database, count: () => 14 }] },
 	];
 
@@ -132,10 +132,8 @@
 			<div class="side-top app-window-drag-handle"></div>
 			<div class="brand">
 				<span class="mark"><img src={logoUrl} alt="" /></span>
-				<div><strong>Ivisyx</strong><small>Venture intelligence OS</small></div>
+				<strong>Ivisyx</strong>
 			</div>
-
-			<button class="jump" onclick={() => (suite.paletteOpen = true)}><Search /><span>Jump to…</span><kbd>⌘K</kbd></button>
 
 			{#each nav as group}
 				{#if group.label}<div class="nav-label">{group.label}</div>{/if}
@@ -145,7 +143,7 @@
 						<button class:active={suite.view === item.id} onclick={() => suite.go(item.id)}>
 							<Icon />
 							<span>{viewLabels[item.id]}</span>
-							{#if item.badge}<em class:live={item.badge === 'Live'}>{item.badge}</em>{:else if item.count}<b>{item.count()}</b>{/if}
+							{#if item.count}<b>{item.count()}</b>{/if}
 						</button>
 					{/each}
 				</nav>
@@ -155,7 +153,7 @@
 
 			<div class="status">
 				<i class="live-dot" class:paused={!suite.playing}></i>
-				<span><strong>{suite.playing ? 'Live' : 'Paused'} · 14 sources</strong><small>{suite.events.length} signals this session</small></span>
+				<span><strong>14 sources connected</strong><small>{suite.playing ? `Updated ${suite.events[0] ? age(suite.events[0].timestamp, suite.now).toLowerCase() : 'just now'}` : 'Updates paused'}</small></span>
 			</div>
 
 			<div class="workspace-wrap">
@@ -208,7 +206,7 @@
 					<div class="team">
 						{#each team as t}<span class="avatar" style:background={t.color} title="{t.name}, {t.role}">{t.initials}</span>{/each}
 					</div>
-					<span class="demo-pill">Synthetic demo data</span>
+					<span class="demo-pill">Demo data</span>
 				</div>
 			</header>
 
@@ -305,60 +303,21 @@
 		filter: drop-shadow(0 2px 3px rgba(10, 20, 23, 0.25));
 	}
 
-	.brand strong,
-	.brand small {
-		display: block;
-	}
-
 	.brand strong {
 		font-size: 16px;
 		font-weight: 650;
-		letter-spacing: -0.035em;
+		letter-spacing: -0.03em;
 	}
 
-	.brand small {
-		margin-top: 2px;
-		color: rgba(255, 255, 255, 0.42);
-		font-size: 6.5px;
-		letter-spacing: 0.04em;
-	}
 
-	.jump {
-		height: 25px;
-		display: flex;
-		align-items: center;
-		gap: 6px;
-		margin: 0 0 10px;
-		padding: 0 7px;
-		border: 1px solid rgba(255, 255, 255, 0.09);
-		border-radius: 7px;
-		background: rgba(255, 255, 255, 0.05);
-		color: rgba(255, 255, 255, 0.45);
-		font-size: 7.5px;
-	}
 
-	.jump :global(svg) {
-		font-size: 11px;
-	}
 
-	.jump span {
-		flex: 1;
-		text-align: left;
-	}
-
-	.jump kbd {
-		border: 0;
-		background: rgba(255, 255, 255, 0.1);
-		color: rgba(255, 255, 255, 0.5);
-	}
 
 	.nav-label {
-		margin: 12px 8px 5px;
-		color: rgba(255, 255, 255, 0.3);
-		font-size: 6.5px;
-		font-weight: 700;
-		letter-spacing: 0.11em;
-		text-transform: uppercase;
+		margin: 14px 8px 5px;
+		color: rgba(255, 255, 255, 0.36);
+		font-size: 7px;
+		font-weight: 600;
 	}
 
 	nav {
@@ -392,21 +351,7 @@
 		font-weight: 500;
 	}
 
-	nav button em {
-		padding: 1px 5px;
-		border-radius: 6px;
-		background: color-mix(in srgb, var(--accent) 45%, transparent);
-		color: #d9fbe9;
-		font-size: 5.8px;
-		font-style: normal;
-		font-weight: 700;
-		letter-spacing: 0.04em;
-	}
 
-	nav button em.live {
-		background: rgba(79, 192, 143, 0.18);
-		color: #7fe3b5;
-	}
 
 	nav button:hover {
 		background: rgba(255, 255, 255, 0.07);
@@ -417,18 +362,6 @@
 		background: rgba(255, 255, 255, 0.14);
 		color: #fff;
 		box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.12);
-	}
-
-	nav button.active::before {
-		content: '';
-		position: absolute;
-		left: -10px;
-		top: 7px;
-		bottom: 7px;
-		width: 2.5px;
-		border-radius: 0 3px 3px 0;
-		background: var(--accent-glow);
-		box-shadow: 0 0 10px var(--accent-glow);
 	}
 
 	.spacer {
@@ -535,11 +468,8 @@
 	.workspace-menu > small {
 		display: block;
 		padding: 3px 6px 5px;
-		color: rgba(255, 255, 255, 0.4);
-		font-size: 6.3px;
-		font-weight: 700;
-		letter-spacing: 0.09em;
-		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.45);
+		font-size: 7px;
 	}
 
 	.workspace-menu button {

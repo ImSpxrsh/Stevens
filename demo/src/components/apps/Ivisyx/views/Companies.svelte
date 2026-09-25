@@ -9,7 +9,7 @@
 	import { suite } from '../state.svelte';
 	import { fitFor, money, sectors, stages } from '../suite-data';
 	import Logo from '../ui/Logo.svelte';
-	import Ring from '../ui/Ring.svelte';
+	import Score from '../ui/Score.svelte';
 
 	let query = $state('');
 	let dataset = $state<'all' | 'real' | 'synthetic' | 'saved'>('all');
@@ -46,9 +46,8 @@
 
 <header class="page-head">
 	<div>
-		<span class="eyebrow">Company graph · New Jersey & beyond</span>
 		<h1>Companies</h1>
-		<p>{entities.length.toLocaleString()} companies indexed · {realCount} verified public profiles · every other record is synthetic.</p>
+		<p>{entities.length.toLocaleString()} companies. {realCount} are real, verified profiles; the rest are synthetic.</p>
 	</div>
 	<div class="actions">
 		<select class="select" bind:value={sort} aria-label="Sort">
@@ -76,11 +75,11 @@
 
 <div class="grid">
 	{#each filtered.slice(0, limit) as { e, fit }, i (e.id)}
-		<article class="card profile rise" style:animation-delay="{Math.min(i, 12) * 25}ms">
+		<article class="card profile">
 			<div class="top">
 				<Logo name={e.name} hue={e.hue} src={e.logo} seed={e.id} size={34} />
 				<div class="top-right">
-					{#if fit !== null}<Ring value={fit} size={28} stroke={2.6} />{/if}
+					{#if fit !== null}<Score value={fit} />{/if}
 					<button class="save" class:saved={suite.saved.includes(e.id)} onclick={() => suite.toggleSaved(e.id)} aria-label="{suite.saved.includes(e.id) ? 'Remove' : 'Add'} {e.name} watchlist"><Bookmark /></button>
 				</div>
 			</div>

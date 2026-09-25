@@ -74,7 +74,7 @@
     { id: 'pipeline', t: 60.5, title: 'Pipeline', note: 'Under the hood: Form D, SBIR, and state announcements are linked, classified, matched, and alerted. Counts are from a real run.' },
     { id: 'alerts', t: 70, title: 'Alerts', note: 'Alerts are automatic only when identity is certain (exact SEC ID). Fuzzy matches wait for a person.' },
     { id: 'measured', t: 76.5, title: 'Evidence, not certainty', note: 'Close on trust: facts, inferences, and unknowns are always labeled.' },
-    { id: 'finale', t: 84, title: 'Finale', note: 'One common track for New Jersey\'s startup signals. 1,435 mm is standard railroad gauge.' },
+    { id: 'finale', t: 84, title: 'Finale', note: 'One common track for New Jersey\'s startup signals.' },
   ];
 
   const CAPTIONS = [

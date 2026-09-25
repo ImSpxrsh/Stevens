@@ -45,8 +45,8 @@
 		{#each series as s, i}
 			{@const pts = s.values.map((v, j) => [x(j), y(v)] as [number, number])}
 			{@const d = smoothPath(pts)}
-			<path d="{d} L{pts[pts.length - 1][0]},{y(zero ? Math.max(min, 0) : min)} L{pts[0][0]},{y(zero ? Math.max(min, 0) : min)} Z" fill="url(#ac-{uid}-{i})" class="area" />
-			<path {d} fill="none" style:stroke={s.color} stroke-width="1.8" class="line" />
+			<path d="{d} L{pts[pts.length - 1][0]},{y(zero ? Math.max(min, 0) : min)} L{pts[0][0]},{y(zero ? Math.max(min, 0) : min)} Z" fill="url(#ac-{uid}-{i})" />
+			<path {d} fill="none" style:stroke={s.color} stroke-width="1.8" />
 		{/each}
 		{#if hover !== null}
 			<line x1={x(hover)} x2={x(hover)} y1={pad.t} y2={height - pad.b} class="cursor" />
@@ -90,25 +90,6 @@
 	}
 	.dark .tick {
 		fill: rgba(220, 235, 228, 0.5);
-	}
-	.line {
-		stroke-dasharray: 1400;
-		stroke-dashoffset: 1400;
-		animation: draw 1.4s cubic-bezier(0.3, 0.7, 0.2, 1) forwards;
-	}
-	.area {
-		opacity: 0;
-		animation: appear 0.9s 0.4s ease forwards;
-	}
-	@keyframes draw {
-		to {
-			stroke-dashoffset: 0;
-		}
-	}
-	@keyframes appear {
-		to {
-			opacity: 1;
-		}
 	}
 	.cursor {
 		stroke: rgba(31, 53, 45, 0.25);

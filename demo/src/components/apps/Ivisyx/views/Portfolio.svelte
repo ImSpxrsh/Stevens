@@ -3,7 +3,7 @@
 	import ChevronRight from '~icons/lucide/chevron-right';
 	import Download from '~icons/lucide/download';
 	import Mail from '~icons/lucide/mail';
-	import Sparkles from '~icons/lucide/sparkles';
+	import FileText from '~icons/lucide/file-text';
 	import { suite } from '../state.svelte';
 	import { money, type Health } from '../suite-data';
 	import AreaChart from '../ui/AreaChart.svelte';
@@ -33,9 +33,8 @@
 
 <header class="page-head">
 	<div>
-		<span class="eyebrow">{suite.firm.fund} · {suite.firm.vintage} vintage</span>
 		<h1>Portfolio</h1>
-		<p>Monthly metrics from founder updates, marked to the latest round. All figures are synthetic.</p>
+		<p>{suite.firm.fund}, {suite.firm.vintage} vintage. Monthly numbers from founder updates, marked to the latest round. All figures are synthetic.</p>
 	</div>
 	<div class="actions">
 		<button class="btn" onclick={() => suite.toast(`Update requests sent to ${suite.portfolio.length} founders`, 'success')}><Mail /> Request updates</button>
@@ -90,9 +89,9 @@
 						<div class="kpi"><small>Net retention</small><strong>{108 + (p.hue % 30)}%</strong></div>
 						<div class="kpi"><small>Pro-rata</small><strong>{money(p.check * 0.6)}</strong></div>
 					</div>
-					<div class="update"><span class="eyebrow">Latest founder update</span><p>“{p.update}”</p></div>
+					<div class="update"><span class="eyebrow">Latest founder update</span><p>"{p.update}"</p></div>
 					<div class="detail-actions">
-						<button class="btn primary" onclick={() => suite.ask(`Prepare a board memo for ${p.name}`)}><Sparkles /> Board memo</button>
+						<button class="btn primary" onclick={() => suite.ask(`Prepare a board memo for ${p.name}`)}><FileText /> Board memo</button>
 						<button class="btn" onclick={() => suite.toast(`Check-in scheduled with ${p.name}`, 'success')}>Schedule check-in</button>
 					</div>
 				</div>
@@ -158,10 +157,8 @@
 		padding-bottom: 7px;
 		border-top: 0;
 		color: var(--faint);
-		font-size: 6.2px;
-		font-weight: 650;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
+		font-size: 7px;
+		font-weight: 600;
 	}
 
 	button.row:hover,

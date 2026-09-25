@@ -25,7 +25,7 @@ node promo/tools/serve.mjs      # http://localhost:4610
 | 9 | Pipeline | Form D, SBIR, and NJEDA/CSIT → link → classify → match → alert, with particle flow (counts from a real NJ run) |
 | 10 | Alerts | Ready vs. held notifications: automatic only on exact identity |
 | 11 | Evidence, not certainty | Facts, inferences, unknowns |
-| 12 | Finale | Rails, wordmark, "1,435 mm · standard gauge" |
+| 12 | Finale | Rails, wordmark, "standard gauge" |
 
 ## Player features
 

@@ -8,7 +8,6 @@
 	import MapPin from '~icons/lucide/map-pin';
 	import Plus from '~icons/lucide/plus';
 	import Radar from '~icons/lucide/radar';
-	import Sparkles from '~icons/lucide/sparkles';
 	import X from '~icons/lucide/x';
 	import { entityById } from '../directory';
 	import { age, suite } from '../state.svelte';
@@ -27,7 +26,7 @@
 <div class="backdrop" role="presentation" transition:fade={{ duration: 150 }} onclick={(ev) => ev.target === ev.currentTarget && suite.close()}>
 	<div class="drawer scroll" role="dialog" aria-modal="true" aria-label="{e.name} details" transition:fly={{ x: 30, duration: 200 }}>
 		<header class="bar">
-			<span class="pill {e.real ? 'accent' : 'amber'}">{e.real ? 'Real company · verified source' : 'Synthetic company'}</span>
+			<span class="pill {e.real ? 'accent' : 'amber'}">{e.real ? 'Real company' : 'Synthetic company'}</span>
 			<button class="btn icon ghost" onclick={() => suite.close()} aria-label="Close"><X /></button>
 		</header>
 
@@ -108,12 +107,12 @@
 				{#each activity as ev (ev.id)}
 					<button class="activity" onclick={() => (suite.selectedEvent = ev)}><i class="pill amber">{ev.kind}</i><span>{ev.title}</span><time>{age(ev.timestamp, suite.now)}</time></button>
 				{:else}
-					<p class="muted small">Waiting for this company’s next simulated signal.</p>
+					<p class="muted small">No simulated signals for this company yet.</p>
 				{/each}
 			</section>
 
 			<div class="actions">
-				<button class="btn primary" onclick={() => suite.ask(`Draft an IC memo for ${e.name}`)}><Sparkles /> Draft IC memo</button>
+				<button class="btn primary" onclick={() => suite.ask(`Draft an IC memo for ${e.name}`)}><FileText /> Draft IC memo</button>
 				{#if e.townId}<button class="btn" onclick={() => { suite.radarTarget = e.townId; suite.close(); suite.go('radar'); }}><Radar /> Radar</button>{/if}
 			</div>
 		{/if}
@@ -310,9 +309,7 @@
 		gap: 5px;
 		margin-bottom: 7px;
 		color: var(--accent-deep);
-		font-size: 6.5px;
-		letter-spacing: 0.09em;
-		text-transform: uppercase;
+		font-size: 8px;
 	}
 
 	.block h3.warn {

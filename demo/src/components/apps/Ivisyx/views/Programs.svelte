@@ -21,7 +21,6 @@
 
 <header class="page-head">
 	<div>
-		<span class="eyebrow">Non-dilutive capital · New Jersey</span>
 		<h1>Programs</h1>
 		<p>Start with the program, then verify the fit. Eligibility must be confirmed with the program administrator.</p>
 	</div>
@@ -30,7 +29,7 @@
 <div class="grid">
 	{#each programs as program, i}
 		{@const Icon = program.icon}
-		<article class="card program rise" style:--tone={program.tone} style:animation-delay="{i * 70}ms">
+		<article class="card program" style:--tone={program.tone}>
 			<div class="top"><span class="icon"><Icon /></span><span class="org">{program.org}<b>{String(i + 1).padStart(2, '0')}</b></span></div>
 			<small class="eyebrow">{program.label}</small>
 			<h2>{program.name}</h2>
@@ -49,7 +48,7 @@
 </div>
 
 <div class="card semantics">
-	<div><small class="eyebrow">Clean semantics</small><h2>Three states. No eligibility theater.</h2></div>
+	<div><small class="eyebrow">Match labels</small><h2>How we label a program match</h2></div>
 	<span class="strong"><i></i><strong>Strong match</strong><small>Material requirements established</small></span>
 	<span class="potential"><i></i><strong>Potential match, verify</strong><small>At least one fact is unknown</small></span>
 	<span><i></i><strong>Not a match</strong><small>A material requirement fails</small></span>

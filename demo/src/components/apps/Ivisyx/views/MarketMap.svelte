@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Sparkles from '~icons/lucide/sparkles';
+	import TrendingUp from '~icons/lucide/trending-up';
 	import Target from '~icons/lucide/target';
 	import { syntheticEntities, type Entity } from '../directory';
 	import { hash } from '../nj-towns';
@@ -33,15 +33,14 @@
 
 <header class="page-head">
 	<div>
-		<span class="eyebrow">Landscape · {syntheticEntities.length.toLocaleString()} synthetic companies</span>
 		<h1>Market map</h1>
-		<p>Every tracked company by sector and category. Brighter tiles score higher on the selected lens.</p>
+		<p>{syntheticEntities.length.toLocaleString()} companies grouped by sector and category. Stronger color means a higher score.</p>
 	</div>
 	<div class="actions">
 		<label class="toggle"><input type="checkbox" bind:checked={onlyThesis} /> In-thesis only</label>
 		<div class="seg">
 			<button class:on={lens === 'fit'} onclick={() => (lens = 'fit')}><Target /> Thesis fit</button>
-			<button class:on={lens === 'momentum'} onclick={() => (lens = 'momentum')}><Sparkles /> Momentum</button>
+			<button class:on={lens === 'momentum'} onclick={() => (lens = 'momentum')}><TrendingUp /> Momentum</button>
 		</div>
 	</div>
 </header>
@@ -67,7 +66,7 @@
 							</button>
 						{/each}
 						{#if cat.items.length > 6}<span class="more">+{cat.items.length - 6}</span>{/if}
-						{#if !cat.items.length}<span class="whitespace">Whitespace: no tracked companies</span>{/if}
+						{#if !cat.items.length}<span class="whitespace">No tracked companies yet</span>{/if}
 					</div>
 				</div>
 			{/each}
@@ -141,10 +140,8 @@
 		justify-content: space-between;
 		margin-bottom: 5px;
 		color: var(--muted);
-		font-size: 6.6px;
-		font-weight: 650;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
+		font-size: 7.2px;
+		font-weight: 600;
 	}
 
 	.cat-name b {

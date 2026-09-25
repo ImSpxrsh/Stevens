@@ -10,7 +10,7 @@
 	import { suite } from '../state.svelte';
 	import { deals, money, pipelineStages, team, type PipelineStage } from '../suite-data';
 	import Logo from '../ui/Logo.svelte';
-	import Ring from '../ui/Ring.svelte';
+	import Score from '../ui/Score.svelte';
 
 	let mode = $state<'board' | 'table'>('board');
 	let owner = $state<string | null>(null);
@@ -46,7 +46,6 @@
 
 <header class="page-head">
 	<div>
-		<span class="eyebrow">Deal flow · {suite.firm.fund}</span>
 		<h1>Pipeline</h1>
 		<p>Drag companies between stages. Fit scores update with {suite.firm.name}'s thesis.</p>
 	</div>
@@ -103,7 +102,7 @@
 								<div class="deal-top">
 									<Logo name={c.e.name} hue={c.e.hue} src={c.e.logo} seed={c.e.id} size={22} />
 									<span><strong>{c.e.name}</strong><small>{c.e.sector} · {c.e.town}</small></span>
-									<Ring value={c.fit} size={22} stroke={2.2} />
+									<Score value={c.fit} />
 								</div>
 								<p>{c.next}</p>
 								<div class="deal-meta">
@@ -143,7 +142,7 @@
 						<td>{c.e.stage}</td>
 						<td><span class="stage-chip" style:--tone={stageTone[c.stage]}>{c.stage}</span></td>
 						<td class="num">{c.e.raise ? money(c.e.raise) : '—'}</td>
-						<td><Ring value={c.fit} size={20} stroke={2} /></td>
+						<td><Score value={c.fit} /></td>
 						<td class="num">{c.days}d</td>
 						<td><span class="avatar" style:background={team.find((t) => t.id === c.owner)?.color}>{team.find((t) => t.id === c.owner)?.initials}</span></td>
 						<td class="muted">{c.next}</td>
@@ -408,11 +407,9 @@
 		padding: 8px 10px;
 		background: rgba(242, 246, 243, 0.95);
 		color: var(--faint);
-		font-size: 6.3px;
-		font-weight: 650;
-		letter-spacing: 0.06em;
+		font-size: 7px;
+		font-weight: 600;
 		text-align: left;
-		text-transform: uppercase;
 	}
 
 	th button {

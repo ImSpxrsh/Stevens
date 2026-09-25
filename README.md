@@ -25,17 +25,17 @@ npm run serve
 
 What's in the suite:
 
-- **Command center**: greeting, thesis matches, KPIs, deal-flow chart, pipeline funnel, agenda, portfolio health, live signal ticker.
-- **Signal radar**: an interactive New Jersey map. Scroll or pinch to zoom, drag to pan, click a county or any of ~220 municipalities to fly in, and zoom far enough to see individual companies. It also has search, layers, a minimap, and a live signal stream.
+- **Overview**: thesis matches, KPIs, deal-flow chart, pipeline funnel, agenda and portfolio health.
+- **NJ map**: an interactive New Jersey map. Scroll or pinch to zoom, drag to pan, click a county or any of ~220 municipalities to fly in, and zoom far enough to see individual companies. It also has search, layers, a minimap, and a live signal stream.
 - **Pipeline**: drag-and-drop kanban and table, owner filters, fit scores.
 - **Companies**: ~1,400 companies with search and filters; each synthetic company gets a generated logo.
-- **Portfolio**, **Market map**, **Fund & LPs** (TVPI/DPI/IRR, J-curve, LP report generator), **Programs**, **Data sources**.
-- **Ivisyx AI**: scripted memo, portfolio, lookalike and meeting-prep answers. No model or API is called.
+- **Portfolio**, **Market map**, **Fund & LPs** (TVPI/DPI/IRR, J-curve, LP report generator), **Programs**, **Sources**.
+- **Assistant**: scripted memo, portfolio, lookalike and meeting-prep answers. It does not call a language model.
 - **⌘K command palette** and a **firm setup** screen. Pick a preset or enter any fund's thesis, stages, geography and brand color, and every fit score re-ranks.
 
-Demo path: Command center → Signal radar (zoom into Mercer County, then Princeton) →
-open a company → Draft IC memo → Pipeline → Fund & LPs → switch workspace in the
-sidebar to show it works for any VC.
+Demo path: Overview → NJ map (zoom into Mercer County, then Princeton) → open a
+company → Draft IC memo → Pipeline → Fund & LPs → switch workspace in the sidebar
+to show it works for any VC. The default workspace is the fictional 59 Capital.
 
 Data: six real New Jersey company profiles link to official sources and never
 receive simulated data. Every other company, deal, metric, fund figure, LP and

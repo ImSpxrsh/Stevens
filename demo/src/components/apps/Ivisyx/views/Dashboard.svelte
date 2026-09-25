@@ -2,18 +2,17 @@
 	import ArrowRight from '~icons/lucide/arrow-right';
 	import ArrowUpRight from '~icons/lucide/arrow-up-right';
 	import Calendar from '~icons/lucide/calendar-clock';
-	import Radar from '~icons/lucide/radar';
-	import Sparkles from '~icons/lucide/sparkles';
+	import FileText from '~icons/lucide/file-text';
+	import MapPinned from '~icons/lucide/map-pinned';
 	import TrendingUp from '~icons/lucide/trending-up';
 	import TriangleAlert from '~icons/lucide/triangle-alert';
-	import Zap from '~icons/lucide/zap';
 	import { entityById, syntheticEntities } from '../directory';
-	import { age, suite } from '../state.svelte';
+	import { suite } from '../state.svelte';
 	import { dealFlowAdvanced, dealFlowSourced, dealFlowWeeks, fitFor, money, pipelineStages, team, type Health } from '../suite-data';
 	import AreaChart from '../ui/AreaChart.svelte';
 	import Logo from '../ui/Logo.svelte';
 	import NjMini from '../ui/NjMini.svelte';
-	import Ring from '../ui/Ring.svelte';
+	import Score from '../ui/Score.svelte';
 	import Sparkline from '../ui/Sparkline.svelte';
 
 	const hour = new Date().getHours();
@@ -38,6 +37,7 @@
 	const healthColor: Record<Health, string> = { Breakout: 'var(--accent)', 'On track': '#7fb8a0', Watch: '#d49a43', 'At risk': '#c0573f' };
 	const attention = $derived(suite.portfolio.filter((p) => p.health === 'At risk' || p.health === 'Watch').slice(0, 3));
 	const latest = $derived(suite.events[0] ? entityById.get(suite.events[0].companyId) : null);
+	const icCount = $derived(funnel.find((f) => f.stage === 'IC review')?.n ?? 0);
 
 	const agenda = [
 		{ time: '09:30', title: 'Partner meeting', who: 'quarry', kind: 'Pitch' },
@@ -62,64 +62,49 @@
 </script>
 
 <div class="dash">
-	<section class="hero hero-dark rise">
+	<section class="hero hero-dark">
 		<div class="hero-copy">
-			<span class="hero-eyebrow">{today.toUpperCase()} · {suite.firm.fund.toUpperCase()}</span>
+			<span class="hero-eyebrow">{today}</span>
 			<h1>{greeting}, {suite.firm.name}.</h1>
-			<p><b>{strongMatches}</b> companies score 80+ against your thesis. <b>{funnel.find((f) => f.stage === 'IC review')?.n}</b> deals are waiting on IC and <b>{attention.length}</b> portfolio companies need a check-in.</p>
+			<p>{strongMatches} companies score 80 or higher against your thesis. {icCount} {icCount === 1 ? 'deal is' : 'deals are'} waiting on IC, and {attention.length} portfolio {attention.length === 1 ? 'company needs' : 'companies need'} a check-in.</p>
 			<div class="hero-actions">
-				<button class="btn primary" onclick={() => suite.go('radar')}><Radar /> Open signal radar</button>
-				<button class="btn on-dark" onclick={() => suite.ask('Summarize this week’s signals for me')}><Sparkles /> Brief me</button>
+				<button class="btn primary" onclick={() => suite.go('radar')}><MapPinned /> Open NJ map</button>
+				<button class="btn on-dark" onclick={() => suite.ask("Summarize this week's signals for me")}><FileText /> Weekly summary</button>
 			</div>
-			<div class="thesis"><span>THESIS</span>{suite.firm.thesis}</div>
+			<div class="thesis"><span>Thesis:</span>{suite.firm.thesis}</div>
 		</div>
 		<div class="hero-map">
 			<NjMini width={150} height={188} pulse={latest?.coordinates ?? null} />
-			{#if latest}
-				<div class="hero-ping"><Zap /><span><small>LATEST SIGNAL</small><strong>{latest.name}</strong><em>{suite.events[0].title} · {age(suite.events[0].timestamp, suite.now)}</em></span></div>
-			{/if}
 		</div>
 		<div class="hero-stats">
-			<div><small>SIGNALS · 7D</small><strong class="num">{(dealFlowSourced[11] * 4 + suite.sequence).toLocaleString()}</strong><span class="up">+18% w/w</span></div>
-			<div><small>THESIS MATCHES</small><strong class="num">{strongMatches}</strong><span>fit score ≥ 80</span></div>
-			<div><small>DRY POWDER</small><strong class="num">{money(suite.fund.committed - suite.fund.called)}</strong><span>{Math.round((1 - suite.fund.called / suite.fund.committed) * 100)}% of fund</span></div>
+			<div><small>Signals, last 7 days</small><strong class="num">{(dealFlowSourced[11] * 4 + suite.sequence).toLocaleString()}</strong><span class="up">up 18% on last week</span></div>
+			<div><small>Thesis matches</small><strong class="num">{strongMatches}</strong><span>fit score 80+</span></div>
+			<div><small>Dry powder</small><strong class="num">{money(suite.fund.committed - suite.fund.called)}</strong><span>{Math.round((1 - suite.fund.called / suite.fund.committed) * 100)}% of fund</span></div>
 		</div>
 	</section>
 
-	<div class="ticker" aria-label="Signal ticker">
-		<div class="ticker-track">
-			{#each [0, 1] as copy}
-				<div class="ticker-set" aria-hidden={copy === 1}>
-					{#each suite.events.slice(0, 10) as ev (ev.id + copy)}
-						{@const e = entityById.get(ev.companyId)}
-						<button onclick={() => suite.open(ev.companyId, ev)}><i></i><b>{e?.name}</b>{ev.title}<span>{e?.town}</span></button>
-					{/each}
-				</div>
-			{/each}
-		</div>
-	</div>
 
 	<section class="kpis">
-		<article class="card kpi-card rise" style:animation-delay="60ms">
+		<article class="card kpi-card">
 			<div class="kpi"><small>New signals · 30d</small><strong>{(dealFlowSourced.slice(-4).reduce((a, b) => a + b, 0) + suite.sequence).toLocaleString()}</strong><span><b class="delta-up">▲ 21%</b> vs prior 30d</span></div>
 			<Sparkline values={dealFlowSourced} width={78} height={30} />
 		</article>
-		<article class="card kpi-card rise" style:animation-delay="100ms">
+		<article class="card kpi-card">
 			<div class="kpi"><small>Active pipeline</small><strong>{active.length}</strong><span>{money(activeRaise)} in open rounds</span></div>
 			<Sparkline values={[9, 11, 10, 13, 14, 13, 16, 18, 17, 19, 21, active.length]} width={78} height={30} color="#c88b33" />
 		</article>
-		<article class="card kpi-card rise" style:animation-delay="140ms">
+		<article class="card kpi-card">
 			<div class="kpi"><small>Portfolio fair value</small><strong>{money(nav)}</strong><span><b class="delta-up">{(nav / suite.portfolio.reduce((s, p) => s + p.check, 0)).toFixed(2)}×</b> on invested</span></div>
 			<Sparkline values={suite.fund.tvpiSeries} width={78} height={30} color="#6a4fa3" />
 		</article>
-		<article class="card kpi-card rise" style:animation-delay="180ms">
+		<article class="card kpi-card">
 			<div class="kpi"><small>Net IRR</small><strong>{suite.fund.irr.toFixed(1)}%</strong><span>TVPI <b>{suite.fund.tvpi.toFixed(2)}×</b> · DPI {suite.fund.dpi.toFixed(2)}×</span></div>
 			<Sparkline values={[-4, -8, -6, 2, 6, 9, 13, 15, 17, 19, 21, suite.fund.irr]} width={78} height={30} color="#2b5f9e" />
 		</article>
 	</section>
 
 	<section class="row-a">
-		<article class="card rise" style:animation-delay="220ms">
+		<article class="card">
 			<header class="card-head">
 				<div><h3><TrendingUp /> Deal flow</h3><small>Companies sourced vs. advanced to first meeting · last 12 weeks</small></div>
 				<div class="legend"><span><i style:background="var(--accent)"></i>Sourced</span><span><i style:background="#d49a43"></i>Advanced</span></div>
@@ -128,7 +113,7 @@
 				<AreaChart labels={dealFlowWeeks} height={150} series={[{ name: 'Sourced', values: dealFlowSourced, color: 'var(--accent)' }, { name: 'Advanced', values: dealFlowAdvanced.map((v) => v * 3), color: '#d49a43' }]} />
 			</div>
 		</article>
-		<article class="card rise" style:animation-delay="260ms">
+		<article class="card">
 			<header class="card-head"><div><h3>Pipeline funnel</h3><small>Conversion by stage</small></div><button class="btn ghost" onclick={() => suite.go('pipeline')}>Board <ArrowRight /></button></header>
 			<div class="funnel">
 				{#each funnel as f, i}
@@ -144,7 +129,7 @@
 	</section>
 
 	<section class="row-b">
-		<article class="card rise" style:animation-delay="300ms">
+		<article class="card">
 			<header class="card-head"><div><h3>Top thesis matches</h3><small>Scored against {suite.firm.name}'s sectors, stages and geography</small></div><button class="btn ghost" onclick={() => suite.go('companies')}>All <ArrowRight /></button></header>
 			<div class="matches">
 				{#each matches as { e, fit }, i (e.id)}
@@ -152,12 +137,12 @@
 						<em>{String(i + 1).padStart(2, '0')}</em>
 						<Logo name={e.name} hue={e.hue} src={e.logo} seed={e.id} size={24} />
 						<span><strong>{e.name}</strong><small>{e.sector} · {e.stage} · {e.town}</small></span>
-						<Ring value={fit} size={24} stroke={2.4} />
+						<Score value={fit} />
 					</button>
 				{/each}
 			</div>
 		</article>
-		<article class="card rise" style:animation-delay="340ms">
+		<article class="card">
 			<header class="card-head"><div><h3><Calendar /> Today</h3><small>{agenda.length} meetings · synced from calendar</small></div></header>
 			<div class="agenda">
 				{#each agenda as a}
@@ -171,7 +156,7 @@
 				{/each}
 			</div>
 		</article>
-		<article class="card rise" style:animation-delay="380ms">
+		<article class="card">
 			<header class="card-head"><div><h3>Portfolio health</h3><small>{suite.portfolio.length} companies · {suite.firm.fund}</small></div><button class="btn ghost" onclick={() => suite.go('portfolio')}><ArrowUpRight /></button></header>
 			<div class="health">
 				<svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
@@ -190,7 +175,7 @@
 		</article>
 	</section>
 
-	<footer class="team-strip rise" style:animation-delay="420ms">
+	<footer class="team-strip">
 		{#each team as t}
 			<span><i class="avatar" style:background={t.color}>{t.initials}</i><b>{t.name}</b>{Object.keys(suite.pipeline).filter((id) => suite.owner(id) === t.id && suite.pipeline[id] !== 'Closed').length} active deals</span>
 		{/each}
@@ -213,9 +198,7 @@
 
 	.hero-eyebrow {
 		color: rgba(200, 240, 222, 0.6);
-		font-size: 6.5px;
-		font-weight: 700;
-		letter-spacing: 0.12em;
+		font-size: 7.5px;
 	}
 
 	.hero h1 {
@@ -230,10 +213,6 @@
 		color: rgba(220, 238, 230, 0.72);
 		font-size: 8.5px;
 		line-height: 1.55;
-	}
-
-	.hero p b {
-		color: #ffd27a;
 	}
 
 	.hero-actions {
@@ -253,10 +232,8 @@
 	}
 
 	.thesis span {
-		color: #d6a957;
-		font-size: 6px;
-		font-weight: 700;
-		letter-spacing: 0.1em;
+		color: rgba(220, 238, 230, 0.9);
+		font-weight: 600;
 	}
 
 	.hero-map {
@@ -265,50 +242,11 @@
 		place-items: center;
 	}
 
-	.hero-ping {
-		position: absolute;
-		left: -30px;
-		bottom: -4px;
-		display: flex;
-		gap: 5px;
-		width: 150px;
-		padding: 6px 7px;
-		border: 1px solid rgba(255, 210, 122, 0.3);
-		border-radius: 8px;
-		background: rgba(6, 20, 15, 0.8);
-		backdrop-filter: blur(8px);
-	}
 
-	.hero-ping :global(svg) {
-		flex: 0 0 auto;
-		color: #ffd27a;
-		font-size: 10px;
-	}
 
-	.hero-ping small,
-	.hero-ping strong,
-	.hero-ping em {
-		display: block;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
 
-	.hero-ping small {
-		color: #ffd27a;
-		font-size: 5.3px;
-		letter-spacing: 0.1em;
-	}
 
-	.hero-ping strong {
-		font-size: 7.5px;
-	}
 
-	.hero-ping em {
-		color: rgba(220, 238, 230, 0.55);
-		font-size: 6px;
-		font-style: normal;
-	}
 
 	.hero-stats {
 		display: grid;
@@ -325,9 +263,8 @@
 	}
 
 	.hero-stats small {
-		color: rgba(200, 240, 222, 0.5);
-		font-size: 5.8px;
-		letter-spacing: 0.1em;
+		color: rgba(200, 240, 222, 0.55);
+		font-size: 7px;
 	}
 
 	.hero-stats strong {
@@ -345,65 +282,15 @@
 		color: #7fe3b5;
 	}
 
-	.ticker {
-		overflow: hidden;
-		height: 26px;
-		border: 1px solid var(--glass-border);
-		border-radius: 8px;
-		background: rgba(12, 22, 19, 0.86);
-		mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
-	}
 
-	.ticker-track {
-		display: flex;
-		width: max-content;
-		height: 100%;
-		animation: ticker 60s linear infinite;
-	}
 
-	.ticker:hover .ticker-track {
-		animation-play-state: paused;
-	}
 
-	.ticker-set {
-		display: flex;
-	}
 
-	.ticker button {
-		display: flex;
-		align-items: center;
-		gap: 5px;
-		padding: 0 14px;
-		color: rgba(220, 238, 230, 0.6);
-		font-size: 7px;
-		white-space: nowrap;
-	}
 
-	.ticker button:hover {
-		color: white;
-	}
 
-	.ticker i {
-		width: 4px;
-		height: 4px;
-		border-radius: 50%;
-		background: #ffd27a;
-		box-shadow: 0 0 6px #ffd27a;
-	}
 
-	.ticker b {
-		color: white;
-	}
 
-	.ticker span {
-		color: rgba(127, 227, 181, 0.7);
-	}
 
-	@keyframes ticker {
-		to {
-			transform: translateX(-50%);
-		}
-	}
 
 	.kpis {
 		display: grid;
@@ -485,17 +372,9 @@
 		display: block;
 		height: 100%;
 		border-radius: 4px;
-		background: linear-gradient(90deg, var(--accent), color-mix(in oklab, var(--accent) 60%, #9ef0cc));
-		box-shadow: 0 3px 8px color-mix(in srgb, var(--accent) 25%, transparent);
-		animation: grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-		transform-origin: left;
+		background: var(--accent);
 	}
 
-	@keyframes grow {
-		from {
-			transform: scaleX(0);
-		}
-	}
 
 	.funnel b {
 		text-align: right;
@@ -529,7 +408,7 @@
 	}
 
 	.matches button {
-		grid-template-columns: 12px 24px minmax(0, 1fr) 24px;
+		grid-template-columns: 12px 24px minmax(0, 1fr) auto;
 	}
 
 	.matches button:hover,
