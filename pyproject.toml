@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gauge"
-version = "0.1.0"
+version = "0.2.0"
 description = "Gauge: discover early-stage New Jersey startups from public records."
 readme = "README.md"
 requires-python = ">=3.12"
@@ -13,7 +13,8 @@ dependencies = []
 [project.optional-dependencies]
 # LLM-assisted match review and announcement extraction (issues #16, #17).
 ai = ["anthropic>=1.8"]
-dev = ["pytest>=8", "ruff>=0.6"]
+api = ["fastapi>=0.115", "uvicorn>=0.30"]
+dev = ["pytest>=8", "ruff>=0.6", "httpx>=0.27"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["gauge"]
@@ -28,3 +29,8 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# SQL strings read better unwrapped.
+"gauge/db/*.py" = ["E501"]
+"tests/db/*.py" = ["E501"]
